@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/assets/static/cloak.html"
-    }
+    { "source": "/", "destination": "/assets/static/cloak.html" }
   ]
 }
