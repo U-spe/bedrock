@@ -29,11 +29,6 @@
     href="https://cdn.classlink.com/production/public/libraries/fontawesome/css/all.min.css">
 
   <style>
-    /*
-      Keep the original ClassLink stylesheet and layout.
-      These rules only ensure the page fills the viewport.
-    */
-
     html,
     body {
       min-height: 100%;
@@ -47,11 +42,11 @@
       cursor: pointer;
     }
   </style>
+
+  <script src="/js/navigation.js" defer></script>
 </head>
 
-<body data-bedrock-cloak="true">
-
-<body class="lp-login-body">
+<body class="lp-login-body" data-bedrock-cloak="true">
 
   <div id="toaster"></div>
 
@@ -104,12 +99,13 @@
               Find your login page
             </div>
 
-            <!-- The ONLY special destination -->
+            <!-- QuickCard is handled by /js/navigation.js -->
             <a
               href="/main.html"
               class="button button-primary qc-button"
               title="Use QuickCard"
-              id="quickcard-button">
+              id="quickcard-button"
+              data-bedrock-quickcard>
 
               <i class="far fa-qrcode qr-icon"></i>
               <span>Use QuickCard</span>
@@ -201,19 +197,24 @@
 
         <div class="lp-login-footer-nav-buttons">
 
-          <a href="https://www.classlink.com/privacy"
+          <a
+            href="https://www.classlink.com/privacy"
             class="lp-login-footer-link">PRIVACY POLICY</a>
 
-          <a href="https://www.classlink.com/help"
+          <a
+            href="https://www.classlink.com/help"
             class="lp-login-footer-link">Help</a>
 
-          <a href="https://www.classlink.com/cdncheck"
+          <a
+            href="https://www.classlink.com/cdncheck"
             class="lp-login-footer-link">Browser Check</a>
 
-          <a href="https://launchpad.classlink.com/"
+          <a
+            href="https://launchpad.classlink.com/"
             class="lp-login-footer-link">REMOTE LOGIN</a>
 
-          <a href="https://launchpad.classlink.com/"
+          <a
+            href="https://launchpad.classlink.com/"
             class="lp-login-footer-link">DIRECT LOGIN</a>
 
         </div>
@@ -243,56 +244,6 @@
     </div>
 
   </div>
-
-  <script>
-    (() => {
-      "use strict";
-
-      const launchpad = "https://launchpad.classlink.com/";
-      const quickcard = document.getElementById("quickcard-button");
-
-      /*
-       * QuickCard goes to the real BEDROCK homepage.
-       */
-      quickcard.addEventListener("click", event => {
-        event.preventDefault();
-        window.location.href = "/main.html";
-      });
-
-      /*
-       * All other interactive controls go to the official
-       * ClassLink LaunchPad in the SAME window.
-       */
-      document.addEventListener("click", event => {
-        const clicked = event.target.closest(
-          "a, button, input, select, textarea, [role='button']"
-        );
-
-        if (!clicked) return;
-
-        if (clicked.closest("#quickcard-button")) return;
-
-        event.preventDefault();
-        window.location.href = launchpad;
-      }, true);
-
-      /*
-       * Prevent the search form from submitting anywhere else.
-       */
-      document.addEventListener("submit", event => {
-        event.preventDefault();
-        window.location.href = launchpad;
-      }, true);
-
-      /*
-       * Clicking the search area or any other non-QuickCard
-       * control navigates to ClassLink. No credentials are
-       * collected or submitted by this page.
-       */
-    })();
-  </script>
-
-  <script src="/js/navigation.js" defer></script>
 
 </body>
 </html>
