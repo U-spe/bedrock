@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
+  <meta name="theme-color" content="#090c10">
 
   <title>BEDROCK</title>
+
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,20 +17,21 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/themes.css">
+
+  <script src="/js/themes.js" defer></script>
+  <script src="/js/hotkeys.js" defer></script>
+  <script src="/js/globalmenu.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 
-<body data-bg-style="stars">
-  <div id="bg-effects-container">
-    <canvas id="stars-canvas"></canvas>
-    <div id="fog-overlay"></div>
-  </div>
-
-  <div class="top">
-    <div id="time">--:--</div>
-    <div id="date">loading...</div>
-  </div>
-
+<body>
   <main id="app">
+    <div class="top">
+      <div id="time">--:--</div>
+      <div id="date">loading...</div>
+    </div>
+
     <section class="center">
       <div class="hero-wrap">
         <div class="brand-mark" aria-hidden="true">
@@ -48,28 +51,25 @@
 
     <section class="quick-links" aria-label="Quick links">
       <a class="quick-card" href="/games.html">
-        <i class="ri-gamepad-line"></i>
+        <i class="ri-gamepad-line" aria-hidden="true"></i>
         <span>games</span>
-        <i class="ri-arrow-up-right-line arrow"></i>
+        <i class="ri-arrow-up-right-line arrow" aria-hidden="true"></i>
       </a>
 
       <a class="quick-card" href="/apps.html">
-        <i class="ri-apps-line"></i>
+        <i class="ri-apps-line" aria-hidden="true"></i>
         <span>apps</span>
-        <i class="ri-arrow-up-right-line arrow"></i>
+        <i class="ri-arrow-up-right-line arrow" aria-hidden="true"></i>
       </a>
 
       <a class="quick-card" href="/browser.html">
-        <i class="ri-global-line"></i>
+        <i class="ri-global-line" aria-hidden="true"></i>
         <span>browser</span>
-        <i class="ri-arrow-up-right-line arrow"></i>
+        <i class="ri-arrow-up-right-line arrow" aria-hidden="true"></i>
       </a>
     </section>
 
     <div id="global-menu"></div>
   </main>
-
-  <script src="/js/globalmenu.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>
