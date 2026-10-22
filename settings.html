@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c10">
+  <title>bedrock — settings</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/themes.css">
+
+  <script src="/js/globalmenu.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/themes.js" defer></script>
+</head>
+<body>
+  <div id="global-menu"></div>
+
+  <div class="br-page-content">
+    <main class="br-page">
+      <header class="br-section br-panel">
+        <div class="br-section-heading">
+          <a href="/index.html" style="font-weight:800;text-decoration:none;color:var(--br-text)">
+            <span class="br-gradient-text">◆</span> bedrock
+          </a>
+          <nav class="br-inline-controls" aria-label="Main navigation">
+            <a class="br-button" href="/main.html">Dashboard</a>
+            <a class="br-button" href="/index.html">Home</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="br-section">
+        <p class="br-muted">PREFERENCES / PERSONALIZATION</p>
+        <h1>Settings<span class="br-gradient-text">.</span></h1>
+        <p class="br-muted">Make Bedrock feel like yours. Changes apply across all three pages.</p>
+      </section>
+
+      <div class="br-settings-layout">
+        <nav class="br-settings-nav br-panel" aria-label="Settings sections">
+          <a href="#appearance">◈ Appearance</a>
+          <a href="#background">✳ Background</a>
+          <a href="#accent">◉ Accent color</a>
+          <a href="#keyboard">⌘ Shortcuts</a>
+        </nav>
+
+        <div>
+          <section class="br-section br-panel" id="appearance">
+            <p class="br-muted">01 / PERSONALIZATION</p>
+            <h2>Theme</h2>
+            <p class="br-muted">Select a theme to update the entire interface.</p>
+            <div id="br-theme-options" class="br-theme-grid">
+              <p class="br-muted">Loading themes...</p>
+            </div>
+          </section>
+
+          <section class="br-section br-panel" id="background">
+            <p class="br-muted">02 / ATMOSPHERE</p>
+            <h2>Background effects</h2>
+            <label class="br-field-label" for="br-background-style">Background style</label>
+            <select class="br-field" id="br-background-style">
+              <option value="stars">Animated stars</option>
+              <option value="fog">Soft fog</option>
+              <option value="gradient">Gradient glow</option>
+              <option value="none">None</option>
+            </select>
+
+            <div class="br-setting-row">
+              <div>
+                <strong>Background animation</strong>
+                <small>Turn animated effects on or off.</small>
+              </div>
+              <input type="checkbox" id="br-animations" checked>
+            </div>
+          </section>
+
+          <section class="br-section br-panel" id="accent">
+            <p class="br-muted">03 / COLOR SYSTEM</p>
+            <h2>Accent color</h2>
+            <p class="br-muted">Customize highlights, links, and interface accents.</p>
+            <label class="br-field-label" for="br-accent-picker">Custom accent</label>
+            <input class="br-field" id="br-accent-picker" type="color" value="#5fae87">
+          </section>
+
+          <section class="br-section br-panel" id="keyboard">
+            <p class="br-muted">04 / NAVIGATION</p>
+            <h2>Keyboard shortcuts</h2>
+            <div class="br-setting-row"><span>Focus dashboard search</span><kbd>/</kbd></div>
+            <div class="br-setting-row"><span>Open settings</span><kbd>Ctrl + ,</kbd></div>
+            <div class="br-setting-row"><span>Show shortcut guide</span><kbd>?</kbd></div>
+            <div class="br-setting-row"><span>Close dialog</span><kbd>Esc</kbd></div>
+          </section>
+
+          <section class="br-section br-panel">
+            <div class="br-section-heading">
+              <div>
+                <h2>Reset preferences</h2>
+                <p class="br-muted">Restore the default Bedrock theme and background.</p>
+              </div>
+              <button class="br-button" id="br-reset-settings" type="button">Reset settings</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="br-footer">
+        bedrock settings · <span id="br-year"></span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
