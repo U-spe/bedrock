@@ -1,0 +1,61 @@
+
+{
+  "defaultTheme": "bedrock",
+  "defaultBackground": "stars",
+  "themes": {
+    "bedrock": {
+      "label": "Bedrock",
+      "background": "#090c10",
+      "surface": "#11161d",
+      "surfaceRaised": "#171f29",
+      "text": "#edf3fa",
+      "muted": "#91a0b2",
+      "accent": "#5fae87"
+    },
+    "midnight": {
+      "label": "Midnight",
+      "background": "#080b18",
+      "surface": "#10162a",
+      "surfaceRaised": "#19213b",
+      "text": "#edf0ff",
+      "muted": "#929dc4",
+      "accent": "#7890ff"
+    },
+    "forest": {
+      "label": "Forest",
+      "background": "#070c0a",
+      "surface": "#101914",
+      "surfaceRaised": "#19251d",
+      "text": "#e8f2ee",
+      "muted": "#9aafa4",
+      "accent": "#5fae87"
+    },
+    "violet": {
+      "label": "Violet",
+      "background": "#0d0915",
+      "surface": "#191225",
+      "surfaceRaised": "#251936",
+      "text": "#f5edff",
+      "muted": "#b0a0c8",
+      "accent": "#a77aff"
+    },
+    "sunrise": {
+      "label": "Sunrise",
+      "background": "#17100e",
+      "surface": "#241815",
+      "surfaceRaised": "#35231c",
+      "text": "#fff0e6",
+      "muted": "#c5a99a",
+      "accent": "#ff9b70"
+    },
+    "light": {
+      "label": "Light",
+      "background": "#edf1f5",
+      "surface": "#ffffff",
+      "surfaceRaised": "#e1e7ee",
+      "text": "#18212b",
+      "muted": "#5f6d7b",
+      "accent": "#287b57"
+    }
+  }
+}
