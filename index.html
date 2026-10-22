@@ -1,38 +1,74 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090909">
+
   <title>BEDROCK</title>
-  <link rel="icon" href="/assets/images/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/menu.css">
 </head>
+
 <body data-bg-style="stars">
-  <div id="bg-effects-container"><canvas id="stars-canvas"></canvas><div id="fog-overlay"></div></div>
-  <div class="top"><div id="time">--:--</div><div id="date">loading...</div></div>
+  <div id="bg-effects-container">
+    <canvas id="stars-canvas"></canvas>
+    <div id="fog-overlay"></div>
+  </div>
+
+  <div class="top">
+    <div id="time">--:--</div>
+    <div id="date">loading...</div>
+  </div>
+
   <main id="app">
     <section class="center">
       <div class="hero-wrap">
-        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <div class="hero-text">
           <h1>BEDROCK<span class="period">.</span></h1>
-          <div class="const" id="constText">smaller mind for the bigger craft</div>
+          <div class="const" id="constText">
+            smaller mind for the bigger craft
+          </div>
         </div>
       </div>
     </section>
+
     <section class="quick-links" aria-label="Quick links">
-      <a class="quick-card" href="/games.html"><i class="ri-gamepad-line"></i><span>games</span><i class="ri-arrow-up-right-line arrow"></i></a>
-      <a class="quick-card" href="/apps.html"><i class="ri-apps-line"></i><span>apps</span><i class="ri-arrow-up-right-line arrow"></i></a>
-      <a class="quick-card" href="/browser.html"><i class="ri-global-line"></i><span>browser</span><i class="ri-arrow-up-right-line arrow"></i></a>
+      <a class="quick-card" href="/games.html">
+        <i class="ri-gamepad-line"></i>
+        <span>games</span>
+        <i class="ri-arrow-up-right-line arrow"></i>
+      </a>
+
+      <a class="quick-card" href="/apps.html">
+        <i class="ri-apps-line"></i>
+        <span>apps</span>
+        <i class="ri-arrow-up-right-line arrow"></i>
+      </a>
+
+      <a class="quick-card" href="/browser.html">
+        <i class="ri-global-line"></i>
+        <span>browser</span>
+        <i class="ri-arrow-up-right-line arrow"></i>
+      </a>
     </section>
+
     <div id="global-menu"></div>
   </main>
+
   <script src="/js/globalmenu.js"></script>
   <script src="/js/main.js"></script>
 </body>
