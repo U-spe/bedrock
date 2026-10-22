@@ -1,0 +1,343 @@
+
+:root {
+  color-scheme: dark;
+  --br-bg: #090c10;
+  --br-surface: #11161d;
+  --br-raised: #171f29;
+  --br-text: #edf3fa;
+  --br-muted: #91a0b2;
+  --br-accent: #5fae87;
+  --br-border: color-mix(in srgb, var(--br-text) 11%, transparent);
+  --br-glow: color-mix(in srgb, var(--br-accent) 22%, transparent);
+  --br-radius: 16px;
+  --br-speed: 180ms;
+}
+
+html[data-br-theme="light"] {
+  color-scheme: light;
+}
+
+html, body {
+  background-color: var(--br-bg);
+  color: var(--br-text);
+}
+
+body {
+  --background-transition: background-color 180ms ease, color 180ms ease;
+  background-image: radial-gradient(
+    ellipse at 50% -20%,
+    var(--br-glow),
+    transparent 65%
+  );
+  background-attachment: fixed;
+  transition: var(--background-transition);
+}
+
+a {
+  color: var(--br-accent);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.br-panel {
+  background: var(--br-surface);
+  border: 1px solid var(--br-border);
+  border-radius: var(--br-radius);
+  color: var(--br-text);
+  box-shadow: 0 12px 40px #00000012;
+}
+
+.br-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid var(--br-border);
+  border-radius: 11px;
+  color: var(--br-text);
+  background: var(--br-raised);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--br-speed), border-color var(--br-speed),
+    background var(--br-speed);
+}
+
+.br-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--br-accent);
+}
+
+.br-button.primary {
+  background: var(--br-accent);
+  border-color: transparent;
+  color: #07110c;
+  font-weight: 700;
+}
+
+.br-muted {
+  color: var(--br-muted);
+}
+
+.br-accent {
+  color: var(--br-accent);
+}
+
+.br-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  color: var(--br-text);
+  background: var(--br-raised);
+  border: 1px solid var(--br-border);
+  border-radius: 10px;
+  outline: none;
+}
+
+.br-field:focus-visible,
+.br-button:focus-visible,
+.br-theme-option:focus-visible {
+  outline: 2px solid var(--br-accent);
+  outline-offset: 3px;
+}
+
+.br-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.br-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.br-theme-option {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 75px;
+  padding: 12px;
+  text-align: left;
+  color: var(--br-text);
+  background: var(--br-raised);
+  border: 1px solid var(--br-border);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.br-theme-option[aria-pressed="true"] {
+  border-color: var(--br-accent);
+  box-shadow: inset 0 0 0 1px var(--br-accent);
+}
+
+.br-theme-swatch {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  border-radius: 9px;
+  background: var(--swatch, var(--br-accent));
+}
+
+.br-theme-option strong,
+.br-theme-option small {
+  display: block;
+}
+
+.br-theme-option small {
+  margin-top: 4px;
+  color: var(--br-muted);
+}
+
+#br-background-effects {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#br-stars {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#br-fog {
+  position: absolute;
+  inset: -30%;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 25% 45%, var(--br-glow), transparent 45%),
+    radial-gradient(ellipse at 70% 60%, var(--br-glow), transparent 40%);
+  filter: blur(45px);
+  transition: opacity 400ms ease;
+}
+
+html[data-br-background="fog"] #br-fog,
+html[data-br-background="gradient"] #br-fog {
+  opacity: 1;
+}
+
+html[data-br-background="gradient"] #br-fog {
+  animation: br-drift 16s ease-in-out infinite alternate;
+}
+
+html[data-br-background="none"] #br-background-effects {
+  display: none;
+}
+
+.br-page-content {
+  position: relative;
+  z-index: 1;
+}
+
+.br-page {
+  width: min(1100px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+
+.br-page h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  letter-spacing: -0.045em;
+}
+
+.br-page h2 {
+  letter-spacing: -0.025em;
+}
+
+.br-gradient-text {
+  color: var(--br-accent);
+}
+
+.br-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.br-card {
+  display: block;
+  padding: 20px;
+  color: var(--br-text);
+  text-decoration: none;
+  transition: transform var(--br-speed), border-color var(--br-speed);
+}
+
+.br-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--br-accent);
+}
+
+.br-card p {
+  color: var(--br-muted);
+  line-height: 1.6;
+}
+
+.br-section {
+  padding: 22px;
+  margin: 18px 0;
+}
+
+.br-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.br-settings-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.br-settings-nav {
+  position: sticky;
+  top: 20px;
+  padding: 12px;
+}
+
+.br-settings-nav a {
+  display: block;
+  padding: 10px 12px;
+  margin: 3px 0;
+  border-radius: 9px;
+  text-decoration: none;
+  color: var(--br-muted);
+}
+
+.br-settings-nav a:hover,
+.br-settings-nav a[aria-current="location"] {
+  color: var(--br-text);
+  background: var(--br-raised);
+}
+
+.br-setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--br-border);
+}
+
+.br-setting-row:last-child {
+  border-bottom: 0;
+}
+
+.br-setting-row small {
+  display: block;
+  margin-top: 5px;
+  color: var(--br-muted);
+}
+
+.br-inline-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.br-footer {
+  margin-top: 36px;
+  color: var(--br-muted);
+  font-size: 13px;
+}
+
+@keyframes br-drift {
+  from { transform: translate(-3%, -2%) scale(1); }
+  to { transform: translate(3%, 2%) scale(1.1); }
+}
+
+@media (max-width: 650px) {
+  .br-settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .br-settings-nav {
+    position: static;
+  }
+
+  .br-setting-row {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
