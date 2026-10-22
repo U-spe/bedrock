@@ -1,44 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808"><meta name="description" content="BEDROCK — games, video, apps, and tools in one place.">
-  <title>BEDROCK</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
-  <link rel="stylesheet" href="/index.css">
-  <script src="/index.js" defer></script><script src="/js/globalmenu.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>bedrock</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
-<body>
-  <div class="app-shell"><div id="global-menu"></div>
-    <main class="main-content" id="main-content">
-      <header class="mobile-header">
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="ri-menu-2-line"></i></button>
-        <a href="/index.html" class="mobile-brand">BEDROCK<span>.</span></a>
-        <button class="mobile-settings" id="mobile-settings" type="button" aria-label="Open settings"><i class="ri-settings-3-line"></i></button>
-      </header>
-      <section class="welcome-block">
-        <div class="welcome-topline"><span class="eyebrow"><span class="live-dot"></span> YOUR DIGITAL GROUNDWORK</span><span class="date-label" id="today-label">BEDROCK / HOME</span></div>
-        <div class="hero-copy-wrap"><div><p class="hero-kicker">WELCOME TO YOUR SPACE</p><h1>Make yourself<br><span>at home.</span></h1><p class="hero-description">Games, video, apps, and useful tools. All connected from one place.</p></div>
-          <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">B<span>.</span></div></div>
-        </div>
-        <label class="search-field"><i class="ri-search-line" aria-hidden="true"></i><input id="site-search" type="search" placeholder="Search BEDROCK..." autocomplete="off"><kbd>/</kbd></label>
+<body data-bg-style="stars" data-theme="bedrock">
+  <div id="bg-effects-container"><canvas id="stars-canvas"></canvas><div id="fog-overlay"></div></div>
+  <div id="app">
+    <div class="top"><div id="time">--:--</div><div id="date">loading...</div></div>
+    <div id="global-menu"></div>
+    <main class="home">
+      <section class="hero">
+        <div class="hero-mark" aria-hidden="true">B.</div>
+        <div class="hero-text"><p class="eyebrow">YOUR SPACE. YOUR RULES.</p><h1>bedrock<span>.</span></h1><p class="subtitle">games, apps, video, and tools. all in one place.</p></div>
       </section>
-      <section class="dashboard-section" id="quick-access"><div class="section-head"><div><p class="section-index">01 / YOUR SPACE</p><h2>Quick access<span>.</span></h2></div><span class="section-hint">PICK UP AND GO</span></div>
-        <div class="quick-grid">
-          <a class="quick-card" href="/games/" data-search="games game library arcade play"><span class="quick-card-top"><span class="card-icon"><i class="ri-gamepad-line"></i></span><i class="ri-arrow-up-right-line card-arrow"></i></span><span class="card-name">Games</span><span class="card-desc">Your next session starts here.</span><span class="card-code">LIBRARY / 001</span></a>
-          <a class="quick-card" href="/apps/youtube-player/" data-search="video youtube player watch videos"><span class="quick-card-top"><span class="card-icon"><i class="ri-play-circle-line"></i></span><i class="ri-arrow-up-right-line card-arrow"></i></span><span class="card-name">Video player</span><span class="card-desc">Find something worth watching.</span><span class="card-code">MEDIA / 002</span></a>
-          <a class="quick-card" href="/apps/" data-search="apps applications proxied apps"><span class="quick-card-top"><span class="card-icon"><i class="ri-apps-2-line"></i></span><i class="ri-arrow-up-right-line card-arrow"></i></span><span class="card-name">Apps</span><span class="card-desc">All your apps, together.</span><span class="card-code">WORKSPACE / 003</span></a>
-          <a class="quick-card" href="/tools/" data-search="tools utilities toolbox"><span class="quick-card-top"><span class="card-icon"><i class="ri-command-line"></i></span><i class="ri-arrow-up-right-line card-arrow"></i></span><span class="card-name">Toolbox</span><span class="card-desc">Small tools. Big convenience.</span><span class="card-code">UTILITIES / 004</span></a>
-        </div>
+      <section class="search-wrap">
+        <i class="ri-search-line" aria-hidden="true"></i>
+        <input id="home-search" type="search" placeholder="search bedrock..." autocomplete="off" aria-label="Search BEDROCK">
+        <kbd>/</kbd>
       </section>
-      <section class="dashboard-section lower-section"><div class="section-head"><div><p class="section-index">02 / THE FOUNDATION</p><h2>Built for your flow<span>.</span></h2></div></div>
-        <div class="statement-card"><div class="statement-mark"><i class="ri-shapes-line"></i></div><div><h3>One hub. Your way.</h3><p>BEDROCK is a modular home for games, video, apps, and tools. More features will appear here as they come online.</p></div><span class="statement-tag">SYSTEM / READY</span></div>
+      <section class="section-heading"><span>QUICK ACCESS</span><span class="section-line"></span><span class="muted">01 / 06</span></section>
+      <section class="quick-grid" id="quick-grid">
+        <a class="quick-card" href="/games/" data-search="games play arcade"><span class="card-icon"><i class="ri-gamepad-line"></i></span><span class="card-copy"><strong>games</strong><small>play something</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
+        <a class="quick-card" href="/apps/proxied-apps/" data-search="proxied apps tiktok twitch reddit"><span class="card-icon"><i class="ri-apps-2-line"></i></span><span class="card-copy"><strong>proxied apps</strong><small>your apps, together</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
+        <a class="quick-card" href="/apps/youtube-player/" data-search="youtube video player"><span class="card-icon"><i class="ri-play-circle-line"></i></span><span class="card-copy"><strong>youtube player</strong><small>video hub</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
+        <a class="quick-card" href="/apps/ai-chat/" data-search="ai chat assistant"><span class="card-icon"><i class="ri-sparkling-2-line"></i></span><span class="card-copy"><strong>ai chat</strong><small>think it through</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
+        <a class="quick-card" href="/apps/music/" data-search="music audio"><span class="card-icon"><i class="ri-music-2-line"></i></span><span class="card-copy"><strong>music</strong><small>set the mood</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
+        <a class="quick-card" href="/proxy/" data-search="proxy browser web"><span class="card-icon"><i class="ri-global-line"></i></span><span class="card-copy"><strong>proxy</strong><small>open the web</small></span><i class="ri-arrow-up-right-line card-arrow"></i></a>
       </section>
-      <footer class="page-footer"><span>BEDROCK<span class="footer-dot">.</span></span><span>BUILT ON SOLID GROUND.</span><span>© <span id="year"></span></span></footer>
-      <p id="no-results" class="no-results" hidden>No matching sections found. Try another search.</p>
+      <p class="home-foot"><span class="status-dot"></span> BEDROCK SYSTEMS ONLINE <span class="foot-sep">/</span> <span id="year"></span></p>
     </main>
   </div>
-  <dialog id="settings-dialog" class="settings-dialog"><form method="dialog"><div class="dialog-top"><span class="section-index">BEDROCK / SETTINGS</span><button class="dialog-close" value="close" aria-label="Close settings"><i class="ri-close-line"></i></button></div><h2>Settings<span>.</span></h2><p>Personalization and preferences will live here. The foundation is in place.</p><button class="dialog-done" value="close">Got it <i class="ri-arrow-right-line"></i></button></form></dialog>
-</body></html>
+  <script src="/js/globalmenu.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="/js/stars.js"></script>
+</body>
+</html>
