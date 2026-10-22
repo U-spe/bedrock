@@ -1,10 +1,14 @@
-/* SPYDR-STYLE FLOATING DOCK, REWORKED FOR BEDROCK */
-.dock{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:7px;background:rgba(23,23,23,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:999px;box-shadow:0 10px 35px rgba(0,0,0,.45);z-index:999;transition:opacity .25s ease,transform .25s ease}
-.dock button{position:relative;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:0;outline:0;border-radius:12px;background:transparent;color:#999;cursor:pointer;transition:transform .22s cubic-bezier(.22,1,.36,1),background .22s,color .22s}
-.dock button i{font-size:21px}
-.dock button:hover{color:#fff;background:rgba(255,255,255,.08);transform:translateY(-6px) scale(1.08)}
-.dock button.active{background:#f2f2f2;color:#090909}
-.dock button::before{content:attr(data-title);position:absolute;bottom:58px;left:50%;transform:translate(-50%,8px);padding:6px 10px;border-radius:8px;background:rgba(0,0,0,.94);border:1px solid #292929;color:white;font-size:11px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+/* Floating Spydr-inspired dock, relocated to bottom-left with hover trigger */
+.menu-trigger-wrap{position:fixed;left:14px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px}
+.dock-trigger{width:45px;height:45px;display:grid;place-items:center;border:1px solid rgba(232,242,238,.13);border-radius:15px;background:rgba(17,17,17,.8);backdrop-filter:blur(20px);color:var(--white);box-shadow:0 10px 35px rgba(0,0,0,.4),0 0 20px rgba(95,174,135,.08);cursor:pointer;transition:transform .22s,background .22s,border-color .22s}
+.dock-trigger i{font-size:20px;color:var(--accent)}
+.dock-trigger:hover,.menu-trigger-wrap:focus-within .dock-trigger{transform:translateY(-2px);background:rgba(30,42,34,.94);border-color:rgba(95,174,135,.42)}
+.dock{display:flex;align-items:center;gap:6px;padding:7px;background:rgba(23,23,23,.84);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:999px;box-shadow:0 10px 35px rgba(0,0,0,.45),0 0 18px rgba(95,174,135,.08);opacity:0;pointer-events:none;transform:translateX(-10px) scale(.97);transform-origin:left center;transition:opacity .22s ease,transform .25s cubic-bezier(.22,1,.36,1)}
+.menu-trigger-wrap:hover .dock,.menu-trigger-wrap:focus-within .dock,.menu-trigger-wrap.open .dock{opacity:1;pointer-events:auto;transform:translateX(0) scale(1)}
+.dock button{position:relative;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:transparent;color:var(--gray);cursor:pointer;transition:transform .22s,background .22s,color .22s,box-shadow .22s}
+.dock button i{font-size:20px}
+.dock button:hover{color:var(--white);background:rgba(255,255,255,.06);transform:translateY(-5px) scale(1.07);box-shadow:0 0 18px rgba(95,174,135,.16)}
+.dock button.active{background:linear-gradient(135deg,var(--accent),#397d5c);color:#07110b;box-shadow:0 0 20px rgba(95,174,135,.22)}
+.dock button::before{content:attr(data-title);position:absolute;bottom:53px;left:50%;transform:translate(-50%,7px);padding:6px 9px;border:1px solid rgba(255,255,255,.08);border-radius:7px;background:rgba(0,0,0,.92);color:#fff;font:11px "JetBrains Mono",monospace;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .16s,transform .16s}
 .dock button:hover::before{opacity:1;transform:translate(-50%,0)}
-.dock button:active{transform:scale(.95)}
-@media(max-width:700px){.dock{bottom:12px;gap:3px;padding:5px;max-width:calc(100vw - 16px)}.dock button{width:39px;height:40px}.dock button i{font-size:19px}}
+@media(max-width:650px){.menu-trigger-wrap{left:10px;bottom:10px;gap:7px}.dock{gap:2px;padding:5px}.dock button{width:35px;height:38px}.dock button i{font-size:18px}.dock-trigger{width:42px;height:42px}}
