@@ -1,27 +1,42 @@
-/* BEDROCK GLOBAL MENU — Spydr's floating dock pattern */
 (() => {
+  "use strict";
   const container = document.getElementById("global-menu");
-  if (!container) return;
+  if (!container || new URLSearchParams(location.search).get("embed") === "1") return;
+
   const pages = [
     { icon: "ri-home-5-line", title: "Home", page: "/index.html" },
-    { icon: "ri-gamepad-line", title: "Games", page: "/games/" },
-    { icon: "ri-apps-2-line", title: "Apps", page: "/apps/other/" },
-    { icon: "ri-global-line", title: "Proxy", page: "/proxy/" },
-    { icon: "ri-settings-3-line", title: "Settings", page: "/settings/" }
+    { icon: "ri-gamepad-line", title: "Games", page: "/games.html" },
+    { icon: "ri-apps-line", title: "Apps", page: "/apps.html" },
+    { icon: "ri-global-line", title: "Browser", page: "/browser.html" },
+    { icon: "ri-settings-3-line", title: "Settings", page: "/settings.html" }
   ];
-  const dock = document.createElement("nav");
-  dock.className = "dock";
-  dock.setAttribute("aria-label", "Main navigation");
-  const current = window.location.pathname;
+  const wrap = document.createElement("div");
+  wrap.className = "menu-trigger-wrap";
+  wrap.innerHTML = '<button class="dock-trigger" type="button" aria-label="Open navigation" aria-expanded="false"><i class="ri-menu-4-line"></i></button><nav class="dock" aria-label="Main navigation"></nav>';
+  const trigger = wrap.querySelector(".dock-trigger");
+  const dock = wrap.querySelector(".dock");
+  const current = location.pathname;
+
   pages.forEach(item => {
     const button = document.createElement("button");
     button.type = "button";
     button.dataset.title = item.title;
     button.setAttribute("aria-label", item.title);
-    if (current === item.page || (item.title === "Home" && (current === "/" || current === "/index.html"))) button.classList.add("active");
     button.innerHTML = `<i class="${item.icon}" aria-hidden="true"></i>`;
-    button.addEventListener("click", () => { window.location.href = item.page; });
+    if (current === item.page || (current === "/" && item.title === "Home")) button.classList.add("active");
+    button.addEventListener("click", () => { location.href = item.page; });
     dock.appendChild(button);
   });
-  container.appendChild(dock);
+
+  trigger.addEventListener("click", () => {
+    const open = wrap.classList.toggle("open");
+    trigger.setAttribute("aria-expanded", String(open));
+  });
+  document.addEventListener("pointerdown", event => {
+    if (!wrap.contains(event.target)) {
+      wrap.classList.remove("open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+  container.appendChild(wrap);
 })();
