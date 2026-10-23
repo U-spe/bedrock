@@ -15,7 +15,7 @@
     {
       icon: "ri-home-5-line",
       title: "Home",
-      page: "/index.html"
+      page: "/main.html"
     },
     {
       icon: "ri-gamepad-line",
