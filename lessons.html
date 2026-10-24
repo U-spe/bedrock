@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>bedrock | games</title>
+  <meta name="theme-color" content="#08090a">
+
+  <link rel="icon" href="./assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/games.css">
+  <link rel="stylesheet" href="./css/menu.css">
+</head>
+
+<body>
+  <div id="loader" aria-hidden="true"></div>
+  <div id="global-menu"></div>
+
+  <header class="games-header">
+    <a class="brand" href="./main.html" aria-label="Bedrock home">
+      <img class="brand-logo" src="./assets/images/logo.png" alt="">
+      <span>bedrock</span>
+    </a>
+
+    <a class="header-button" href="./settings.html" aria-label="Settings">
+      <i class="ri-settings-3-line" aria-hidden="true"></i>
+      <span>Settings</span>
+    </a>
+  </header>
+
+  <main class="games-main">
+    <section class="library-section" aria-label="Game library">
+      <div class="library-toolbar">
+        <div class="library-select dropdown">
+          <button
+            id="dropdownButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="dropdownMenu"
+          >
+            <i class="ri-layout-grid-line" aria-hidden="true"></i>
+            <span id="sourceText">Loading library...</span>
+            <i class="ri-arrow-down-s-line dropdown-chevron" aria-hidden="true"></i>
+          </button>
+
+          <div id="dropdownMenu" role="menu" hidden></div>
+        </div>
+
+        <label class="search-box">
+          <i class="ri-search-line" aria-hidden="true"></i>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search games..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search games"
+          >
+          <kbd>/</kbd>
+        </label>
+      </div>
+
+      <div class="library-info">
+        <div>
+          <span class="section-eyebrow">BEDROCK / LIBRARY</span>
+          <h1>Games</h1>
+        </div>
+
+        <div class="library-total">
+          <span id="game-count">00</span>
+          <span>GAMES</span>
+        </div>
+      </div>
+
+      <div id="results-label" class="results-label">LOADING</div>
+
+      <div id="game-grid" aria-live="polite">
+        <div class="grid-status">Loading games...</div>
+      </div>
+    </section>
+  </main>
+
+  <section
+    id="game-view"
+    class="game-view"
+    aria-hidden="true"
+    aria-label="Game player"
+  >
+    <header class="player-bar">
+      <button
+        id="closeGameBtn"
+        class="player-icon-btn player-back"
+        type="button"
+        aria-label="Back to games"
+        title="Back to games"
+      >
+        <i class="ri-arrow-left-line" aria-hidden="true"></i>
+      </button>
+
+      <div class="player-title-wrap">
+        <span class="player-live-dot" aria-hidden="true"></span>
+        <div>
+          <span class="player-overline">NOW PLAYING</span>
+          <h2 id="player-game-name">Game</h2>
+        </div>
+      </div>
+
+      <div class="player-actions">
+        <button
+          id="reloadGameBtn"
+          class="player-icon-btn"
+          type="button"
+          aria-label="Reload game"
+          title="Reload game"
+        >
+          <i class="ri-refresh-line" aria-hidden="true"></i>
+        </button>
+
+        <button
+          id="fullscreenBtn"
+          class="player-icon-btn player-fullscreen-btn"
+          type="button"
+          aria-label="Enter fullscreen"
+          title="Fullscreen"
+        >
+          <i class="ri-fullscreen-line" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <div id="game-stage">
+      <div id="game-loader" class="active">
+        <div class="loader-orbit" aria-hidden="true">
+          <span class="loader-orbit-ring"></span>
+          <span class="loader-orbit-ring ring-two"></span>
+          <span class="loader-core">
+            <i class="ri-gamepad-line"></i>
+          </span>
+        </div>
+
+        <span class="loading-eyebrow">BEDROCK / PLAYER</span>
+        <h3>Loading game</h3>
+        <p id="loading-status">Preparing your game...</p>
+
+        <div class="loading-progress" aria-hidden="true">
+          <span></span>
+        </div>
+      </div>
+
+      <iframe
+        id="game-frame"
+        title="Game"
+        allow="fullscreen; gamepad"
+        allowfullscreen
+        loading="eager"
+      ></iframe>
+    </div>
+  </section>
+
+  <script src="./js/lessons.js"></script>
+  <script src="./js/globalmenu.js"></script>
+</body>
+</html>
