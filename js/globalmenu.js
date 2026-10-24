@@ -12,31 +12,31 @@
   }
 
   const pages = [
-    {
-      icon: "ri-home-5-line",
-      title: "Home",
-      page: "/main.html"
-    },
-    {
-      icon: "ri-gamepad-line",
-      title: "Games",
-      page: "/games.html"
-    },
-    {
-      icon: "ri-apps-line",
-      title: "Apps",
-      page: "/apps.html"
-    },
-    {
-      icon: "ri-global-line",
-      title: "Browser",
-      page: "/browser.html"
-    },
-    {
-      icon: "ri-settings-3-line",
-      title: "Settings",
-      page: "/settings.html"
-    }
+        {
+            icon: "ri-home-5-line",
+            title: "Home",
+            page: "/main.html"
+        },
+        {
+            icon: "ri-gamepad-line",
+            title: "Games",
+            page: "/lessons.html"
+        },
+        {
+            icon: "ri-apps-line",
+            title: "Apps",
+            page: "/flashcards.html"
+        },
+        {
+            icon: "ri-global-line",
+            title: "Browser",
+            page: "/search.html"
+        },
+        {
+            icon: "ri-settings-3-line",
+            title: "Settings",
+            page: "/settings.html"
+        }
   ];
 
   const wrap = document.createElement("div");
