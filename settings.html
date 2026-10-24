@@ -1,113 +1,170 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090c10">
   <title>bedrock — settings</title>
-
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/menu.css">
   <link rel="stylesheet" href="/css/themes.css">
-
-  <script src="/js/globalmenu.js" defer></script>
-  <script src="/js/navigation.js" defer></script>
   <script src="/js/themes.js" defer></script>
+  <script src="/js/hotkeys.js" defer></script>
+  <script src="/js/globalmenu.js" defer></script>
 </head>
 <body>
   <div id="global-menu"></div>
-
   <div class="br-page-content">
     <main class="br-page">
-      <header class="br-section br-panel">
-        <div class="br-section-heading">
-          <a href="/index.html" style="font-weight:800;text-decoration:none;color:var(--br-text)">
-            <span class="br-gradient-text">◆</span> bedrock
-          </a>
-          <nav class="br-inline-controls" aria-label="Main navigation">
-            <a class="br-button" href="/main.html">Dashboard</a>
-            <a class="br-button" href="/index.html">Home</a>
-          </nav>
-        </div>
+      <header class="br-section br-panel br-settings-header">
+        <a class="br-brand" href="/main.html"><img src="/assets/images/logo.png" alt=""> <span>bedrock</span></a>
+        <nav class="br-inline-controls" aria-label="Main navigation">
+          <a class="br-button" href="/main.html">Dashboard</a>
+          <a class="br-button" href="/lessons.html">Games</a>
+        </nav>
       </header>
 
-      <section class="br-section">
+      <section class="br-section br-settings-intro">
         <p class="br-muted">PREFERENCES / PERSONALIZATION</p>
         <h1>Settings<span class="br-gradient-text">.</span></h1>
-        <p class="br-muted">Make Bedrock feel like yours. Changes apply across all three pages.</p>
+        <p class="br-muted">One settings system, shared across Bedrock pages and saved automatically.</p>
+        <div class="br-settings-status" id="br-settings-status" role="status">Settings ready</div>
       </section>
 
       <div class="br-settings-layout">
         <nav class="br-settings-nav br-panel" aria-label="Settings sections">
-          <a href="#appearance">◈ Appearance</a>
-          <a href="#background">✳ Background</a>
-          <a href="#accent">◉ Accent color</a>
-          <a href="#keyboard">⌘ Shortcuts</a>
+          <a href="#appearance"><i class="ri-palette-line"></i> Appearance</a>
+          <a href="#background"><i class="ri-landscape-line"></i> Backgrounds</a>
+          <a href="#custom-theme"><i class="ri-contrast-2-line"></i> Custom theme</a>
+          <a href="#tab-identity"><i class="ri-window-line"></i> Tab identity</a>
+          <a href="#keyboard"><i class="ri-keyboard-line"></i> Keyboard</a>
+          <a href="#behavior"><i class="ri-settings-4-line"></i> Behavior</a>
         </nav>
 
-        <div>
+        <div class="br-settings-sections">
           <section class="br-section br-panel" id="appearance">
-            <p class="br-muted">01 / PERSONALIZATION</p>
-            <h2>Theme</h2>
-            <p class="br-muted">Select a theme to update the entire interface.</p>
-            <div id="br-theme-options" class="br-theme-grid">
-              <p class="br-muted">Loading themes...</p>
+            <p class="br-muted">01 / INTERFACE</p>
+            <h2>Theme palette</h2>
+            <p class="br-muted">Choose a palette. It applies throughout Bedrock.</p>
+            <div id="br-theme-options" class="br-theme-grid"><p class="br-muted">Loading themes…</p></div>
+            <div class="br-setting-row">
+              <div><strong>Accent color</strong><small>Override the theme's default highlight color.</small></div>
+              <input class="br-color-input" id="br-accent-picker" type="color" value="#5fae87" aria-label="Accent color">
+            </div>
+            <div class="br-setting-row">
+              <div><strong>Animate interface effects</strong><small>Disable background motion when you prefer a still interface.</small></div>
+              <label class="br-switch"><input id="br-animations" type="checkbox" checked><span></span></label>
             </div>
           </section>
 
           <section class="br-section br-panel" id="background">
             <p class="br-muted">02 / ATMOSPHERE</p>
-            <h2>Background effects</h2>
-            <label class="br-field-label" for="br-background-style">Background style</label>
+            <h2>Background system</h2>
+            <label class="br-field-label" for="br-background-style">Background effect</label>
             <select class="br-field" id="br-background-style">
               <option value="stars">Animated stars</option>
               <option value="fog">Soft fog</option>
               <option value="gradient">Gradient glow</option>
+              <option value="theme">Theme glow</option>
               <option value="none">None</option>
             </select>
-
             <div class="br-setting-row">
-              <div>
-                <strong>Background animation</strong>
-                <small>Turn animated effects on or off.</small>
-              </div>
-              <input type="checkbox" id="br-animations" checked>
+              <div><strong>Show star particles</strong><small>Only affects the animated stars background.</small></div>
+              <label class="br-switch"><input id="toggle-stars" type="checkbox" checked><span></span></label>
             </div>
+            <div class="br-setting-row">
+              <div><strong>Use video background</strong><small>Video backgrounds appear behind page content on supported Bedrock pages.</small></div>
+              <label class="br-switch"><input id="br-video-enabled" type="checkbox"><span></span></label>
+            </div>
+            <h3 class="br-subheading">Choose a video</h3>
+            <div id="br-video-options" class="br-video-grid" aria-label="Video background choices"></div>
+            <p class="br-muted br-small-note">Video files are loaded from <code>/assets/images/b/</code>. If a video asset is missing, the selected preview remains visible in Settings and the page falls back to the normal background.</p>
           </section>
 
-          <section class="br-section br-panel" id="accent">
-            <p class="br-muted">03 / COLOR SYSTEM</p>
-            <h2>Accent color</h2>
-            <p class="br-muted">Customize highlights, links, and interface accents.</p>
-            <label class="br-field-label" for="br-accent-picker">Custom accent</label>
-            <input class="br-field" id="br-accent-picker" type="color" value="#5fae87">
+          <section class="br-section br-panel" id="custom-theme">
+            <p class="br-muted">03 / CUSTOM PALETTE</p>
+            <h2>Build your own theme</h2>
+            <p class="br-muted">Choose colors for the primary glow, secondary glow, and optional third color.</p>
+            <div class="br-custom-colors">
+              <label>Primary color<input class="br-color-input" id="custom-color-1" type="color" value="#7c3aed"></label>
+              <label>Secondary color<input class="br-color-input" id="custom-color-2" type="color" value="#3f5efb"></label>
+              <label>Third color<input class="br-color-input" id="custom-color-3" type="color" value="#ff4fd8"></label>
+            </div>
+            <div class="br-setting-row">
+              <div><strong>Use third color</strong><small>Add the third color to the custom glow.</small></div>
+              <label class="br-switch"><input id="custom-color-3-enabled" type="checkbox"><span></span></label>
+            </div>
+            <button class="br-button" id="br-use-custom-theme" type="button">Apply custom theme</button>
+          </section>
+
+          <section class="br-section br-panel" id="tab-identity">
+            <p class="br-muted">04 / TAB IDENTITY</p>
+            <h2>Page title and icon</h2>
+            <p class="br-muted">Customize the title and favicon shown for Bedrock tabs.</p>
+            <div class="br-setting-row br-stack-row">
+              <label class="br-grow" for="br-cloak-title">Tab title<input class="br-field" id="br-cloak-title" type="text" maxlength="80" placeholder="bedrock"></label>
+              <label class="br-grow" for="br-cloak-icon">Favicon URL<input class="br-field" id="br-cloak-icon" type="url" placeholder="/assets/images/logo.png"></label>
+            </div>
+            <div class="br-setting-row">
+              <div><strong>Apply custom tab identity</strong><small>Changes the current page's title and favicon; does not change the page URL.</small></div>
+              <label class="br-switch"><input id="toggle-cloak" type="checkbox"><span></span></label>
+            </div>
+            <label class="br-field-label" for="cloak-target-select">Preset</label>
+            <select class="br-field" id="cloak-target-select">
+              <option value="bedrock">bedrock</option>
+              <option value="google">Google</option>
+              <option value="classroom">Classroom</option>
+              <option value="classlink">ClassLink</option>
+            </select>
+            <p class="br-muted br-small-note">Custom title and favicon fields take priority over the selected preset when filled in.</p>
           </section>
 
           <section class="br-section br-panel" id="keyboard">
-            <p class="br-muted">04 / NAVIGATION</p>
+            <p class="br-muted">05 / KEYBOARD</p>
             <h2>Keyboard shortcuts</h2>
-            <div class="br-setting-row"><span>Focus dashboard search</span><kbd>/</kbd></div>
-            <div class="br-setting-row"><span>Open settings</span><kbd>Ctrl + ,</kbd></div>
-            <div class="br-setting-row"><span>Show shortcut guide</span><kbd>?</kbd></div>
-            <div class="br-setting-row"><span>Close dialog</span><kbd>Esc</kbd></div>
+            <p class="br-muted">Select a shortcut button, then press the key you want to assign.</p>
+            <div class="br-hotkey-list">
+              <div class="br-setting-row"><div><strong>Quick settings</strong><small>Open Settings.</small></div><button class="br-key-button" data-hotkey="quickSettingsKey" type="button">F9</button></div>
+              <div class="br-setting-row"><div><strong>Developer panel</strong><small>Toggle a small performance panel.</small></div><button class="br-key-button" data-hotkey="devModeKey" type="button">F4</button></div>
+              <div class="br-setting-row"><div><strong>Boss key</strong><small>Return to the Bedrock dashboard.</small></div><button class="br-key-button" data-hotkey="bossKey" type="button">Escape</button></div>
+              <div class="br-setting-row"><div><strong>Panic key</strong><small>Navigate to the configured fallback page.</small></div><button class="br-key-button" data-hotkey="panicKey" type="button">`</button></div>
+            </div>
+            <div class="br-setting-row">
+              <div><strong>Fallback page</strong><small>Destination for the panic key.</small></div>
+              <input class="br-field br-fallback-input" id="br-panic-url" type="url" placeholder="https://www.google.com">
+            </div>
+            <div class="br-shortcut-help">
+              <span><kbd>/</kbd> Focus search</span>
+              <span><kbd>Ctrl</kbd> + <kbd>,</kbd> Settings</span>
+              <span><kbd>?</kbd> Shortcut guide</span>
+              <span><kbd>Esc</kbd> Close menus/dialogs</span>
+            </div>
           </section>
 
-          <section class="br-section br-panel">
-            <div class="br-section-heading">
-              <div>
-                <h2>Reset preferences</h2>
-                <p class="br-muted">Restore the default Bedrock theme and background.</p>
-              </div>
+          <section class="br-section br-panel" id="behavior">
+            <p class="br-muted">06 / BEHAVIOR</p>
+            <h2>Saving and page behavior</h2>
+            <div class="br-setting-row">
+              <div><strong>Auto-save settings</strong><small>Save each change to this browser and sync other open Bedrock tabs.</small></div>
+              <label class="br-switch"><input id="toggle-autosave" type="checkbox" checked><span></span></label>
+            </div>
+            <div class="br-setting-row">
+              <div><strong>Warn before closing</strong><small>Enable the browser's standard leave-page warning. Browser controls remain available.</small></div>
+              <label class="br-switch"><input id="br-anti-close-enabled" type="checkbox"><span></span></label>
+            </div>
+            <div class="br-setting-row br-reset-row">
+              <div><strong>Reset preferences</strong><small>Restore the default palette, backgrounds, shortcuts, and tab identity.</small></div>
               <button class="br-button" id="br-reset-settings" type="button">Reset settings</button>
             </div>
           </section>
         </div>
       </div>
-
-      <footer class="br-footer">
-        bedrock settings · <span id="br-year"></span>
-      </footer>
+      <footer class="br-footer">bedrock settings · <span id="br-year"></span></footer>
     </main>
   </div>
 </body>
