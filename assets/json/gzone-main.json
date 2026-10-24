@@ -1,0 +1,37 @@
+[
+    {
+    "Name": "Sky",
+    "File": "assets/json/sky.json",
+    "Icon": "ri-flask-line"
+  },
+  {
+    "Name": "MacVG",
+    "File": "assets/json/macvg.json",
+    "Icon": "ri-ship-2-line"
+  },
+    {
+    "Name": "Requested",
+    "File": "assets/json/requested.json",
+    "Icon": "ri-star-line"
+  }, 
+   {
+    "Name": "Fire Hydrant",
+    "File": "assets/json/hydra.json",
+    "Icon": "ri-fire-line"
+  },
+   {
+    "Name": "Truffled",
+    "File": "assets/json/truffled.json",
+    "Icon": "ri-ghost-line"
+  },
+  {
+    "Name": "SunTree",
+    "File": "assets/json/suntree.json",
+    "Icon": "ri-tree-line"
+  },
+    {
+    "Name": "Lumin",
+    "File": "lumin",
+    "Icon": "ri-lightbulb-line"
+  } 
+]
