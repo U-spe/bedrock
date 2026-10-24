@@ -1,1021 +1,509 @@
 (() => {
   "use strict";
-
   if (window.BedrockSettings) return;
 
   const STORAGE_KEY = "bedrock.preferences.v1";
   const LEGACY_KEY = "spydr_config_matrix";
   const CONFIG_URL = "/assets/json/themes.json";
-
-  const DEFAULTS = Object.freeze({
+  const VIDEO_ROOT = "/assets/images/b/";
+  const VIDEO_COUNT = 6;
+  const DEFAULTS = {
     autoSave: true,
     theme: "bedrock",
     background: "stars",
     starsEnabled: true,
     animations: true,
     accent: "",
-    customTheme: {
-      color1: "#7c3aed",
-      color2: "#3f5efb",
-      color3: "#ff4fd8",
-      useColor3: false
-    },
+    customTheme: { color1: "#7c3aed", color2: "#3f5efb", color3: "#ff4fd8", useColor3: false },
+    videoBackground: 1,
+    videoBackgroundEnabled: false,
     panicKey: "`",
     bossKey: "Escape",
     devModeKey: "F4",
     quickSettingsKey: "F9",
+    panicUrl: "https://www.google.com",
     cloakEnabled: false,
     cloakTarget: "bedrock",
-    cloakTitle: "bedrock",
-    cloakIcon: "/assets/images/logo.png"
-  });
-
-  const VALID_BACKGROUNDS = new Set([
-    "none",
-    "stars",
-    "fog",
-    "gradient",
-    "theme"
-  ]);
-
-  const CLOAK_PRESETS = {
-    bedrock: {
-      title: "bedrock",
-      icon: "/assets/images/logo.png"
-    },
-    google: {
-      title: "Google",
-      icon: "https://www.google.com/favicon.ico"
-    },
-    classroom: {
-      title: "Home - Classroom",
-      icon: "https://ssl.gstatic.com/classroom/favicon.png"
-    },
-    classlink: {
-      title: "My Apps - ClassLink",
-      icon: "https://www.classlink.com/favicon.ico"
-    }
+    cloakTitle: "",
+    cloakIcon: "",
+    antiCloseEnabled: false
   };
-
-  let config = { themes: {} };
-  let state = cloneDefaults();
-  let listeners = new Set();
-  let initialized = false;
-  let animationFrame = 0;
-  let resizeHandler = null;
-  let stars = [];
-  let canvas = null;
-  let context = null;
-  let devPanel = null;
-  let devMode = false;
-  let recordingHotkey = null;
-  let originalTitle = document.title;
-  let originalFavicon = "";
-
+  const CLOAK_PRESETS = {
+    bedrock: { title: "bedrock", icon: "/assets/images/logo.png" },
+    google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
+    classroom: { title: "Home - Classroom", icon: "https://ssl.gstatic.com/classroom/favicon.png" },
+    classlink: { title: "My Apps - ClassLink", icon: "https://www.classlink.com/favicon.ico" }
+  };
   const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [
-    ...root.querySelectorAll(selector)
-  ];
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  let themeConfig = { defaultTheme: "bedrock", themes: {} };
+  let state = readState();
+  let listeners = new Set();
+  let recording = null;
+  let originalTitle = document.title;
+  let originalIcon = "";
+  let devPanel = null;
+  let devVisible = false;
+  let starsCanvas = null;
+  let starsCtx = null;
+  let stars = [];
+  let frame = 0;
+  let resizeFn = null;
 
   function cloneDefaults() {
-    return {
-      ...DEFAULTS,
-      customTheme: { ...DEFAULTS.customTheme }
-    };
+    return { ...DEFAULTS, customTheme: { ...DEFAULTS.customTheme } };
   }
-
-  function safeParse(value) {
+  function parseObject(raw) {
     try {
-      const parsed = JSON.parse(value);
-      return parsed && typeof parsed === "object" && !Array.isArray(parsed)
-        ? parsed
-        : null;
-    } catch {
-      return null;
-    }
+      const value = JSON.parse(raw);
+      return value && typeof value === "object" && !Array.isArray(value) ? value : null;
+    } catch { return null; }
   }
-
   function normalize(input) {
-    const result = {
-      ...cloneDefaults(),
-      ...(input || {}),
-      customTheme: {
-        ...DEFAULTS.customTheme,
-        ...(input?.customTheme || {})
-      }
-    };
-
-    if (typeof result.autoSave !== "boolean") {
-      result.autoSave = DEFAULTS.autoSave;
+    const next = { ...cloneDefaults(), ...(input || {}) };
+    next.customTheme = { ...DEFAULTS.customTheme, ...(input?.customTheme || {}) };
+    if (typeof next.autoSave !== "boolean") next.autoSave = true;
+    if (typeof next.starsEnabled !== "boolean") next.starsEnabled = true;
+    if (typeof next.animations !== "boolean") next.animations = true;
+    if (typeof next.videoBackgroundEnabled !== "boolean") next.videoBackgroundEnabled = false;
+    if (typeof next.antiCloseEnabled !== "boolean") next.antiCloseEnabled = false;
+    if (!Number.isInteger(next.videoBackground) || next.videoBackground < 1 || next.videoBackground > VIDEO_COUNT) next.videoBackground = 1;
+    if (!["none", "stars", "fog", "gradient", "theme"].includes(next.background)) next.background = "stars";
+    for (const key of ["panicKey", "bossKey", "devModeKey", "quickSettingsKey"]) {
+      if (typeof next[key] !== "string" || !next[key]) next[key] = DEFAULTS[key];
     }
-
-    if (typeof result.animations !== "boolean") {
-      result.animations = DEFAULTS.animations;
-    }
-
-    if (typeof result.starsEnabled !== "boolean") {
-      result.starsEnabled = DEFAULTS.starsEnabled;
-    }
-
-    if (typeof result.cloakEnabled !== "boolean") {
-      result.cloakEnabled = false;
-    }
-
-    if (typeof result.theme !== "string") {
-      result.theme = DEFAULTS.theme;
-    }
-
-    if (!VALID_BACKGROUNDS.has(result.background)) {
-      result.background = DEFAULTS.background;
-    }
-
-    for (const key of [
-      "panicKey",
-      "bossKey",
-      "devModeKey",
-      "quickSettingsKey"
-    ]) {
-      if (typeof result[key] !== "string" || !result[key]) {
-        result[key] = DEFAULTS[key];
-      }
-    }
-
-    return result;
+    if (typeof next.theme !== "string") next.theme = "bedrock";
+    if (typeof next.accent !== "string") next.accent = "";
+    if (typeof next.cloakTitle !== "string") next.cloakTitle = "";
+    if (typeof next.cloakIcon !== "string") next.cloakIcon = "";
+    if (typeof next.panicUrl !== "string") next.panicUrl = DEFAULTS.panicUrl;
+    return next;
   }
-
-  function readSavedSettings() {
-    const current = safeParse(localStorage.getItem(STORAGE_KEY));
-
-    if (current) return normalize(current);
-
-    const legacy = safeParse(localStorage.getItem(LEGACY_KEY));
-
-    if (legacy) {
-      const migrated = normalize({
-        ...legacy,
-        background: legacy.bgStyle || legacy.background,
-        animations: legacy.animations ?? true
-      });
-
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
-      } catch {
-        /* Storage can be disabled by browser policy. */
-      }
-
-      return migrated;
-    }
-
+  function readState() {
+    try {
+      const current = parseObject(localStorage.getItem(STORAGE_KEY));
+      if (current) return normalize(current);
+      const old = parseObject(localStorage.getItem(LEGACY_KEY));
+      if (old) return normalize({ ...old, background: old.background || old.bgStyle || "stars" });
+    } catch {}
     return cloneDefaults();
   }
-
   function save() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       return true;
     } catch (error) {
-      console.warn("bedrock settings: unable to save preferences", error);
+      console.warn("bedrock settings: could not save preferences", error);
       return false;
     }
   }
-
   function emit(key) {
+    const detail = { key, value: get(key), settings: getAll() };
     for (const callback of [...listeners]) {
-      try {
-        callback(key, get(key), getAll());
-      } catch (error) {
-        console.error("bedrock settings listener failed:", error);
-      }
+      try { callback(key, detail.value, detail.settings); } catch (error) { console.error("bedrock settings subscriber failed", error); }
     }
-
-    window.dispatchEvent(new CustomEvent("bedrock:settingschange", {
-      detail: {
-        key,
-        value: get(key),
-        settings: getAll()
-      }
-    }));
+    window.dispatchEvent(new CustomEvent("bedrock:settingschange", { detail }));
   }
-
   function validColor(value) {
     if (typeof value !== "string") return "";
-
     const probe = document.createElement("span");
     probe.style.color = "";
     probe.style.color = value.trim();
-
     return probe.style.color ? value.trim() : "";
   }
-
   function toHex(value) {
-    const color = validColor(value);
-    if (!color) return "";
-
-    if (/^#[\da-f]{6}$/i.test(color)) return color;
-
-    const probe = document.createElement("canvas");
-    const ctx = probe.getContext("2d");
-    if (!ctx) return "";
-
-    ctx.fillStyle = color;
-    const normalized = ctx.fillStyle;
-
-    return /^#[\da-f]{6}$/i.test(normalized) ? normalized : "";
+    const probe = document.createElement("canvas").getContext("2d");
+    if (!probe) return "#ffffff";
+    probe.fillStyle = validColor(value) || "#ffffff";
+    const result = probe.fillStyle;
+    return /^#[\da-f]{6}$/i.test(result) ? result : "#ffffff";
   }
-
-  function getActiveTheme() {
-    const themeId = state.theme;
-
-    if (themeId === "custom") {
-      const custom = state.customTheme;
-
+  function getTheme() {
+    if (state.theme === "custom") {
+      const c = state.customTheme;
       return {
-        label: "Custom",
-        background: "#090909",
-        surface: "#111111",
-        surfaceRaised: "#171717",
-        text: "#ffffff",
-        muted: "#bdbdbd",
-        accent: custom.color1 || "#7c3aed",
-        secondary: custom.color2 || "#3f5efb"
+        label: "Custom", background: "#090c10", surface: "#11161d",
+        surfaceRaised: "#171f29", text: "#edf3fa", muted: "#91a0b2",
+        accent: c.color1, secondary: c.color2
       };
     }
-
-    return config.themes?.[themeId] ||
-      config.themes?.[config.defaultTheme] ||
-      {
-        label: "Bedrock",
-        background: "#090909",
-        surface: "#111111",
-        surfaceRaised: "#171717",
-        text: "#ffffff",
-        muted: "#bdbdbd",
-        accent: "#ffffff"
-      };
+    return themeConfig.themes?.[state.theme] || themeConfig.themes?.[themeConfig.defaultTheme] || {
+      label: "Bedrock", background: "#090c10", surface: "#11161d",
+      surfaceRaised: "#171f29", text: "#edf3fa", muted: "#91a0b2", accent: "#5fae87"
+    };
   }
-
   function applyTheme() {
     const root = document.documentElement;
-    const theme = getActiveTheme();
-    const accent = validColor(state.accent) || theme.accent || "#ffffff";
-    const secondary = theme.secondary || accent;
-    const background = theme.background || "#090909";
-    const surface = theme.surface || "#111111";
-    const raised = theme.surfaceRaised || "#171717";
-    const text = theme.text || "#ffffff";
-    const muted = theme.muted || "#bdbdbd";
-    const border = `color-mix(in srgb, ${text} 12%, transparent)`;
-    const glow = `color-mix(in srgb, ${accent} 25%, transparent)`;
-
+    const t = getTheme();
+    const accent = validColor(state.accent) || t.accent || "#5fae87";
+    const secondary = t.secondary || accent;
+    const border = `color-mix(in srgb, ${t.text || "#fff"} 12%, transparent)`;
+    const glow = `color-mix(in srgb, ${accent} 26%, transparent)`;
     root.dataset.brTheme = state.theme;
     root.dataset.theme = state.theme;
-
-    root.style.setProperty("--br-bg", background);
-    root.style.setProperty("--br-surface", surface);
-    root.style.setProperty("--br-raised", raised);
-    root.style.setProperty("--br-text", text);
-    root.style.setProperty("--br-muted", muted);
-    root.style.setProperty("--br-accent", accent);
-    root.style.setProperty("--br-border", border);
-    root.style.setProperty("--br-glow", glow);
-
-    root.style.setProperty("--theme-primary", text);
-    root.style.setProperty("--theme-secondary", accent);
-    root.style.setProperty("--theme-background", background);
-    root.style.setProperty("--theme-surface", surface);
-    root.style.setProperty("--theme-text", text);
-    root.style.setProperty("--theme-muted", muted);
-    root.style.setProperty("--theme-border", border);
-    root.style.setProperty("--theme-glow", glow);
-
-    root.style.setProperty("--primary-color", text);
-    root.style.setProperty("--secondary-color", accent);
-    root.style.setProperty("--background-color", background);
-    root.style.setProperty("--surface-color", surface);
-    root.style.setProperty("--text-color", text);
-    root.style.setProperty("--muted-color", muted);
-    root.style.setProperty("--border-color", border);
-    root.style.setProperty("--accent-color", accent);
-    root.style.setProperty("--accent-glow", glow);
-
-    root.style.setProperty("--bg", background);
-    root.style.setProperty("--bg2", secondary);
-    root.style.setProperty("--card", surface);
-    root.style.setProperty("--border", border);
-    root.style.setProperty("--white", text);
-    root.style.setProperty("--gray", muted);
-    root.style.setProperty("--darkgray", muted);
-    root.style.setProperty("--accent", accent);
-
-    root.style.setProperty("--gradient-1", background);
-    root.style.setProperty("--gradient-2", accent);
-    root.style.setProperty("--gradient-3", secondary);
-
     root.style.colorScheme = state.theme === "light" ? "light" : "dark";
-
+    const vars = {
+      "--br-bg": t.background || "#090c10", "--br-surface": t.surface || "#11161d",
+      "--br-raised": t.surfaceRaised || "#171f29", "--br-text": t.text || "#edf3fa",
+      "--br-muted": t.muted || "#91a0b2", "--br-accent": accent,
+      "--br-secondary": secondary, "--br-border": border, "--br-glow": glow,
+      "--theme-primary": t.text || "#edf3fa", "--theme-secondary": accent,
+      "--theme-background": t.background || "#090c10", "--theme-surface": t.surface || "#11161d",
+      "--theme-text": t.text || "#edf3fa", "--theme-muted": t.muted || "#91a0b2",
+      "--theme-border": border, "--theme-glow": glow, "--bg": t.background || "#090c10",
+      "--bg2": secondary, "--card": t.surface || "#11161d", "--border": border,
+      "--white": t.text || "#edf3fa", "--gray": t.muted || "#91a0b2", "--accent": accent,
+      "--primary-color": t.text || "#edf3fa", "--secondary-color": accent,
+      "--background-color": t.background || "#090c10", "--surface-color": t.surface || "#11161d",
+      "--text-color": t.text || "#edf3fa", "--muted-color": t.muted || "#91a0b2",
+      "--border-color": border, "--accent-color": accent, "--accent-glow": glow,
+      "--gradient-1": t.background || "#090c10", "--gradient-2": accent, "--gradient-3": secondary
+    };
+    for (const [key, value] of Object.entries(vars)) root.style.setProperty(key, value);
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.content = background;
-
+    if (meta) meta.content = t.background || "#090c10";
     if (document.body) {
       document.body.dataset.theme = state.theme;
-      document.body.dataset.spydrTheme = state.theme;
-      document.body.style.backgroundColor = background;
+      document.body.style.backgroundColor = t.background || "#090c10";
     }
-
-    $$("[data-theme-choice]").forEach(button => {
-      button.setAttribute(
-        "aria-pressed",
-        String(button.dataset.themeChoice === state.theme)
-      );
-    });
-
-    const accentPicker = $("#br-accent-picker");
-    if (accentPicker) {
-      accentPicker.value = toHex(accent) || "#ffffff";
-    }
-
-    const custom1 = $("#custom-color-1");
-    const custom2 = $("#custom-color-2");
-    const custom3 = $("#custom-color-3");
-    const custom3Enabled = $("#custom-color-3-enabled");
-
-    if (custom1) custom1.value = state.customTheme.color1;
-    if (custom2) custom2.value = state.customTheme.color2;
-    if (custom3) custom3.value = state.customTheme.color3;
-    if (custom3Enabled) {
-      custom3Enabled.checked = Boolean(state.customTheme.useColor3);
-    }
+    $$("[data-theme-choice]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.themeChoice === state.theme)));
+    const picker = $("#br-accent-picker");
+    if (picker) picker.value = toHex(accent);
+    const c1 = $("#custom-color-1"); if (c1) c1.value = state.customTheme.color1;
+    const c2 = $("#custom-color-2"); if (c2) c2.value = state.customTheme.color2;
+    const c3 = $("#custom-color-3"); if (c3) c3.value = state.customTheme.color3;
+    const c3e = $("#custom-color-3-enabled"); if (c3e) c3e.checked = !!state.customTheme.useColor3;
   }
-
   function ensureBackground() {
     let layer = $("#br-background-effects");
-
     if (!layer) {
       layer = document.createElement("div");
       layer.id = "br-background-effects";
       layer.setAttribute("aria-hidden", "true");
-      layer.innerHTML = `
-        <canvas id="br-stars"></canvas>
-        <div id="br-fog"></div>
-      `;
+      layer.innerHTML = '<canvas id="br-stars"></canvas><div id="br-fog"></div>';
       document.body.prepend(layer);
     }
-
-    canvas = $("#br-stars");
-    context = canvas?.getContext("2d") || null;
+    starsCanvas = $("#br-stars");
+    starsCtx = starsCanvas?.getContext("2d") || null;
+    let video = $("#br-video-background");
+    if (!video) {
+      video = document.createElement("video");
+      video.id = "br-video-background";
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute("aria-hidden", "true");
+      video.preload = "metadata";
+      document.body.prepend(video);
+    }
+    let shade = $("#br-video-shade");
+    if (!shade) {
+      shade = document.createElement("div");
+      shade.id = "br-video-shade";
+      shade.setAttribute("aria-hidden", "true");
+      document.body.prepend(shade);
+    }
   }
-
   function stopStars() {
-    if (animationFrame) {
-      cancelAnimationFrame(animationFrame);
-      animationFrame = 0;
-    }
-
-    if (resizeHandler) {
-      window.removeEventListener("resize", resizeHandler);
-      resizeHandler = null;
-    }
-
-    if (context && canvas) {
-      context.clearRect(0, 0, canvas.width, canvas.height);
-    }
-
+    if (frame) cancelAnimationFrame(frame);
+    frame = 0;
+    if (resizeFn) window.removeEventListener("resize", resizeFn);
+    resizeFn = null;
+    if (starsCtx && starsCanvas) starsCtx.clearRect(0, 0, starsCanvas.width, starsCanvas.height);
     stars = [];
   }
-
   function startStars() {
     stopStars();
-
-    if (!canvas || !context) return;
-    if (!state.animations || !state.starsEnabled) return;
-    if (state.background !== "stars") return;
-
+    if (!starsCanvas || !starsCtx || !state.animations || !state.starsEnabled || state.background !== "stars") return;
     const resize = () => {
-      const ratio = Math.min(window.devicePixelRatio || 1, 2);
-
-      canvas.width = Math.floor(window.innerWidth * ratio);
-      canvas.height = Math.floor(window.innerHeight * ratio);
-      canvas.style.width = `${window.innerWidth}px`;
-      canvas.style.height = `${window.innerHeight}px`;
-
-      context.setTransform(ratio, 0, 0, ratio, 0, 0);
-
-      const count = Math.min(
-        150,
-        Math.max(35, Math.floor(window.innerWidth / 9))
-      );
-
-      stars = Array.from({ length: count }, () => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        radius: Math.random() * 1.25 + 0.25,
-        alpha: Math.random() * 0.55 + 0.2,
-        speed: Math.random() * 0.14 + 0.025
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      starsCanvas.width = Math.floor(innerWidth * dpr);
+      starsCanvas.height = Math.floor(innerHeight * dpr);
+      starsCanvas.style.width = `${innerWidth}px`;
+      starsCanvas.style.height = `${innerHeight}px`;
+      starsCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      stars = Array.from({ length: Math.min(150, Math.max(35, Math.floor(innerWidth / 9)) ) }, () => ({
+        x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+        r: Math.random() * 1.2 + .25, a: Math.random() * .55 + .18,
+        speed: Math.random() * .14 + .025
       }));
     };
-
     const draw = () => {
-      if (!context || !canvas || !state.animations ||
-          !state.starsEnabled || state.background !== "stars") {
-        animationFrame = 0;
-        return;
+      if (!starsCtx || !state.animations || !state.starsEnabled || state.background !== "stars") { frame = 0; return; }
+      starsCtx.clearRect(0, 0, innerWidth, innerHeight);
+      const color = validColor(state.accent) || getTheme().accent || "#fff";
+      for (const s of stars) {
+        starsCtx.beginPath(); starsCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        starsCtx.globalAlpha = s.a; starsCtx.fillStyle = color; starsCtx.fill(); starsCtx.globalAlpha = 1;
+        s.y += s.speed;
+        if (s.y > innerHeight + 2) { s.y = -2; s.x = Math.random() * innerWidth; }
       }
-
-      context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-      const theme = getActiveTheme();
-      const color = validColor(state.accent) || theme.accent || "#ffffff";
-
-      for (const star of stars) {
-        context.beginPath();
-        context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        context.fillStyle = color;
-        context.globalAlpha = star.alpha;
-        context.fill();
-        context.globalAlpha = 1;
-
-        star.y += star.speed;
-
-        if (star.y > window.innerHeight + 2) {
-          star.y = -2;
-          star.x = Math.random() * window.innerWidth;
-        }
-      }
-
-      animationFrame = requestAnimationFrame(draw);
+      frame = requestAnimationFrame(draw);
     };
-
-    resize();
-    resizeHandler = resize;
+    resizeFn = resize;
     window.addEventListener("resize", resize, { passive: true });
-    animationFrame = requestAnimationFrame(draw);
+    resize(); frame = requestAnimationFrame(draw);
   }
-
   function applyBackground() {
     const root = document.documentElement;
-
     root.dataset.brBackground = state.background;
     root.dataset.bgStyle = state.background;
     root.dataset.brAnimations = state.animations ? "on" : "off";
-
+    root.dataset.brVideo = state.videoBackgroundEnabled ? "on" : "off";
     if (document.body) {
       document.body.dataset.bgStyle = state.background;
       document.body.dataset.bg = state.background;
     }
-
-    const selector = $("#br-background-style");
-    if (selector) selector.value = state.background;
-
-    const animationsToggle = $("#br-animations");
-    if (animationsToggle) animationsToggle.checked = state.animations;
-
-    const starsToggle = $("#toggle-stars");
-    if (starsToggle) starsToggle.checked = state.starsEnabled;
-
-    const effects = $("#br-background-effects");
-    if (effects) {
-      effects.style.display =
-        state.background === "none" ? "none" : "block";
+    const bgSelect = $("#br-background-style"); if (bgSelect) bgSelect.value = state.background;
+    const anim = $("#br-animations"); if (anim) anim.checked = state.animations;
+    const starsToggle = $("#toggle-stars"); if (starsToggle) starsToggle.checked = state.starsEnabled;
+    const videoToggle = $("#br-video-enabled"); if (videoToggle) videoToggle.checked = state.videoBackgroundEnabled;
+    const video = $("#br-video-background");
+    const shade = $("#br-video-shade");
+    if (video) {
+      const source = `${VIDEO_ROOT}v${state.videoBackground}.mp4`;
+      if (video.dataset.source !== source) {
+        video.dataset.source = source;
+        video.src = source;
+        video.load();
+      }
+      video.style.display = state.videoBackgroundEnabled ? "block" : "none";
+      if (state.videoBackgroundEnabled && state.animations) {
+        const play = video.play();
+        if (play && typeof play.catch === "function") play.catch(() => {});
+      } else video.pause();
     }
-
+    if (shade) shade.style.display = state.videoBackgroundEnabled ? "block" : "none";
+    const effects = $("#br-background-effects");
+    if (effects) effects.style.display = state.background === "none" || state.videoBackgroundEnabled ? "none" : "block";
     const fog = $("#br-fog");
     if (fog) {
-      fog.style.opacity =
-        state.background === "fog" ||
-        state.background === "gradient" ||
-        state.background === "theme"
-          ? "1"
-          : "0";
-
-      fog.style.animation =
-        state.animations && state.background === "gradient"
-          ? "br-drift 16s ease-in-out infinite alternate"
-          : "none";
+      fog.style.opacity = ["fog", "gradient", "theme"].includes(state.background) ? "1" : "0";
+      fog.style.animation = state.animations && state.background === "gradient" ? "br-drift 16s ease-in-out infinite alternate" : "none";
     }
-
-    if (state.background === "stars") {
-      startStars();
-    } else {
-      stopStars();
-    }
+    if (state.background === "stars" && !state.videoBackgroundEnabled) startStars(); else stopStars();
+    $$("[data-video-choice]").forEach(button => {
+      button.setAttribute("aria-pressed", String(Number(button.dataset.videoChoice) === state.videoBackground));
+    });
   }
-
   function applyCloak() {
-    if (!document.head) return;
-
-    let icon = $('link[rel~="icon"]');
-
-    if (!icon) {
-      icon = document.createElement("link");
-      icon.rel = "icon";
-      document.head.appendChild(icon);
-    }
-
-    if (!originalFavicon) originalFavicon = icon.href;
-
+    const icon = $('link[rel~="icon"]') || (() => {
+      const node = document.createElement("link"); node.rel = "icon"; document.head.append(node); return node;
+    })();
+    if (!originalIcon) originalIcon = icon.href || "";
     if (!state.cloakEnabled) {
       document.title = originalTitle || "bedrock";
-      if (originalFavicon) icon.href = originalFavicon;
+      if (originalIcon) icon.href = originalIcon;
       return;
     }
-
-    const preset = CLOAK_PRESETS[state.cloakTarget] ||
-      CLOAK_PRESETS.bedrock;
-
-    document.title = state.cloakTitle || preset.title;
-    icon.href = state.cloakIcon || preset.icon;
+    const preset = CLOAK_PRESETS[state.cloakTarget] || CLOAK_PRESETS.bedrock;
+    document.title = state.cloakTitle.trim() || preset.title;
+    icon.href = state.cloakIcon.trim() || preset.icon;
   }
-
-  function applyAll() {
-    applyTheme();
-    applyBackground();
-    applyCloak();
-    syncSettingsControls();
-  }
-
-  function syncSettingsControls() {
-    const map = {
-      "toggle-autosave": "autoSave",
-      "toggle-stars": "starsEnabled",
-      "toggle-cloak": "cloakEnabled"
+  function syncControls() {
+    const values = {
+      "toggle-autosave": "autoSave", "toggle-stars": "starsEnabled",
+      "toggle-cloak": "cloakEnabled", "br-anti-close-enabled": "antiCloseEnabled",
+      "br-video-enabled": "videoBackgroundEnabled", "br-animations": "animations"
     };
-
-    for (const [id, key] of Object.entries(map)) {
-      const control = document.getElementById(id);
-      if (control) control.checked = Boolean(state[key]);
+    for (const [id, key] of Object.entries(values)) {
+      const el = document.getElementById(id);
+      if (el) el.checked = Boolean(state[key]);
     }
-
-    const background = $("#br-background-style") ||
-      $("#bg-fx-variant") ||
-      $("#bg-style-select");
-
-    if (background) {
-      background.value = state.background;
+    const bg = $("#br-background-style"); if (bg) bg.value = state.background;
+    const target = $("#cloak-target-select"); if (target) target.value = state.cloakTarget;
+    const title = $("#br-cloak-title"); if (title) title.value = state.cloakTitle;
+    const icon = $("#br-cloak-icon"); if (icon) icon.value = state.cloakIcon;
+    const url = $("#br-panic-url"); if (url) url.value = state.panicUrl;
+    for (const key of ["panicKey", "bossKey", "devModeKey", "quickSettingsKey"]) {
+      const btn = $(`[data-hotkey="${key}"]`);
+      if (btn) btn.textContent = state[key] === " " ? "Space" : state[key];
     }
-
-    const cloakTarget = $("#cloak-target-select");
-    if (cloakTarget) cloakTarget.value = state.cloakTarget;
-
-    for (const key of [
-      "panicKey",
-      "bossKey",
-      "devModeKey",
-      "quickSettingsKey"
-    ]) {
-      const button = document.querySelector(`[data-hotkey="${key}"]`);
-      if (button) button.textContent = state[key] === " " ? "Space" : state[key];
-    }
-
-    const themeRadios = $$('input[name="ui-theme"]');
-    themeRadios.forEach(radio => {
-      radio.checked = radio.value === state.theme;
-    });
-
-    const accentRadios = $$('input[name="accent-color"]');
-    accentRadios.forEach(radio => {
-      radio.checked = radio.value === state.accent;
-    });
+    const accent = $("#br-accent-picker"); if (accent) accent.value = toHex(validColor(state.accent) || getTheme().accent);
+    const year = $("#br-year"); if (year) year.textContent = new Date().getFullYear();
   }
-
-  function get(key) {
-    return state[key];
-  }
-
-  function getAll() {
-    return {
-      ...state,
-      customTheme: { ...state.customTheme }
-    };
-  }
-
+  function applyAll() { applyTheme(); applyBackground(); applyCloak(); syncControls(); }
+  function get(key) { return state[key]; }
+  function getAll() { return { ...state, customTheme: { ...state.customTheme } }; }
   function set(key, value, options = {}) {
     if (!Object.prototype.hasOwnProperty.call(DEFAULTS, key)) return false;
-
-    const previous = state[key];
-
-    if (key === "background" && !VALID_BACKGROUNDS.has(value)) {
-      return false;
-    }
-
-    if (key === "accent" && value && !validColor(value)) {
-      return false;
-    }
-
-    state[key] = value;
-
-    if (key === "theme" && value !== "custom" &&
-        !config.themes?.[value]) {
-      state[key] = previous;
-      return false;
-    }
-
-    if (key === "customTheme") {
-      state.customTheme = {
-        ...DEFAULTS.customTheme,
-        ...(value || {})
-      };
-    }
-
+    if (key === "background" && !["none", "stars", "fog", "gradient", "theme"].includes(value)) return false;
+    if (key === "videoBackground" && (!Number.isInteger(Number(value)) || Number(value) < 1 || Number(value) > VIDEO_COUNT)) return false;
+    if (key === "accent" && value && !validColor(value)) return false;
+    if (["autoSave", "starsEnabled", "animations", "videoBackgroundEnabled", "antiCloseEnabled", "cloakEnabled"].includes(key) && typeof value !== "boolean") return false;
+    if (key === "theme" && value !== "custom" && !themeConfig.themes?.[value]) return false;
+    if (key === "customTheme") state.customTheme = { ...DEFAULTS.customTheme, ...(value || {}) };
+    else state[key] = key === "videoBackground" ? Number(value) : value;
     if (options.apply !== false) applyAll();
-
-    if (options.save !== false && state.autoSave) save();
-
+    if (options.save !== false && (state.autoSave || key === "autoSave")) save();
     emit(key);
     return true;
   }
-
   function setCustomTheme(key, value) {
-    const allowed = new Set([
-      "color1",
-      "color2",
-      "color3",
-      "useColor3"
-    ]);
-
-    if (!allowed.has(key)) return false;
-
+    if (!["color1", "color2", "color3", "useColor3"].includes(key)) return false;
     if (key !== "useColor3" && !validColor(value)) return false;
-
     state.customTheme[key] = value;
-
     if (state.autoSave) save();
-
-    applyTheme();
-    applyBackground();
-    emit("customTheme");
+    applyTheme(); applyBackground(); renderThemeOptions(); emit("customTheme");
     return true;
   }
-
   function reset() {
     state = cloneDefaults();
-    save();
-    applyAll();
-    emit("*");
+    save(); applyAll(); renderThemeOptions(); emit("*");
+    setStatus("Preferences reset.");
   }
-
   function subscribe(callback) {
     if (typeof callback !== "function") return () => {};
     listeners.add(callback);
     return () => listeners.delete(callback);
   }
-
-  function chooseTheme(themeId) {
-    if (themeId !== "custom" && !config.themes?.[themeId]) return false;
-    return set("theme", themeId);
+  function chooseTheme(id) {
+    if (id !== "custom" && !themeConfig.themes?.[id]) return false;
+    if (id === "custom") state.accent = "";
+    const ok = set("theme", id);
+    renderThemeOptions();
+    return ok;
   }
-
   function renderThemeOptions() {
     const container = $("#br-theme-options");
     if (!container) return;
-
     container.replaceChildren();
-
-    const themes = {
-      ...(config.themes || {}),
-      custom: {
-        label: "Custom",
-        accent: state.customTheme.color1 || "#7c3aed",
-        background: "#090909"
-      }
-    };
-
+    const themes = { ...(themeConfig.themes || {}), custom: { label: "Custom", accent: state.customTheme.color1, background: "#090c10" } };
     for (const [id, theme] of Object.entries(themes)) {
       const button = document.createElement("button");
-      button.type = "button";
-      button.className = "br-theme-option";
-      button.dataset.themeChoice = id;
+      button.type = "button"; button.className = "br-theme-option"; button.dataset.themeChoice = id;
       button.setAttribute("aria-pressed", String(state.theme === id));
-
-      const swatch = document.createElement("span");
-      swatch.className = "br-theme-swatch";
-      swatch.style.setProperty("--swatch", theme.accent || "#ffffff");
-
-      const label = document.createElement("span");
-      const strong = document.createElement("strong");
-      const small = document.createElement("small");
-
-      strong.textContent = theme.label || id;
-      small.textContent = id === "custom"
-        ? "Your custom palette"
-        : `${theme.label || id} palette`;
-
-      label.append(strong, small);
-      button.append(swatch, label);
-      button.addEventListener("click", () => chooseTheme(id));
+      const swatch = document.createElement("span"); swatch.className = "br-theme-swatch"; swatch.style.setProperty("--swatch", theme.accent || "#fff");
+      const text = document.createElement("span"); const strong = document.createElement("strong"); const small = document.createElement("small");
+      strong.textContent = theme.label || id; small.textContent = id === "custom" ? "Your own palette" : `${theme.label || id} palette`;
+      text.append(strong, small); button.append(swatch, text); button.addEventListener("click", () => chooseTheme(id)); container.append(button);
+    }
+  }
+  function renderVideoOptions() {
+    const container = $("#br-video-options");
+    if (!container) return;
+    container.replaceChildren();
+    for (let i = 1; i <= VIDEO_COUNT; i++) {
+      const button = document.createElement("button");
+      button.type = "button"; button.className = "br-video-option"; button.dataset.videoChoice = String(i);
+      button.setAttribute("aria-pressed", String(state.videoBackground === i));
+      const img = document.createElement("img"); img.src = `${VIDEO_ROOT}v${i}p.jpg`; img.alt = `Video background ${i} preview`; img.loading = "lazy";
+      img.addEventListener("error", () => { img.hidden = true; button.classList.add("br-preview-missing"); });
+      const label = document.createElement("span"); label.textContent = `Background ${String(i).padStart(2, "0")}`;
+      const check = document.createElement("i"); check.className = "ri-check-line"; check.setAttribute("aria-hidden", "true");
+      button.append(img, label, check);
+      button.addEventListener("click", () => set("videoBackground", i));
       container.append(button);
     }
   }
-
-  function startHotkeyRecording(button, settingName) {
-    if (recordingHotkey) {
-      recordingHotkey.button.classList.remove("recording");
-      recordingHotkey.button.textContent =
-        state[recordingHotkey.settingName];
+  function setStatus(message) {
+    const el = $("#br-settings-status");
+    if (el) el.textContent = message;
+  }
+  function startRecording(button, keyName) {
+    if (recording) {
+      window.removeEventListener("keydown", recording.listener, true);
+      recording.button.classList.remove("recording");
+      recording.button.textContent = state[recording.keyName] === " " ? "Space" : state[recording.keyName];
     }
-
-    recordingHotkey = { button, settingName };
-    button.classList.add("recording");
-    button.textContent = "PRESS A KEY";
-
-    const onKey = event => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if (event.key === "Tab" || event.key === "Shift" ||
-          event.key === "Control" || event.key === "Alt" ||
-          event.key === "Meta") {
-        return;
-      }
-
-      window.removeEventListener("keydown", onKey, true);
-
-      const current = recordingHotkey;
-      recordingHotkey = null;
-
-      if (!current) return;
-
-      current.button.classList.remove("recording");
-
-      const recorded = event.key === " " ? " " : event.key;
-      set(current.settingName, recorded);
-      current.button.textContent = recorded === " " ? "Space" : recorded;
+    const record = { button, keyName, listener: null };
+    button.classList.add("recording"); button.textContent = "PRESS A KEY";
+    record.listener = event => {
+      event.preventDefault(); event.stopPropagation();
+      if (["Tab", "Shift", "Control", "Alt", "Meta", "CapsLock"].includes(event.key)) return;
+      window.removeEventListener("keydown", record.listener, true);
+      recording = null; button.classList.remove("recording");
+      const key = event.key === " " ? " " : event.key;
+      set(keyName, key); button.textContent = key === " " ? "Space" : key;
     };
-
-    window.addEventListener("keydown", onKey, true);
+    recording = record;
+    window.addEventListener("keydown", record.listener, true);
   }
-
   function openQuickSettings() {
-    if (typeof window.BedrockOpenSettings === "function") {
-      window.BedrockOpenSettings();
-      return;
-    }
-
-    if (!location.pathname.endsWith("/settings.html")) {
-      location.href = "/settings.html";
-      return;
-    }
-
-    const firstSection = $("#appearance");
-    firstSection?.scrollIntoView({
-      behavior: state.animations ? "smooth" : "auto"
-    });
+    if (location.pathname.endsWith("/settings.html")) {
+      $("#appearance")?.scrollIntoView({ behavior: state.animations ? "smooth" : "auto" });
+    } else location.href = "/settings.html";
   }
-
-  function toggleDevMode() {
-    devMode = !devMode;
-
+  function toggleDevPanel() {
+    devVisible = !devVisible;
     if (!devPanel) {
-      devPanel = document.createElement("aside");
-      devPanel.id = "bedrock-dev-panel";
-      devPanel.setAttribute("aria-live", "polite");
-
-      Object.assign(devPanel.style, {
-        position: "fixed",
-        right: "16px",
-        bottom: "16px",
-        zIndex: "999999",
-        display: "none",
-        flexDirection: "column",
-        gap: "5px",
-        padding: "12px 14px",
-        background: "rgba(8,8,8,.92)",
-        color: "#fff",
-        border: "1px solid rgba(255,255,255,.2)",
-        borderRadius: "12px",
-        font: "12px/1.6 'JetBrains Mono', monospace",
-        pointerEvents: "none",
-        backdropFilter: "blur(12px)"
-      });
-
-      document.body.appendChild(devPanel);
+      devPanel = document.createElement("aside"); devPanel.id = "br-dev-panel";
+      document.body.append(devPanel);
     }
-
-    devPanel.style.display = devMode ? "flex" : "none";
-
-    if (devMode) {
-      let last = performance.now();
-      let frames = 0;
-
-      const update = now => {
-        if (!devMode) return;
-
-        frames++;
-
-        if (now - last >= 1000) {
-          devPanel.textContent =
-            `BEDROCK SYSTEM\nFPS: ${frames}\nTHEME: ${state.theme}\nBACKGROUND: ${state.background}`;
-          frames = 0;
-          last = now;
-        }
-
-        requestAnimationFrame(update);
-      };
-
-      requestAnimationFrame(update);
-    }
+    devPanel.hidden = !devVisible;
+    if (devVisible) devPanel.textContent = `BEDROCK SYSTEM\nTHEME: ${state.theme}\nBACKGROUND: ${state.background}\nVIDEO: ${state.videoBackgroundEnabled ? state.videoBackground : "off"}`;
   }
-
   function runHotkey(event) {
-    if (recordingHotkey) return;
-
+    if (recording) return;
     const target = event.target;
-    const typing = target instanceof HTMLElement &&
-      (target.isContentEditable ||
-       /INPUT|TEXTAREA|SELECT/.test(target.tagName));
-
+    const typing = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
     if (typing || event.altKey || event.ctrlKey || event.metaKey) return;
-
     if (event.key === state.panicKey) {
       event.preventDefault();
-      set("cloakEnabled", true);
-      set("cloakTarget", "classroom");
-      location.replace("https://google.com");
-      return;
-    }
-
-    if (event.key === state.bossKey && state.cloakEnabled) {
+      try { location.assign(new URL(state.panicUrl || DEFAULTS.panicUrl, location.href).href); } catch { location.assign(DEFAULTS.panicUrl); }
+    } else if (event.key === state.bossKey) {
       event.preventDefault();
-      set("cloakEnabled", false);
-      return;
-    }
-
-    if (event.key === state.devModeKey) {
-      event.preventDefault();
-      toggleDevMode();
-      return;
-    }
-
-    if (event.key === state.quickSettingsKey) {
-      event.preventDefault();
-      openQuickSettings();
+      location.href = "/main.html";
+    } else if (event.key === state.devModeKey) {
+      event.preventDefault(); toggleDevPanel();
+    } else if (event.key === state.quickSettingsKey) {
+      event.preventDefault(); openQuickSettings();
     }
   }
-
-  function bindSettingsPage() {
-    $("#br-background-style")?.addEventListener("change", event => {
-      set("background", event.currentTarget.value);
-    });
-
-    $("#bg-fx-variant")?.addEventListener("change", event => {
-      set("background", event.currentTarget.value);
-    });
-
-    $("#br-animations")?.addEventListener("change", event => {
-      set("animations", event.currentTarget.checked);
-    });
-
-    $("#toggle-stars")?.addEventListener("change", event => {
-      set("starsEnabled", event.currentTarget.checked);
-    });
-
-    $("#toggle-autosave")?.addEventListener("change", event => {
-      set("autoSave", event.currentTarget.checked);
-      save();
-    });
-
-    $("#br-accent-picker")?.addEventListener("input", event => {
-      set("accent", event.currentTarget.value);
-    });
-
-    $("#toggle-cloak")?.addEventListener("change", event => {
-      set("cloakEnabled", event.currentTarget.checked);
-    });
-
-    $("#cloak-target-select")?.addEventListener("change", event => {
-      set("cloakTarget", event.currentTarget.value);
-    });
-
-    $("#custom-color-1")?.addEventListener("input", event => {
-      setCustomTheme("color1", event.currentTarget.value);
-    });
-
-    $("#custom-color-2")?.addEventListener("input", event => {
-      setCustomTheme("color2", event.currentTarget.value);
-    });
-
-    $("#custom-color-3")?.addEventListener("input", event => {
-      setCustomTheme("color3", event.currentTarget.value);
-    });
-
-    $("#custom-color-3-enabled")?.addEventListener("change", event => {
-      setCustomTheme("useColor3", event.currentTarget.checked);
-    });
-
+  function bindSettings() {
+    $("#br-background-style")?.addEventListener("change", e => set("background", e.currentTarget.value));
+    $("#br-animations")?.addEventListener("change", e => set("animations", e.currentTarget.checked));
+    $("#toggle-stars")?.addEventListener("change", e => set("starsEnabled", e.currentTarget.checked));
+    $("#br-video-enabled")?.addEventListener("change", e => set("videoBackgroundEnabled", e.currentTarget.checked));
+    $("#br-accent-picker")?.addEventListener("input", e => set("accent", e.currentTarget.value));
+    $("#toggle-autosave")?.addEventListener("change", e => { set("autoSave", e.currentTarget.checked); save(); });
+    $("#toggle-cloak")?.addEventListener("change", e => set("cloakEnabled", e.currentTarget.checked));
+    $("#cloak-target-select")?.addEventListener("change", e => set("cloakTarget", e.currentTarget.value));
+    $("#br-cloak-title")?.addEventListener("input", e => set("cloakTitle", e.currentTarget.value));
+    $("#br-cloak-icon")?.addEventListener("input", e => set("cloakIcon", e.currentTarget.value));
+    $("#br-panic-url")?.addEventListener("change", e => set("panicUrl", e.currentTarget.value.trim() || DEFAULTS.panicUrl));
+    $("#br-anti-close-enabled")?.addEventListener("change", e => set("antiCloseEnabled", e.currentTarget.checked));
+    $("#custom-color-1")?.addEventListener("input", e => setCustomTheme("color1", e.currentTarget.value));
+    $("#custom-color-2")?.addEventListener("input", e => setCustomTheme("color2", e.currentTarget.value));
+    $("#custom-color-3")?.addEventListener("input", e => setCustomTheme("color3", e.currentTarget.value));
+    $("#custom-color-3-enabled")?.addEventListener("change", e => setCustomTheme("useColor3", e.currentTarget.checked));
+    $("#br-use-custom-theme")?.addEventListener("click", () => { set("accent", ""); chooseTheme("custom"); setStatus("Custom theme applied."); });
     $("#br-reset-settings")?.addEventListener("click", reset);
-
-    $$("[data-hotkey]").forEach(button => {
-      button.addEventListener("click", () => {
-        startHotkeyRecording(button, button.dataset.hotkey);
-      });
-    });
-
-    $$('input[name="ui-theme"]').forEach(radio => {
-      radio.addEventListener("change", () => chooseTheme(radio.value));
-    });
-
-    $$('input[name="accent-color"]').forEach(radio => {
-      radio.addEventListener("change", () => set("accent", radio.value));
-    });
-
-    const search = $("#dashboard-search");
-
-    if (search) {
-      search.addEventListener("input", () => {
-        const query = search.value.trim().toLowerCase();
-        let visible = 0;
-
-        $$(".br-card[data-search]").forEach(card => {
-          const matches = !query ||
-            `${card.textContent} ${card.dataset.search || ""}`
-              .toLowerCase()
-              .includes(query);
-
-          card.hidden = !matches;
-          if (matches) visible++;
-        });
-
-        const empty = $("#br-no-results");
-        if (empty) empty.hidden = visible !== 0;
-      });
-    }
+    $$("[data-hotkey]").forEach(button => button.addEventListener("click", () => startRecording(button, button.dataset.hotkey)));
   }
-
   async function init() {
-    if (initialized) return;
-    initialized = true;
-
-    state = readSavedSettings();
-
+    if (!document.body) return;
+    originalTitle = document.title || "bedrock";
+    const initialIcon = $('link[rel~="icon"]'); originalIcon = initialIcon?.href || "";
     try {
       const response = await fetch(CONFIG_URL, { cache: "no-cache" });
-
       if (response.ok) {
         const data = await response.json();
-        config = data && typeof data === "object"
-          ? data
-          : { themes: {} };
+        if (data && typeof data === "object") themeConfig = data;
       }
-    } catch (error) {
-      console.warn("bedrock theme config unavailable", error);
-    }
-
-    if (state.theme !== "custom" && !config.themes?.[state.theme]) {
-      state.theme = config.defaultTheme || "bedrock";
-    }
-
-    if (!document.body) return;
-
-    ensureBackground();
-    applyAll();
-    renderThemeOptions();
-    bindSettingsPage();
-
-    const year = $("#br-year");
-    if (year) year.textContent = new Date().getFullYear();
-
-    const favicon = $('link[rel~="icon"]');
-    originalFavicon = favicon?.href || "";
-    originalTitle = document.title;
-
-    applyCloak();
+    } catch (error) { console.warn("bedrock theme config unavailable", error); }
+    if (state.theme !== "custom" && !themeConfig.themes?.[state.theme]) state.theme = themeConfig.defaultTheme || "bedrock";
+    ensureBackground(); applyAll(); renderThemeOptions(); renderVideoOptions(); bindSettings();
     window.addEventListener("keydown", runHotkey);
-
     window.addEventListener("storage", event => {
       if (event.key !== STORAGE_KEY || !event.newValue) return;
-
-      const incoming = safeParse(event.newValue);
-      if (!incoming) return;
-
-      state = normalize(incoming);
-      applyAll();
-      renderThemeOptions();
-      emit("*");
+      const incoming = parseObject(event.newValue); if (!incoming) return;
+      state = normalize(incoming); applyAll(); renderThemeOptions(); renderVideoOptions(); emit("*");
     });
-
+    // Apply the optional browser-native leave-page warning without disabling browser controls.
+    const antiClose = document.createElement("script");
+    antiClose.src = "/js/anti-close.js";
+    antiClose.defer = true;
+    document.head.append(antiClose);
     save();
   }
-
   window.BedrockSettings = Object.freeze({
-    get,
-    getAll,
-    set,
-    setCustomTheme,
-    reset,
-    save,
-    subscribe,
-    chooseTheme,
-    applyTheme,
-    applyBackground,
-    applyAll,
-    openQuickSettings,
-    getThemes: () => ({ ...(config.themes || {}) })
+    get, getAll, set, setCustomTheme, reset, save, subscribe, chooseTheme,
+    applyTheme, applyBackground, applyAll, openQuickSettings,
+    getThemes: () => ({ ...(themeConfig.themes || {}) })
   });
-
   window.BedrockOpenSettings = openQuickSettings;
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init, { once: true });
-  } else {
-    init();
-  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+  else init();
 })();
