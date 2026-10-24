@@ -1,30 +1,43 @@
+
 (() => {
   "use strict";
 
-  const quickCard = document.querySelector("[data-bedrock-quickcard]");
-  const frame = document.getElementById("bedrock-frame");
+  /*
+   * Reuse Bedrock's existing navigation controller.
+   * This avoids creating a second, competing QuickCard/iframe system.
+   */
 
-  if (!quickCard || !frame) return;
+  const sourcePath = "/js/navigation.js";
+  const marker = "data-bedrock-navigation-loader";
 
-  Object.assign(frame.style, {
-    position: "fixed",
-    inset: "0",
-    width: "100%",
-    height: "100%",
-    border: "0",
-    margin: "0",
-    padding: "0",
-    zIndex: "2147483647",
-    background: "#090909"
-  });
+  function loadNavigationController() {
+    if (document.querySelector(`script[${marker}]`)) return;
 
-  quickCard.addEventListener("click", event => {
-    event.preventDefault();
+    const alreadyLoaded = [...document.scripts].some(script => {
+      if (!script.src) return false;
 
-    if (!frame.src || frame.src === "about:blank") {
-      frame.src = "/main.html";
-    }
+      try {
+        return new URL(script.src, location.href).pathname === sourcePath;
+      } catch {
+        return false;
+      }
+    });
 
-    frame.hidden = false;
-  });
+    if (alreadyLoaded) return;
+
+    const script = document.createElement("script");
+
+    script.src = sourcePath;
+    script.setAttribute(marker, "");
+
+    script.onerror = () => {
+      console.error(
+        "[bedrock cloak] Failed to load /js/navigation.js"
+      );
+    };
+
+    (document.head || document.documentElement).appendChild(script);
+  }
+
+  loadNavigationController();
 })();
