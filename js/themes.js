@@ -262,7 +262,7 @@
     const video = $("#br-video-background");
     const shade = $("#br-video-shade");
     if (video) {
-      const source = `${VIDEO_ROOT}v${state.videoBackground}.mp4`;
+      const source = `${VIDEO_ROOT}v${state.videoBackground}-b.mp4`;
       if (video.dataset.source !== source) {
         video.dataset.source = source;
         video.src = source;
