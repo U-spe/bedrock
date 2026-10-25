@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity WebGL Player | MyRustySubmarine</title>
+    <link rel="shortcut icon" href="/assets/lessons/sky/my-rusty-submarine/TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="/assets/lessons/sky/my-rusty-submarine/TemplateData/style.css" />
+    <script src="/assets/lessons/sky/my-rusty-submarine/TemplateData/UnityProgress.js"></script>
+    <script src="/assets/lessons/sky/my-rusty-submarine/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/MyRustySubmarineWebGL.json", { onProgress: UnityProgress });
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 1024px; height: 600px;"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">My Rusty Submarine</div>
+      </div>
+    </div>
+  </body>
+</html>
