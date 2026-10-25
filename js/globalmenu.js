@@ -4,9 +4,9 @@
 
   const PAGES = [
     { title: "Home", icon: "ri-home-5-line", href: "/main.html" },
-    { title: "Games", icon: "ri-gamepad-line", href: "/games.html" },
-    { title: "Apps", icon: "ri-apps-line", href: "/apps.html" },
-    { title: "Browser", icon: "ri-global-line", href: "/browser.html" },
+    { title: "Games", icon: "ri-gamepad-line", href: "/lessons.html" },
+    { title: "Apps", icon: "ri-apps-line", href: "/flashcards.html" },
+    { title: "Browser", icon: "ri-global-line", href: "/search.html" },
     { title: "Settings", icon: "ri-settings-3-line", href: "/settings.html" }
   ];
 
