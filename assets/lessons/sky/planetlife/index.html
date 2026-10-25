@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> -->
+
+	<meta charset="UTF-8"/>
+
+	<link rel="stylesheet" href="/assets/lessons/sky/planetlife/Stylesheet.css">
+
+	<title>planet life</title>
+
+</head>
+<body>
+
+  <img src="/assets/lessons/sky/planetlife/images/handling/coolMathSplash.png" id="coolMathSplash">
+
+  <div id="backgroundDiv"></div>
+
+<div id="gameDiv" style="display: none;">
+
+  <div id="resIconDiv">
+    <div id="resIconWrapper">
+      <img src="/assets/lessons/sky/planetlife/images/icons/wood.png" alt="wood">
+      <p id="wood">0</p>
+      <img src="/assets/lessons/sky/planetlife/images/icons/gold.png" alt="gold">
+      <p id="gold">0</p>
+      <img src="/assets/lessons/sky/planetlife/images/icons/coco.png" alt="coco">
+      <p id="coco">0</p>
+      <img src="/assets/lessons/sky/planetlife/images/icons/stardust.png" alt="stardust">
+      <p id="stardust">0</p>
+      <div class="floatRight">
+        <img src="/assets/lessons/sky/planetlife/images/icons/settings.png" style="margin-right: 10px; margin-top: 4px; width: 60%" onclick="toggleSettings()">
+      </div>
+    </div>
+  </div>
+
+  <div class="fullWidth" id="resInfoDiv">
+    <div id="infoContentHolder">
+      <img src="/assets/lessons/sky/planetlife/images/icons/wood.png" alt="wood per second">
+      <p id="woodSec">+0/s</p>
+      <img src="/assets/lessons/sky/planetlife/images/icons/gold.png" alt="gold per second">
+      <p id="goldSec">+0/s</p>
+      <img src="/assets/lessons/sky/planetlife/images/icons/coco.png" alt="coco per second">
+      <p id="cocoSec">+0/s</p>
+      <div class="floatRight" id="ghostCounter">
+        <img src="/assets/lessons/sky/planetlife/images/icons/ghost.png" alt="ghosts">
+        <p id="ghostCount">0</p>
+      </div>
+      <div class="floatRight" id="ringCounter">
+        <img src="/assets/lessons/sky/planetlife/images/icons/lollipop.gif" alt="space rings">
+        <p id="ringCount">0</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bodyWrapper" id="bWrapper">
+
+  <div id="almostBlackground"></div>
+
+    </br>
+    </br>
+    </br>
+
+    <div class="fullWidth" id="artDiv">
+      <h1 id="dungeonLevel"></h1>
+      <h1 id="settingsHeadline">Settings</h1>
+      <div class="blackCover">
+        <div class="derekArt" id="derekDiv">
+          <img src="/assets/lessons/sky/planetlife/images/handling/invisibleImg.gif" class="derekImg" style="z-index: 10;" id="legsImg">
+          <img src="/assets/lessons/sky/planetlife/images/handling/invisibleImg.gif" class="derekImg" style="z-index: 11;" id="headImg">
+          <img src="/assets/lessons/sky/planetlife/images/handling/invisibleImg.gif" class="derekImg" style="z-index: 12;" id="fistImg">
+          <img src="/assets/lessons/sky/planetlife/images/handling/derekBlack.gif" class="derekImg" id="derekBlackImg">
+        </div>
+        <img src="/assets/lessons/sky/planetlife/images/handling/planet.gif" id="handlingArt">
+      </div>
+      <img src="/assets/lessons/sky/planetlife/images/handling/tinyImg.gif" id="settingsArt">
+<!--       <img src="images/backgrounds/BlackCover.png" id="blackCover"> -->
+    </div>
+
+  	<div class="fullWidth" id="textDiv">
+
+      
+
+      <div class="handlingBlackCover">
+        <div class="textHolder">
+          <p id="resCounter"></p>
+          <p id="handling"></p>
+        </div>
+      </div>
+  		
+      <p id="settingsHandling"></p>
+
+      <div id="loading_container"></div>
+
+  		<div id="buttons">
+
+  		</div>
+
+
+
+      <div id="settingsButtons">
+
+      </div>
+
+    <div class="fullWidth">
+      <br>
+      <br>
+    </div>
+
+  	</div>
+
+  </div>
+
+</div>
+
+  <script src="/assets/lessons/sky/planetlife/en.json"></script>
+  <script src="/assets/lessons/sky/planetlife/bridge.js"></script>
+  <script src="/assets/lessons/sky/planetlife/base64.js"></script>
+  <script src="/assets/lessons/sky/planetlife/state.js"></script>
+  <script src="/assets/lessons/sky/planetlife/initVars.js"></script>
+  <script src="/assets/lessons/sky/planetlife/sound.js"></script>
+  <script src="/assets/lessons/sky/planetlife/handling.js"></script>
+  <script src="/assets/lessons/sky/planetlife/broccoliHandling.js"></script>
+  <script src="/assets/lessons/sky/planetlife/burgulonHandling.js"></script>
+  <script src="/assets/lessons/sky/planetlife/theEnd.js"></script>
+  <script src="/assets/lessons/sky/planetlife/beanie.js"></script>
+  <script src="/assets/lessons/sky/planetlife/woodenPoker.js"></script>
+  <script src="/assets/lessons/sky/planetlife/ancientPlanet.js"></script>
+  <script src="/assets/lessons/sky/planetlife/stanley.js"></script>
+  <script src="/assets/lessons/sky/planetlife/burgulonCore.js"></script>
+  <script src="/assets/lessons/sky/planetlife/jack.js"></script>
+  <script src="/assets/lessons/sky/planetlife/derekulianManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/jerkBattle.js"></script>
+  <script src="/assets/lessons/sky/planetlife/jerkManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/derekSkills.js"></script>
+  <script src="/assets/lessons/sky/planetlife/quizManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/beanshop.js"></script>
+  <script src="/assets/lessons/sky/planetlife/jerkClub.js"></script>
+  <script src="/assets/lessons/sky/planetlife/startMenu.js"></script>
+  <script src="/assets/lessons/sky/planetlife/productManagerNew.js"></script>
+  <script src="/assets/lessons/sky/planetlife/dungeonManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/globalVars.js"></script>
+	<script src="/assets/lessons/sky/planetlife/gameManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/buttons.js"></script>
+  <script src="/assets/lessons/sky/planetlife/presentManager.js"></script>
+  <script src="/assets/lessons/sky/planetlife/s_startolar.js"></script>
+  <script src="/assets/lessons/sky/planetlife/timeTerrarium.js"></script>
+  <script src="/assets/lessons/sky/planetlife/derekItems.js"></script>
+  <script src="/assets/lessons/sky/planetlife/intro.js"></script>
+	<script src="/assets/lessons/sky/planetlife/build.js"></script>
+  <script src="/assets/lessons/sky/planetlife/starmap.js"></script>
+  <script src="/assets/lessons/sky/planetlife/friendHouse.js"></script>
+  <script src="/assets/lessons/sky/planetlife/settings.js"></script>
+
+</body>
+</html>
