@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from v6p9d9t4.ssl.hwcdn.net/html/3485633/Geometry Dash PS1 Full/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 May 2023 15:44:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+		<script src="/assets/lessons/sky/geops1/libs/jshashtable.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/gd.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/gd-splash-image.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/libs/hshg.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/libs/rbush.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/inputmanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/jsonmanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/timemanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/runtimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/profiler.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/runtimescene.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/scenestack.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/polygon.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/force.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/layer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/timer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/runtimegame.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/variable.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/variablescontainer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/oncetriggers.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/runtimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/commontools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/inputtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/objecttools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/cameratools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/soundtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/storagetools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/stringtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/windowtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/events-tools/networktools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/pixi.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TiledSpriteObject/tiledspriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/TiledSpriteObject/tiledspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code0.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code1.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code2.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code3.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code4.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code5.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code6.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code7.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code8.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code9.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/code10.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/geops1/data.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+
+	</script>
+</body>
+
+<!-- Mirrored from v6p9d9t4.ssl.hwcdn.net/html/3485633/Geometry Dash PS1 Full/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 May 2023 15:45:12 GMT -->
+</html>
