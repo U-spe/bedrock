@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from v6p9d9t4.ssl.hwcdn.net/html/5706313/index/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 May 2023 16:12:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+		<script src="/assets/lessons/sky/mc2d/libs/jshashtable.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/logger.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/gd.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/libs/rbush.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/inputmanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/jsonmanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/timemanager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/runtimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/profiler.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/runtimescene.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/scenestack.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/polygon.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/force.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/layer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/timer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/runtimegame.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/variable.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/variablescontainer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/oncetriggers.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/runtimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/commontools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/variabletools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/inputtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/objecttools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/cameratools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/soundtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/storagetools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/stringtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/windowtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/events-tools/networktools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/splash/gd-logo-light.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/pixi.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/pixi-renderers/pixi-effects-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/PlatformBehavior/platformtools.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/TiledSpriteObject/tiledspriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/TiledSpriteObject/tiledspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/gdjs-evtsext__parallax__horizontaltiledspriteparallax.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/TopDownMovementBehavior/topdownmovementruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/ParticleSystem/particleemitterobject.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/ParticleSystem/particleemitterobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/ParticleSystem/pixi-particles-pixi-renderer.min.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/advanced-bloom-pixi-filter.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/drop-shadow-pixi-filter.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/light-night-pixi-filter.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/pixi-filters/filter-advanced-bloom.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/pixi-filters/filter-drop-shadow.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/Extensions/Effects/pixi-filters/filter-kawase-blur.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code0.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code1.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code2.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code3.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code4.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/code5.js" crossorigin="anonymous"></script>
+	<script src="/assets/lessons/sky/mc2d/data.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+
+	</script>
+</body>
+
+<!-- Mirrored from v6p9d9t4.ssl.hwcdn.net/html/5706313/index/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 May 2023 16:12:34 GMT -->
+</html>
