@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>TwitchTetris</title>
+    <link href="//fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" />
+    
+    <link href="/assets/lessons/sky/twitch-tetris/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="/assets/lessons/sky/twitch-tetris/scoreScreen.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/json-minified.js"></script>
+  </head>
+  <body onload="scoreScreenOnLoad()">
+
+    <table border="0" class="mainTable">
+      <tr>
+	<td class="menuCell">
+	  <div class="menu">
+	    <img class="menuLogo" src="/assets/lessons/sky/twitch-tetris/media/background/logo.png"></img>
+	    <br/><br/>
+
+	    <a href="/assets/lessons/sky/twitch-tetris/index.html" class="bareLink">
+	      <div class="menuItem">Play TwitchTetris</div>
+	    </a>
+	    <br/>
+	    <a href="/assets/lessons/sky/twitch-tetris/controls.html" class="bareLink">
+	      <div class="menuItem">Controls Options</div>
+	    </a>
+	    <br/>
+	    <a href="/assets/lessons/sky/twitch-tetris/highScores.html" class="bareLink">
+	      <div class="menuItem selectedMenuItem">High Scores</div>
+	    </a>
+	    <br/>
+	    <a href="/assets/lessons/sky/twitch-tetris/about.html" class="bareLink">
+	      <div class="menuItem">About TwitchTetris</div>
+	    </a>
+	    <br/>
+	    <a href="http://www.leighpauls.com" class="bareLink">
+	      <div class="menuItem">About the Developer</div>
+	    </a>
+	    <br/>
+
+	    <div class="instructions">
+	      <b> &gt TwitchTetris --help </b>
+	      <p>Use the keyboard controls to rotate and move the blocks as they fall</p>
+	      <p>Place the blocks to form horizontal lines, which will be removed and make all the blocks above fall down. If the blocks reach the top of the screen, the game is over!</p>
+	      <p>Clear multiple lines at a time, or clear lines in consective moves to earn more points.</p>
+	    </div>
+
+	  </div>
+	</td>
+	<td class="contentCell">
+	  <div class="scoreArea" id="scoreDiv"></div>
+	  <div id="applyNameDiv" class="applyNameHidden">
+	    Congratulations! You have made a top Score!<br/>
+	    Enter your name and hit ENTER to submit your name!</br>
+	    <label for="nameInput">Name: </label>
+	    <input type="text" id="nameInput" onkeydown="nameKeyDown(event)" />
+	  </div>
+	  <br/><br/>
+	  <a href="/assets/lessons/sky/twitch-tetris/index.html" class="bareLink" onclick="trySubmitName()">
+	    <div class="playAgainButton">
+	      Play Again
+	    </div>
+	  </a>
+
+	</td>
+      </tr>
+    </table>
+  </body>
+</html>

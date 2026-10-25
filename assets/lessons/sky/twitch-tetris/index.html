@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>TwitchTetris</title>
+    <link href="//fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" />
+		<link href="/favicon.ico" rel="icon">
+    <link href="/assets/lessons/sky/twitch-tetris/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="/assets/lessons/sky/twitch-tetris/cookie.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/gameControls.js"></script>
+
+    <script src="/assets/lessons/sky/twitch-tetris/jawsjs.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Block.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Shapes.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/WallKicks.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/ControlGroup.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Background.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/RandomBag.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/PreviewGroup.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/ScoreTracker.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/TtyBlock.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Game.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Game_Logic.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/Button.js"></script>
+    <script src="/assets/lessons/sky/twitch-tetris/tetris.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+      function onClickEvent(event) {
+        if (Tetris.currentInstance) {
+          Tetris.currentInstance.mouseClicked(event.layerX, event.layerY);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table border="0" class="mainTable">
+      <tr>
+        <td class="menuCell">
+          <div class="menu">
+            <img class="menuLogo" src="/assets/lessons/sky/twitch-tetris/media/background/logo.png" />
+            <br />
+            <br />
+
+            <a href="/assets/lessons/sky/twitch-tetris/index.html" class="bareLink">
+              <div class="menuItem selectedMenuItem">Play TwitchTetris</div>
+            </a>
+            <br />
+            <a href="/assets/lessons/sky/twitch-tetris/controls.html" class="bareLink">
+              <div class="menuItem">Controls Options</div>
+            </a>
+            <br />
+            <a href="/assets/lessons/sky/twitch-tetris/highScores.html" class="bareLink">
+              <div class="menuItem">High Scores</div>
+            </a>
+            <br />
+            <a href="/assets/lessons/sky/twitch-tetris/about.html" class="bareLink">
+              <div class="menuItem">About TwitchTetris</div>
+            </a>
+            <br />
+            <a href="http://www.leighpauls.com" class="bareLink">
+              <div class="menuItem">About the Developer</div>
+            </a>
+            <br />
+
+            <div class="instructions">
+              <b> &gt TwitchTetris --help </b>
+              <p>Use the keyboard controls to rotate and move the blocks as they fall</p>
+              <p>Place the blocks to form horizontal lines, which will be removed and make all the blocks above fall down. If the blocks reach the top of the screen, the game is over!</p>
+              <p>Clear multiple lines at a time, or clear lines in consective moves to earn more points.</p>
+            </div>
+          </div>
+        </td>
+        <td class="contentCell">
+          <div class="gamePanel">
+            <div class="gameElements">
+              <div class="ttyOutput scoreOutput" id="scoreDiv"></div>
+              <div class="ttyOutput linesOutput" id="linesDiv"></div>
+              <div class="ttyOutput levelOutput" id="levelDiv"></div>
+              <div class="ttyOutput tickerOutput" id="tickerDiv"></div>
+
+              <div class="gameEndOutputHidden" id="gameEndContainer">
+                <div style="padding: 5px;" id="gameEndDiv"></div>
+              </div>
+
+              <canvas class="gameCanvas" id="gameCanvas" width="600" height="500" onclick="onClickEvent(event)" class="gameCanvas">
+                Your browser does not natively support Html5, or the Canvas Tag. Using this browser is slowing the progress of the web. Please get a modern browser, such as Google Chrome or Mozzila FireFox
+              </canvas>
+            </div>
+            <div class="controlsTitle">
+              <br />
+              <b>Controls:</b><br />
+              <table border="1" cellpadding="3" class="controlsTable">
+                <tr class="controlsTableHeader">
+                  <td width="80">Move Block</td>
+                  <td width="80">Soft Drop</td>
+                  <td width="80">Rotate</td>
+                  <td width="80">Save Piece</td>
+                  <td width="80">Hard Drop</td>
+                  <td width="80">Pause</td>
+                </tr>
+
+                <tr>
+                  <td><span id="shiftLeft">Left</span>, <span id="shiftRight">Right</span></td>
+                  <td><span id="softDrop">Down</span></td>
+                  <td><span id="rotateLeft">Z</span>, <span id="rotateRight">X, Up</span></td>
+                  <td><span id="swap">C, Shift</span></td>
+                  <td><span id="hardDrop">Space</span></td>
+                  <td>Esc</td>
+                </tr>
+              </table>
+            </div>
+            <br />
+            <a href="/assets/lessons/sky/twitch-tetris/controls.html" class="bareLink">
+              <div class="menuItem">Controls Options</div>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
