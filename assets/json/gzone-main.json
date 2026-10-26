@@ -1,6 +1,6 @@
 [
     {
-    "Name": "Sky",
+    "Name": "Sky + MacVG",
     "File": "assets/json/sky.json",
     "Icon": "ri-flask-line"
   },
@@ -25,13 +25,8 @@
     "Icon": "ri-ghost-line"
   },
   {
-    "Name": "SunTree",
+    "Name": "Seraph",
     "File": "assets/json/suntree.json",
     "Icon": "ri-tree-line"
-  },
-    {
-    "Name": "Lumin",
-    "File": "lumin",
-    "Icon": "ri-lightbulb-line"
-  } 
+  }
 ]
