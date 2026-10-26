@@ -6,6 +6,906 @@
     "cover": "https://cdn-icons-png.flaticon.com/512/5968/5968528.png",
     "url": "/assets/forms/custom.html"
   }, 
+   {
+    "Name": "slope",
+    "Image": "/images/thumbnails/slope.jpg",
+    "Game": "https://imissthatkinda.misery/games/slope/index.html"
+  },
+  {
+    "Name": "subway surfers",
+    "Image": "/images/thumbnails/subwaysurfers.jpeg",
+    "Game": "https://imissthatkinda.misery/games/subwaysurfers/index.html"
+  },
+  {
+    "Name": "flappy bird",
+    "Image": "/images/thumbnails/flappybird.jpg",
+    "Game": "https://imissthatkinda.misery/games/flappy/index.html"
+  },
+  {
+    "Name": "papa's pizzaria",
+    "Image": "/images/thumbnails/papaspizzeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papaspizzaria/index.html"
+  },
+  {
+    "Name": "papa's burgeria",
+    "Image": "/images/thumbnails/papasburgeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papasburgeria/index.html"
+  },
+  {
+    "Name": "super mario 64",
+    "Image": "/images/thumbnails/sm64.jpg",
+    "Game": "https://imissthatkinda.misery/games/sm64/index.html"
+  },
+  {
+    "Name": "run 3",
+    "Image": "/images/thumbnails/run3.jpg",
+    "Game": "https://imissthatkinda.misery/games/run3/index.html"
+  },
+  {
+    "Name": "bitlife",
+    "Image": "/images/thumbnails/bitlife.jpg",
+    "Game": "https://imissthatkinda.misery/games/bitlife/index.html"
+  },
+  {
+    "Name": "crossy road",
+    "Image": "/images/thumbnails/crossyroad.jpg",
+    "Game": "https://imissthatkinda.misery/games/crossy/index.html"
+  },
+  {
+    "Name": "minecraft [v1.5.2]",
+    "Image": "/images/thumbnails/mc.jpg",
+    "Game": "https://imissthatkinda.misery/games/mc/index.html"
+  },
+  {
+    "Name": "cookie clicker",
+    "Image": "/images/thumbnails/cookieclick.jpg",
+    "Game": "https://imissthatkinda.misery/games/cookieclicker/index.html"
+  },
+  {
+    "Name": "temple run 2",
+    "Image": "/images/thumbnails/templerun2.jpg",
+    "Game": "https://imissthatkinda.misery/games/templerun2/index.html"
+  },
+  {
+    "Name": "duck life 4",
+    "Image": "/images/thumbnails/ducklife4.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife4/index.html"
+  },
+  {
+    "Name": "chrome dino game",
+    "Image": "/images/thumbnails/chromedino.jpg",
+    "Game": "https://imissthatkinda.misery/games/dinogame/index.html"
+  },
+  {
+    "Name": "jetpack joyride",
+    "Image": "/images/thumbnails/jetpackjoyride.jpg",
+    "Game": "https://imissthatkinda.misery/games/jetpackjoyride/index.html"
+  },
+  {
+    "Name": "retro bowl",
+    "Image": "/images/thumbnails/retrobowl.jpg",
+    "Game": "https://imissthatkinda.misery/games/retrobowl/index.html"
+  },
+  {
+    "Name": "fruit ninja",
+    "Image": "/images/thumbnails/fruitninja.jpg",
+    "Game": "https://imissthatkinda.misery/games/fruitninja/index.html"
+  },
+  {
+    "Name": "doodle jump",
+    "Image": "/images/thumbnails/doodlejump.jpg",
+    "Game": "https://imissthatkinda.misery/games/doodlejump/index.html"
+  },
+  {
+    "Name": "2048",
+    "Image": "/images/thumbnails/2048.jpg",
+    "Game": "https://imissthatkinda.misery/games/2048/index.html"
+  },
+  {
+    "Name": "tetris",
+    "Image": "/images/thumbnails/tetris.jpg",
+    "Game": "https://imissthatkinda.misery/games/tetris/index.html"
+  },
+  {
+    "Name": "fancy pants adventure",
+    "Image": "/images/thumbnails/fancypantsadventure.jpg",
+    "Game": "https://imissthatkinda.misery/games/fancypantsadventure/index.html"
+  },
+  {
+    "Name": "happy wheels",
+    "Image": "/images/thumbnails/happywheels.jpg",
+    "Game": "https://imissthatkinda.misery/games/happywheels/index.html"
+  },
+  {
+    "Name": "papa's hotdoggeria",
+    "Image": "/images/thumbnails/papashotdoggeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papashotdoggeria/index.html"
+  },
+  {
+    "Name": "paperio2",
+    "Image": "/images/thumbnails/paperio2.jpg",
+    "Game": "https://imissthatkinda.misery/games/paperio2/index.html"
+  },
+  {
+    "Name": "super hot",
+    "Image": "/images/thumbnails/superhot.jpg",
+    "Game": "https://imissthatkinda.misery/games/superhot/index.html"
+  },
+  {
+    "Name": "the binding of isaac",
+    "Image": "/images/thumbnails/thebindingofisaac.jpg",
+    "Game": "https://imissthatkinda.misery/games/thebindingofisaac/index.html"
+  },
+  {
+    "Name": "townscaper",
+    "Image": "/images/thumbnails/townscaper.jpg",
+    "Game": "https://imissthatkinda.misery/games/townscaper/index.html"
+  },
+  {
+    "Name": "tunnel rush",
+    "Image": "/images/thumbnails/tunnelrush.jpg",
+    "Game": "https://imissthatkinda.misery/games/tunnelrush/index.html"
+  },
+  {
+    "Name": "theme hotel",
+    "Image": "/images/thumbnails/themehotel.jpg",
+    "Game": "https://imissthatkinda.misery/games/themehotel/index.html"
+  },
+  {
+    "Name": "escaping the prison",
+    "Image": "/images/thumbnails/escapingtheprison.jpg",
+    "Game": "https://imissthatkinda.misery/games/escapingtheprison/index.html"
+  },
+  {
+    "Name": "stealing the diamond",
+    "Image": "/images/thumbnails/stealingthediamond.jpg",
+    "Game": "https://imissthatkinda.misery/games/stealingthediamond/index.html"
+  },
+  {
+    "Name": "infiltrating the airship",
+    "Image": "/images/thumbnails/infiltratingtheairship.jpg",
+    "Game": "https://imissthatkinda.misery/games/infiltratingtheairship/index.html"
+  },
+  {
+    "Name": "fleeing the complex",
+    "Image": "/images/thumbnails/fleeingthecomplex.jpg",
+    "Game": "https://imissthatkinda.misery/games/fleeingthecomplex/index.html"
+  },
+  {
+    "Name": "the impossible quiz",
+    "Image": "/images/thumbnails/theimpossiblequiz.jpg",
+    "Game": "https://imissthatkinda.misery/games/theimpossiblequiz/index.html"
+  },
+  {
+    "Name": "solitaire",
+    "Image": "/images/thumbnails/solitaire.jpg",
+    "Game": "https://imissthatkinda.misery/games/solitaire/index.html"
+  },
+  {
+    "Name": "drift hunters",
+    "Image": "/images/thumbnails/drifthunters.jpg",
+    "Game": "https://imissthatkinda.misery/games/drifthunters/index.html"
+  },
+  {
+    "Name": "vex 6",
+    "Image": "/images/thumbnails/vex6.jpg",
+    "Game": "https://imissthatkinda.misery/games/vex6/index.html"
+  },
+  {
+    "Name": "among us fangame",
+    "Image": "/images/thumbnails/amongus.jpg",
+    "Game": "https://imissthatkinda.misery/games/amongus/index.html"
+  },
+  {
+    "Name": "edge surf",
+    "Image": "/images/thumbnails/surf.jpg",
+    "Game": "https://imissthatkinda.misery/games/surf/index.html"
+  },
+  {
+    "Name": "motox3m",
+    "Image": "/images/thumbnails/motox3m.jpeg",
+    "Game": "https://imissthatkinda.misery/games/motox3m/index.html"
+  },
+  {
+    "Name": "fnaf 1",
+    "Image": "/images/thumbnails/fnaf.jpg",
+    "Game": "https://imissthatkinda.misery/games/fnaf/index.html"
+  },
+  {
+    "Name": "fnaf 2",
+    "Image": "/images/thumbnails/fnaf2.jpg",
+    "Game": "https://imissthatkinda.misery/games/fnaf-2/index.html"
+  },
+  {
+    "Name": "fnaf 3",
+    "Image": "/images/thumbnails/fnaf3.jpg",
+    "Game": "https://imissthatkinda.misery/games/fnaf-3/index.html"
+  },
+  {
+    "Name": "fnaf 4",
+    "Image": "/images/thumbnails/fnaf4.jpg",
+    "Game": "https://imissthatkinda.misery/games/fnaf-4/index.html"
+  },
+  {
+    "Name": "riddle school",
+    "Image": "/images/thumbnails/riddleschool.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddleschool1/index.html"
+  },
+  {
+    "Name": "riddle school 2",
+    "Image": "/images/thumbnails/riddleschool2.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddleschool2/index.html"
+  },
+  {
+    "Name": "riddle school 3",
+    "Image": "/images/thumbnails/riddleschool3.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddleschool3/index.html"
+  },
+  {
+    "Name": "riddle school 4",
+    "Image": "/images/thumbnails/riddleschool4.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddleschool4/index.html"
+  },
+  {
+    "Name": "riddle school 5",
+    "Image": "/images/thumbnails/riddleschool5.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddleschool5/index.html"
+  },
+  {
+    "Name": "riddle transfer",
+    "Image": "/images/thumbnails/riddletransfer.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddletransfer/index.html"
+  },
+  {
+    "Name": "riddle transfer 2",
+    "Image": "/images/thumbnails/riddletransfer2.jpg",
+    "Game": "https://imissthatkinda.misery/games/riddleschool/riddletransfer2/index.html"
+  },
+  {
+    "Name": "drift boss",
+    "Image": "/images/thumbnails/driftboss.jpg",
+    "Game": "https://imissthatkinda.misery/games/driftboss/index.html"
+  },
+  {
+    "Name": "friday night funkin",
+    "Image": "/images/thumbnails/fnf.jpg",
+    "Game": "https://imissthatkinda.misery/games/fnf/index.html"
+  },
+  {
+    "Name": "pacman",
+    "Image": "/images/thumbnails/pacman.jpg",
+    "Game": "https://imissthatkinda.misery/games/pacman/index.html"
+  },
+  {
+    "Name": "papa's pancakeria",
+    "Image": "/images/thumbnails/papaspancakeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papaspancakeria/index.html"
+  },
+  {
+    "Name": "rooftop snipers",
+    "Image": "/images/thumbnails/rooftopsnipers.jpg",
+    "Game": "https://imissthatkinda.misery/games/rooftop/index.html"
+  },
+  {
+    "Name": "baldi's basics",
+    "Image": "/images/thumbnails/baldisbasics.jpg",
+    "Game": "https://imissthatkinda.misery/games/baldisbasics/index.html"
+  },
+  {
+    "Name": "bob the robber 2",
+    "Image": "/images/thumbnails/bobtherobber2.jpg",
+    "Game": "https://imissthatkinda.misery/games/bobtherobber2/index.html"
+  },
+  {
+    "Name": "minesweeper",
+    "Image": "/images/thumbnails/minesweeper.jpg",
+    "Game": "https://imissthatkinda.misery/games/minesweeper/index.html"
+  },
+  {
+    "Name": "pokemon emerald",
+    "Image": "/images/thumbnails/pokemonemerald.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonemerald/index.html"
+  },
+  {
+    "Name": "pokemon fire red",
+    "Image": "/images/thumbnails/pokemonfirered.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonfirered/index.html"
+  },
+  {
+    "Name": "super mario bros",
+    "Image": "/images/thumbnails/supermariobros.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermariobros/index.html"
+  },
+  {
+    "Name": "super mario kart",
+    "Image": "/images/thumbnails/supermariokart.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermariokart/index.html"
+  },
+  {
+    "Name": "super mario world",
+    "Image": "/images/thumbnails/supermarioworld.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermarioworld/index.html"
+  },
+  {
+    "Name": "there is no game",
+    "Image": "/images/thumbnails/thereisnogame.jpg",
+    "Game": "https://imissthatkinda.misery/games/thereisnogame/index.html"
+  },
+  {
+    "Name": "world's hardest game",
+    "Image": "/images/thumbnails/worldshardestgame.jpg",
+    "Game": "https://imissthatkinda.misery/games/worldshardestgame/index.html"
+  },
+  {
+    "Name": "castlevania",
+    "Image": "/images/thumbnails/castlevania.jpg",
+    "Game": "https://imissthatkinda.misery/games/castlevania/index.html"
+  },
+  {
+    "Name": "donkey kong",
+    "Image": "/images/thumbnails/donkeykong.jpg",
+    "Game": "https://imissthatkinda.misery/games/donkeykong/index.html"
+  },
+  {
+    "Name": "dr mario",
+    "Image": "/images/thumbnails/drmario.jpg",
+    "Game": "https://imissthatkinda.misery/games/drmario/index.html"
+  },
+  {
+    "Name": "metroid",
+    "Image": "/images/thumbnails/metroid.jpg",
+    "Game": "https://imissthatkinda.misery/games/metroid/index.html"
+  },
+  {
+    "Name": "super mario bros 2",
+    "Image": "/images/thumbnails/supermariobros2.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermariobros2/index.html"
+  },
+  {
+    "Name": "super mario bros 3",
+    "Image": "/images/thumbnails/supermariobros3.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermariobros3/index.html"
+  },
+  {
+    "Name": "the legend of zelda",
+    "Image": "/images/thumbnails/thelegendofzelda.jpg",
+    "Game": "https://imissthatkinda.misery/games/thelegendofzelda/index.html"
+  },
+  {
+    "Name": "warioware",
+    "Image": "/images/thumbnails/warioware.jpg",
+    "Game": "https://imissthatkinda.misery/games/warioware/index.html"
+  },
+  {
+    "Name": "yoshi's island",
+    "Image": "/images/thumbnails/yoshisisland.jpg",
+    "Game": "https://imissthatkinda.misery/games/yoshisisland/index.html"
+  },
+  {
+    "Name": "donkey kong land",
+    "Image": "/images/thumbnails/donkeykongland.jpg",
+    "Game": "https://imissthatkinda.misery/games/donkeykongland/index.html"
+  },
+  {
+    "Name": "kirby's dream land",
+    "Image": "/images/thumbnails/kirbysdreamland.jpg",
+    "Game": "https://imissthatkinda.misery/games/kirbysdreamland/index.html"
+  },
+  {
+    "Name": "super mario land",
+    "Image": "/images/thumbnails/supermarioland.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermarioland/index.html"
+  },
+  {
+    "Name": "doge miner",
+    "Image": "/images/thumbnails/dogeminer.jpg",
+    "Game": "https://imissthatkinda.misery/games/dogeminer/index.html"
+  },
+  {
+    "Name": "tanuki sunset",
+    "Image": "/images/thumbnails/tanukisunset.jpg",
+    "Game": "https://imissthatkinda.misery/games/tanukisunset/index.html"
+  },
+  {
+    "Name": "aquapark slides",
+    "Image": "/images/thumbnails/aquaparkslides.jpg",
+    "Game": "https://imissthatkinda.misery/games/aquaparkslides/index.html"
+  },
+  {
+    "Name": "color switch",
+    "Image": "/images/thumbnails/colorswitch.jpg",
+    "Game": "https://imissthatkinda.misery/games/colorswitch/index.html"
+  },
+  {
+    "Name": "papa's freezeria",
+    "Image": "/images/thumbnails/papasfreezeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papasfreezeria/index.html"
+  },
+  {
+    "Name": "btd",
+    "Image": "/images/thumbnails/btd.jpg",
+    "Game": "https://imissthatkinda.misery/games/btd/btd/index.html"
+  },
+  {
+    "Name": "btd 2",
+    "Image": "/images/thumbnails/btd2.jpg",
+    "Game": "https://imissthatkinda.misery/games/btd/btd2/index.html"
+  },
+  {
+    "Name": "btd 3",
+    "Image": "/images/thumbnails/btd3.jpg",
+    "Game": "https://imissthatkinda.misery/games/btd/btd3/index.html"
+  },
+  {
+    "Name": "btd 4",
+    "Image": "/images/thumbnails/btd4.jpg",
+    "Game": "https://imissthatkinda.misery/games/btd/btd4/index.html"
+  },
+  {
+    "Name": "bomberman",
+    "Image": "/images/thumbnails/bomberman.jpg",
+    "Game": "https://imissthatkinda.misery/games/bomberman/index.html"
+  },
+  {
+    "Name": "fire emblem",
+    "Image": "/images/thumbnails/fireemblem.jpg",
+    "Game": "https://imissthatkinda.misery/games/fireemblem/index.html"
+  },
+  {
+    "Name": "ice climber",
+    "Image": "/images/thumbnails/iceclimber.jpg",
+    "Game": "https://imissthatkinda.misery/games/iceclimber/index.html"
+  },
+  {
+    "Name": "mario kart super circuit",
+    "Image": "/images/thumbnails/mariokartsupercircuit.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariokartsupercircuit/index.html"
+  },
+  {
+    "Name": "pokemon leaf green",
+    "Image": "/images/thumbnails/pokemonleafgreen.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonleafgreen/index.html"
+  },
+  {
+    "Name": "pokemon ruby",
+    "Image": "/images/thumbnails/pokemonruby.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonruby/index.html"
+  },
+  {
+    "Name": "pokemon sapphire",
+    "Image": "/images/thumbnails/pokemonsapphire.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonsapphire/index.html"
+  },
+  {
+    "Name": "superstar saga",
+    "Image": "/images/thumbnails/superstarsaga.jpg",
+    "Game": "https://imissthatkinda.misery/games/superstarsaga/index.html"
+  },
+  {
+    "Name": "adofai",
+    "Image": "/images/thumbnails/adofai.jpg",
+    "Game": "https://imissthatkinda.misery/games/adofai/index.html"
+  },
+  {
+    "Name": "super smash flash",
+    "Image": "/images/thumbnails/supersmashflash.jpg",
+    "Game": "https://imissthatkinda.misery/games/supersmashflash/index.html"
+  },
+  {
+    "Name": "super meat boy",
+    "Image": "/images/thumbnails/supermeatboy.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermeatboy/index.html"
+  },
+  {
+    "Name": "stickman hook",
+    "Image": "/images/thumbnails/stickmanhook.jpg",
+    "Game": "https://imissthatkinda.misery/games/stickmanhook/index.html"
+  },
+  {
+    "Name": "defend the tank",
+    "Image": "/images/thumbnails/defendthetank.jpg",
+    "Game": "https://imissthatkinda.misery/games/defendthetank/index.html"
+  },
+  {
+    "Name": "sort the court",
+    "Image": "/images/thumbnails/sortthecourt.jpg",
+    "Game": "https://imissthatkinda.misery/games/sortthecourt/index.html"
+  },
+  {
+    "Name": "this is the only level",
+    "Image": "/images/thumbnails/thisistheonlylevel.jpg",
+    "Game": "https://imissthatkinda.misery/games/thisistheonlylevel/index.html"
+  },
+  {
+    "Name": "run",
+    "Image": "/images/thumbnails/run.jpg",
+    "Game": "https://imissthatkinda.misery/games/run/index.html"
+  },
+  {
+    "Name": "run 2",
+    "Image": "/images/thumbnails/run2.jpg",
+    "Game": "https://imissthatkinda.misery/games/run2/index.html"
+  },
+  {
+    "Name": "battleships",
+    "Image": "/images/thumbnails/battleships.jpg",
+    "Game": "https://imissthatkinda.misery/games/battleships/index.html"
+  },
+  {
+    "Name": "breaking the bank",
+    "Image": "/images/thumbnails/breakingthebank.jpg",
+    "Game": "https://imissthatkinda.misery/games/breakingthebank/index.html"
+  },
+  {
+    "Name": "duck life",
+    "Image": "/images/thumbnails/ducklife.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife/index.html"
+  },
+  {
+    "Name": "duck life 2",
+    "Image": "/images/thumbnails/ducklife2.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife2/index.html"
+  },
+  {
+    "Name": "duck life 3",
+    "Image": "/images/thumbnails/ducklife3.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife3/index.html"
+  },
+  {
+    "Name": "line rider",
+    "Image": "/images/thumbnails/linerider.jpg",
+    "Game": "https://imissthatkinda.misery/games/linerider/index.html"
+  },
+  {
+    "Name": "mario combat",
+    "Image": "/images/thumbnails/mariocombat.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariocombat/index.html"
+  },
+  {
+    "Name": "raft wars 2",
+    "Image": "/images/thumbnails/raftwars2.jpg",
+    "Game": "https://imissthatkinda.misery/games/raftwars2/index.html"
+  },
+  {
+    "Name": "space invaders",
+    "Image": "/images/thumbnails/spaceinvaders.jpg",
+    "Game": "https://imissthatkinda.misery/games/spaceinvaders/index.html"
+  },
+  {
+    "Name": "animal crossing",
+    "Image": "/images/thumbnails/animalcrossingwildworld.jpg",
+    "Game": "https://imissthatkinda.misery/games/animalcrossingwildworld/index.html"
+  },
+  {
+    "Name": "mario kart ds",
+    "Image": "/images/thumbnails/mariokartds.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariokartds/index.html"
+  },
+  {
+    "Name": "new super mario bros",
+    "Image": "/images/thumbnails/newsupermariobros.jpg",
+    "Game": "https://imissthatkinda.misery/games/newsupermariobros/index.html"
+  },
+  {
+    "Name": "nintendogs",
+    "Image": "/images/thumbnails/nintendogs.jpg",
+    "Game": "https://imissthatkinda.misery/games/nintendogs/index.html"
+  },
+  {
+    "Name": "super mario 64 ds",
+    "Image": "/images/thumbnails/sm64ds.jpg",
+    "Game": "https://imissthatkinda.misery/games/sm64ds/index.html"
+  },
+  {
+    "Name": "gun mayhem",
+    "Image": "/images/thumbnails/gunmayhem.jpg",
+    "Game": "https://imissthatkinda.misery/games/gunmayhem/index.html"
+  },
+  {
+    "Name": "learn to fly",
+    "Image": "/images/thumbnails/learntofly.jpg",
+    "Game": "https://imissthatkinda.misery/games/learntofly/index.html"
+  },
+  {
+    "Name": "rooftop snipers 2",
+    "Image": "/images/thumbnails/rooftopsnipers2.jpg",
+    "Game": "https://imissthatkinda.misery/games/rooftop2/index.html"
+  },
+  {
+    "Name": "super mario 64",
+    "Image": "/images/thumbnails/sm64.jpg",
+    "Game": "https://imissthatkinda.misery/games/sm64/index.html"
+  },
+  {
+    "Name": "super mario bros",
+    "Image": "/images/thumbnails/supermariobros.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermariobros/index.html"
+  },
+  {
+    "Name": "super mario world",
+    "Image": "/images/thumbnails/supermarioworld.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermarioworld/index.html"
+  },
+  {
+    "Name": "pokemon emerald",
+    "Image": "/images/thumbnails/pokemonemerald.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonemerald/index.html"
+  },
+  {
+    "Name": "pokemon fire red",
+    "Image": "/images/thumbnails/pokemonfirered.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonfirered/index.html"
+  },
+  {
+    "Name": "pokemon leaf green",
+    "Image": "/images/thumbnails/pokemonleafgreen.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonleafgreen/index.html"
+  },
+  {
+    "Name": "pokemon ruby",
+    "Image": "/images/thumbnails/pokemonruby.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonruby/index.html"
+  },
+  {
+    "Name": "pokemon sapphire",
+    "Image": "/images/thumbnails/pokemonsapphire.jpg",
+    "Game": "https://imissthatkinda.misery/games/pokemonsapphire/index.html"
+  },
+  {
+    "Name": "castlevania",
+    "Image": "/images/thumbnails/castlevania.jpg",
+    "Game": "https://imissthatkinda.misery/games/castlevania/index.html"
+  },
+  {
+    "Name": "donkey kong",
+    "Image": "/images/thumbnails/donkeykong.jpg",
+    "Game": "https://imissthatkinda.misery/games/donkeykong/index.html"
+  },
+  {
+    "Name": "dr mario",
+    "Image": "/images/thumbnails/drmario.jpg",
+    "Game": "https://imissthatkinda.misery/games/drmario/index.html"
+  },
+  {
+    "Name": "metroid",
+    "Image": "/images/thumbnails/metroid.jpg",
+    "Game": "https://imissthatkinda.misery/games/metroid/index.html"
+  },
+  {
+    "Name": "the legend of zelda",
+    "Image": "/images/thumbnails/thelegendofzelda.jpg",
+    "Game": "https://imissthatkinda.misery/games/thelegendofzelda/index.html"
+  },
+  {
+    "Name": "warioware",
+    "Image": "/images/thumbnails/warioware.jpg",
+    "Game": "https://imissthatkinda.misery/games/warioware/index.html"
+  },
+  {
+    "Name": "yoshi's island",
+    "Image": "/images/thumbnails/yoshisisland.jpg",
+    "Game": "https://imissthatkinda.misery/games/yoshisisland/index.html"
+  },
+  {
+    "Name": "donkey kong land",
+    "Image": "/images/thumbnails/donkeykongland.jpg",
+    "Game": "https://imissthatkinda.misery/games/donkeykongland/index.html"
+  },
+  {
+    "Name": "kirby's dream land",
+    "Image": "/images/thumbnails/kirbysdreamland.jpg",
+    "Game": "https://imissthatkinda.misery/games/kirbysdreamland/index.html"
+  },
+  {
+    "Name": "super mario land",
+    "Image": "/images/thumbnails/supermarioland.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermarioland/index.html"
+  },
+  {
+    "Name": "doge miner",
+    "Image": "/images/thumbnails/dogeminer.jpg",
+    "Game": "https://imissthatkinda.misery/games/dogeminer/index.html"
+  },
+  {
+    "Name": "tanuki sunset",
+    "Image": "/images/thumbnails/tanukisunset.jpg",
+    "Game": "https://imissthatkinda.misery/games/tanukisunset/index.html"
+  },
+  {
+    "Name": "aquapark slides",
+    "Image": "/images/thumbnails/aquaparkslides.jpg",
+    "Game": "https://imissthatkinda.misery/games/aquaparkslides/index.html"
+  },
+  {
+    "Name": "color switch",
+    "Image": "/images/thumbnails/colorswitch.jpg",
+    "Game": "https://imissthatkinda.misery/games/colorswitch/index.html"
+  },
+  {
+    "Name": "papa's freezeria",
+    "Image": "/images/thumbnails/papasfreezeria.jpg",
+    "Game": "https://imissthatkinda.misery/games/papasfreezeria/index.html"
+  },
+  {
+    "Name": "bomberman",
+    "Image": "/images/thumbnails/bomberman.jpg",
+    "Game": "https://imissthatkinda.misery/games/bomberman/index.html"
+  },
+  {
+    "Name": "fire emblem",
+    "Image": "/images/thumbnails/fireemblem.jpg",
+    "Game": "https://imissthatkinda.misery/games/fireemblem/index.html"
+  },
+  {
+    "Name": "ice climber",
+    "Image": "/images/thumbnails/iceclimber.jpg",
+    "Game": "https://imissthatkinda.misery/games/iceclimber/index.html"
+  },
+  {
+    "Name": "mario kart super circuit",
+    "Image": "/images/thumbnails/mariokartsupercircuit.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariokartsupercircuit/index.html"
+  },
+  {
+    "Name": "superstar saga",
+    "Image": "/images/thumbnails/superstarsaga.jpg",
+    "Game": "https://imissthatkinda.misery/games/superstarsaga/index.html"
+  },
+  {
+    "Name": "adofai",
+    "Image": "/images/thumbnails/adofai.jpg",
+    "Game": "https://imissthatkinda.misery/games/adofai/index.html"
+  },
+  {
+    "Name": "super smash flash",
+    "Image": "/images/thumbnails/supersmashflash.jpg",
+    "Game": "https://imissthatkinda.misery/games/supersmashflash/index.html"
+  },
+  {
+    "Name": "super meat boy",
+    "Image": "/images/thumbnails/supermeatboy.jpg",
+    "Game": "https://imissthatkinda.misery/games/supermeatboy/index.html"
+  },
+  {
+    "Name": "stickman hook",
+    "Image": "/images/thumbnails/stickmanhook.jpg",
+    "Game": "https://imissthatkinda.misery/games/stickmanhook/index.html"
+  },
+  {
+    "Name": "defend the tank",
+    "Image": "/images/thumbnails/defendthetank.jpg",
+    "Game": "https://imissthatkinda.misery/games/defendthetank/index.html"
+  },
+  {
+    "Name": "sort the court",
+    "Image": "/images/thumbnails/sortthecourt.jpg",
+    "Game": "https://imissthatkinda.misery/games/sortthecourt/index.html"
+  },
+  {
+    "Name": "this is the only level",
+    "Image": "/images/thumbnails/thisistheonlylevel.jpg",
+    "Game": "https://imissthatkinda.misery/games/thisistheonlylevel/index.html"
+  },
+  {
+    "Name": "run",
+    "Image": "/images/thumbnails/run.jpg",
+    "Game": "https://imissthatkinda.misery/games/run/index.html"
+  },
+  {
+    "Name": "run 2",
+    "Image": "/images/thumbnails/run2.jpg",
+    "Game": "https://imissthatkinda.misery/games/run2/index.html"
+  },
+  {
+    "Name": "battleships",
+    "Image": "/images/thumbnails/battleships.jpg",
+    "Game": "https://imissthatkinda.misery/games/battleships/index.html"
+  },
+  {
+    "Name": "breaking the bank",
+    "Image": "/images/thumbnails/breakingthebank.jpg",
+    "Game": "https://imissthatkinda.misery/games/breakingthebank/index.html"
+  },
+  {
+    "Name": "duck life",
+    "Image": "/images/thumbnails/ducklife.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife/index.html"
+  },
+  {
+    "Name": "duck life 2",
+    "Image": "/images/thumbnails/ducklife2.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife2/index.html"
+  },
+  {
+    "Name": "duck life 3",
+    "Image": "/images/thumbnails/ducklife3.jpg",
+    "Game": "https://imissthatkinda.misery/games/ducklife3/index.html"
+  },
+  {
+    "Name": "line rider",
+    "Image": "/images/thumbnails/linerider.jpg",
+    "Game": "https://imissthatkinda.misery/games/linerider/index.html"
+  },
+  {
+    "Name": "mario combat",
+    "Image": "/images/thumbnails/mariocombat.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariocombat/index.html"
+  },
+  {
+    "Name": "raft wars 2",
+    "Image": "/images/thumbnails/raftwars2.jpg",
+    "Game": "https://imissthatkinda.misery/games/raftwars2/index.html"
+  },
+  {
+    "Name": "space invaders",
+    "Image": "/images/thumbnails/spaceinvaders.jpg",
+    "Game": "https://imissthatkinda.misery/games/spaceinvaders/index.html"
+  },
+  {
+    "Name": "animal crossing",
+    "Image": "/images/thumbnails/animalcrossingwildworld.jpg",
+    "Game": "https://imissthatkinda.misery/games/animalcrossingwildworld/index.html"
+  },
+  {
+    "Name": "mario kart ds",
+    "Image": "/images/thumbnails/mariokartds.jpg",
+    "Game": "https://imissthatkinda.misery/games/mariokartds/index.html"
+  },
+  {
+    "Name": "new super mario bros",
+    "Image": "/images/thumbnails/newsupermariobros.jpg",
+    "Game": "https://imissthatkinda.misery/games/newsupermariobros/index.html"
+  },
+  {
+    "Name": "nintendogs",
+    "Image": "/images/thumbnails/nintendogs.jpg",
+    "Game": "https://imissthatkinda.misery/games/nintendogs/index.html"
+  },
+  {
+    "Name": "super mario 64 ds",
+    "Image": "/images/thumbnails/sm64ds.jpg",
+    "Game": "https://imissthatkinda.misery/games/sm64ds/index.html"
+  },
+  {
+    "Name": "gun mayhem",
+    "Image": "/images/thumbnails/gunmayhem.jpg",
+    "Game": "https://imissthatkinda.misery/games/gunmayhem/index.html"
+  },
+  {
+    "Name": "learn to fly",
+    "Image": "/images/thumbnails/learntofly.jpg",
+    "Game": "https://imissthatkinda.misery/games/learntofly/index.html"
+  },
+  {
+    "Name": "rooftop snipers 2",
+    "Image": "/images/thumbnails/rooftopsnipers2.jpg",
+    "Game": "https://imissthatkinda.misery/games/rooftop2/index.html"
+  },
+  {
+    "Name": "papa louie",
+    "Image": "/images/thumbnails/papalouie.jpg",
+    "Game": "https://imissthatkinda.misery/games/papalouie/index.html"
+  },
+  {
+    "Name": "papa louie 2",
+    "Image": "/images/thumbnails/papalouie2.jpg",
+    "Game": "https://imissthatkinda.misery/games/papalouie2/index.html"
+  },
+  {
+    "Name": "papa louie 3",
+    "Image": "/images/thumbnails/papalouie3.jpg",
+    "Game": "https://imissthatkinda.misery/games/papalouie3/index.html"
+  },
+  {
+    "Name": "steak and jake",
+    "Image": "/images/thumbnails/steakandjake.jpg",
+    "Game": "https://imissthatkinda.misery/games/steakandjake/index.html"
+  },
+  {
+    "Name": "steak and jake midnight",
+    "Image": "/images/thumbnails/steakandjakemidnightmarch.jpg",
+    "Game": "https://imissthatkinda.misery/games/steakandjakemidnightmarch/index.html"
+  },
   {
       "id": 2,
       "name": "1v1.LOL",
