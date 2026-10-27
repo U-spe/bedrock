@@ -116,8 +116,10 @@
                 addToHistory(result.target);
             }
 
-            // The frame visits the UV service route, not the UV demo homepage.
-            frame.src = result.proxyUrl;
+console.log("[rockz] target:", result.target);
+console.log("[rockz] generated proxy URL:", result.proxyUrl);
+
+frame.src = result.proxyUrl;
 
             // Some network failures do not produce a useful iframe error event.
             loadTimer = window.setTimeout(() => {
