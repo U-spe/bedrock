@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090c10">
+  <title>rockz — bedrock</title>
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/themes.css">
+  <link rel="stylesheet" href="/rocks/rockz.css">
+  <script src="/js/themes.js" defer></script>
+  <script src="/rocks/rockz.js" defer></script>
+</head>
+<body class="rockz-page">
+  <header class="rockz-topbar">
+    <a class="rockz-brand" href="/main.html" aria-label="Back to Bedrock"><img src="/assets/images/logo.png" alt=""><span>rockz<span class="rockz-dot">.</span></span></a>
+    <div class="rockz-engine"><span class="rockz-live-dot"></span> ULTRAVIOLET ENGINE</div>
+    <div class="rockz-actions">
+      <button class="rockz-icon-button" id="rockz-reload" type="button" title="Reload proxy" aria-label="Reload proxy"><i class="ri-refresh-line"></i></button>
+      <button class="rockz-icon-button" id="rockz-popout" type="button" title="Open proxy in a new tab" aria-label="Open proxy in a new tab"><i class="ri-external-link-line"></i></button>
+      <a class="rockz-icon-button" href="/settings.html" title="Bedrock settings" aria-label="Bedrock settings"><i class="ri-settings-3-line"></i></a>
+    </div>
+  </header>
+  <main class="rockz-main">
+    <div class="rockz-loading" id="rockz-loading"><div class="rockz-loader"></div><p>connecting to ultraviolet</p><small>starting the Rockz browser environment…</small></div>
+    <iframe id="rockz-uv" title="Rockz browser powered by Ultraviolet" src="https://ultraviolet-app.sp1.blitz.cloud/" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="rockz-frame-error" id="rockz-frame-error" hidden>
+      <i class="ri-wifi-off-line" aria-hidden="true"></i><strong>Ultraviolet did not load</strong>
+      <span>Check the connection, then reload Rockz or open the engine directly.</span>
+      <button type="button" id="rockz-retry">Try again</button>
+      <a href="https://ultraviolet-app.sp1.blitz.cloud/" target="_blank" rel="noopener noreferrer">Open Ultraviolet directly <i class="ri-arrow-up-right-line"></i></a>
+    </div>
+  </main>
+</body>
+</html>
