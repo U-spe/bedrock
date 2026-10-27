@@ -1,30 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#090c10">
-  <title>bedrock — browser</title>
-  <link rel="icon" type="image/png" href="/assets/images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/menu.css">
-  <link rel="stylesheet" href="/css/themes.css">
-  <script src="/js/themes.js" defer></script>
-  <script src="/js/hotkeys.js" defer></script>
-  <script src="/js/globalmenu.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Bedrock</title>
   <style>
-    html,body { width:100%; height:100%; min-height:100%; margin:0; overflow:hidden; }
-    body { min-height:100vh; }
-    #rockz-embed { position:fixed; inset:0; width:100%; height:100%; border:0; display:block; background:var(--br-bg,#090c10); }
-    #global-menu { position:relative; z-index:10000; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #rockz-embed {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #000;
+    }
   </style>
 </head>
 <body>
-  <iframe id="rockz-embed" src="/rocks/pr.xy.html" title="Rockz browser" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-  <div id="global-menu"></div>
+  <iframe
+    id="rockz-embed"
+    title="Bedrock Search"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen
+  ></iframe>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const CONFIG_URL = "/assets/json/search.types.json";
+      const SETTINGS_KEY = "bedrock.proxy.engine";
+      const iframe = document.getElementById("rockz-embed");
+
+      async function initializeSearch() {
+        try {
+          const response = await fetch(CONFIG_URL, { cache: "no-store" });
+
+          if (!response.ok) {
+            throw new Error(`Could not load search configuration (${response.status})`);
+          }
+
+          const config = await response.json();
+          const engines = config.types;
+
+          if (!engines || typeof engines !== "object") {
+            throw new Error("Invalid config for the proxy. check the paths, or contact an admin.");
+          }
+
+          const savedEngine = localStorage.getItem(SETTINGS_KEY);
+          const selectedEngine = engines[savedEngine]?.enabled
+            ? savedEngine
+            : config.default;
+
+          const engine = engines[selectedEngine];
+
+          if (!engine || !engine.enabled || !engine.url) {
+            throw new Error("Scramjet is not available. please check url, or contact an admin.");
+          }
+
+          iframe.src = engine.url;
+        } catch (error) {
+          console.error("[Bedrock Search]", error);
+          document.body.innerHTML = "";
+        }
+      }
+
+      window.addEventListener("storage", (event) => {
+        if (event.key === SETTINGS_KEY) {
+          initializeSearch();
+        }
+      });
+
+      window.addEventListener("bedrock:proxy-engine-changed", () => {
+        initializeSearch();
+      });
+
+      initializeSearch();
+    })();
+  </script>
 </body>
 </html>
