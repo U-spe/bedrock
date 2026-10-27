@@ -1,0 +1,17 @@
+{
+  "default": "scramjet",
+  "types": {
+    "scramjet": {
+      "name": "Scramjet",
+      "shortName": "SJ",
+      "url": "https://sjett-app.sp1.blitz.cloud/",
+      "enabled": true
+    },
+    "ultraviolet": {
+      "name": "Ultraviolet",
+      "shortName": "UV",
+      "url": "https://ultrav-app.sp1.blitz.cloud/",
+      "enabled": true
+    }
+  }
+}
