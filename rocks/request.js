@@ -1,139 +1,260 @@
 (() => {
-    "use strict";
+  "use strict";
 
-    const ENGINE_ORIGIN = "https://ultraviolet-app.sp1.blitz.cloud";
+  const ENGINES = Object.freeze({
+    scramjet: {
+      id: "scramjet",
+      label: "scramjet",
+      shortLabel: "sj",
+      origin: "https://sjett.sp1.blitz.cloud",
+      prefix: "/scramjet/"
+    },
 
-    let configPromise = null;
+    ultraviolet: {
+      id: "ultraviolet",
+      label: "ultraviolet",
+      shortLabel: "uv",
+      origin: "https://ultraviolet-app.sp1.blitz.cloud",
+      prefix: "/uv/service/"
+    }
+  });
 
-    function loadScript(src) {
-        return new Promise((resolve, reject) => {
-            const existing = [...document.scripts].find(
-                (script) => script.dataset.rockzSource === src
-            );
+  const SETTINGS_KEY = "bedrock.proxy.engine";
 
-            if (existing?.dataset.loaded === "true") {
-                resolve();
-                return;
-            }
+  let uvConfigPromise = null;
 
-            if (existing) {
-                existing.addEventListener("load", resolve, { once: true });
-                existing.addEventListener(
-                    "error",
-                    () => reject(new Error(`could not load ${src}`)),
-                    { once: true }
-                );
-                return;
-            }
+  function normalizeEngine(value) {
+    const engine = String(value || "").trim().toLowerCase();
 
-            const script = document.createElement("script");
-            script.src = src;
-            script.async = true;
-            script.dataset.rockzSource = src;
-
-            script.addEventListener("load", () => {
-                script.dataset.loaded = "true";
-                resolve();
-            }, { once: true });
-
-            script.addEventListener("error", () => {
-                script.remove();
-                reject(new Error(`could not load ultraviolet asset: ${src}`));
-            }, { once: true });
-
-            document.head.appendChild(script);
-        });
+    if (["uv", "ultraviolet"].includes(engine)) {
+      return "ultraviolet";
     }
 
-    async function getConfig() {
-        if (window.__uv$config?.encodeUrl) {
-            return window.__uv$config;
-        }
+    return "scramjet";
+  }
 
-        if (!configPromise) {
-            configPromise = (async () => {
-                await loadScript(`${ENGINE_ORIGIN}/uv/uv.bundle.js`);
-                await loadScript(`${ENGINE_ORIGIN}/uv/uv.config.js`);
+  function getEngine() {
+    try {
+      return normalizeEngine(localStorage.getItem(SETTINGS_KEY));
+    } catch {
+      return "scramjet";
+    }
+  }
 
-                const config = window.__uv$config;
+  function setEngine(value) {
+    const engine = normalizeEngine(value);
 
-                if (
-                    !config ||
-                    typeof config.encodeUrl !== "function" ||
-                    typeof config.prefix !== "string"
-                ) {
-                    throw new Error(
-                        "ultraviolet did not expose a valid proxy configuration"
-                    );
-                }
-
-                return config;
-            })().catch((error) => {
-                configPromise = null;
-                throw error;
-            });
-        }
-
-        return configPromise;
+    try {
+      localStorage.setItem(SETTINGS_KEY, engine);
+    } catch (error) {
+      console.warn("[rockz] couldn't persist the proxy engine:", error);
     }
 
-    function resolveTarget(value) {
-        let target = String(value || "").trim();
+    window.dispatchEvent(
+      new CustomEvent("bedrock:proxy-engine-changed", {
+        detail: { engine }
+      })
+    );
 
-        if (!target) {
-            throw new Error("enter a url or search term first");
-        }
+    return engine;
+  }
 
-        if (/\s/.test(target) && !/^[a-z][a-z0-9+.-]*:\/\//i.test(target)) {
-            return `https://www.google.com/search?q=${encodeURIComponent(target)}`;
-        }
+  function getEngineConfig(engine = getEngine()) {
+    return ENGINES[normalizeEngine(engine)];
+  }
 
-        if (!/^[a-z][a-z0-9+.-]*:\/\//i.test(target)) {
-            if (/^[\w-]+(\.[\w-]+)+(?::\d+)?(?:[/?#].*)?$/i.test(target)) {
-                target = `https://${target}`;
-            } else {
-                return `https://www.google.com/search?q=${encodeURIComponent(target)}`;
-            }
-        }
+  function resolveTarget(value) {
+    let target = String(value || "").trim();
 
-        let parsed;
-
-        try {
-            parsed = new URL(target);
-        } catch {
-            throw new Error("that address is not valid");
-        }
-
-        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
-            throw new Error("rockz only supports http and https addresses");
-        }
-
-        return parsed.href;
+    if (!target) {
+      throw new Error("enter a URL or search term first");
     }
 
-    async function encode(target) {
-        const config = await getConfig();
-        const resolved = resolveTarget(target);
-        const encoded = config.encodeUrl(resolved);
-
-        if (typeof encoded !== "string" || !encoded) {
-            throw new Error("ultraviolet could not encode this address");
-        }
-
-        const prefix = config.prefix.startsWith("/")
-            ? config.prefix
-            : `/${config.prefix}`;
-
-        return {
-            target: resolved,
-            encoded,
-            proxyUrl: `${ENGINE_ORIGIN}${prefix}${encoded}`
-        };
+    if (/[\u0000-\u001f]/.test(target)) {
+      throw new Error("that address contains invalid characters");
     }
 
-    window.RockzRequest = Object.freeze({
-        engineOrigin: ENGINE_ORIGIN,
-        resolveTarget,
-        encode
+    if (/^[a-z][a-z\d+.-]*:\/\//i.test(target)) {
+      // A scheme is already present.
+    } else if (
+      /^[\w-]+(?:\.[\w-]+)+(?:\:\d+)?(?:[/?#][^\s]*)?$/i.test(target)
+    ) {
+      target = `https://${target}`;
+    } else {
+      target = `https://www.google.com/search?q=${encodeURIComponent(target)}`;
+    }
+
+    let parsed;
+
+    try {
+      parsed = new URL(target);
+    } catch {
+      throw new Error("that address is not valid");
+    }
+
+    if (!["http:", "https:"].includes(parsed.protocol)) {
+      throw new Error("rockz only supports HTTP and HTTPS addresses");
+    }
+
+    if (!parsed.hostname) {
+      throw new Error("enter a valid website address");
+    }
+
+    return parsed.href;
+  }
+
+  function loadScript(src, marker) {
+    return new Promise((resolve, reject) => {
+      const existing = [...document.scripts].find(
+        script => script.dataset.rockzSource === marker
+      );
+
+      if (existing?.dataset.loaded === "true") {
+        resolve();
+        return;
+      }
+
+      if (existing) {
+        existing.addEventListener("load", resolve, { once: true });
+        existing.addEventListener(
+          "error",
+          () => reject(new Error(`could not load proxy asset: ${src}`)),
+          { once: true }
+        );
+        return;
+      }
+
+      const script = document.createElement("script");
+
+      script.src = src;
+      script.async = true;
+      script.dataset.rockzSource = marker;
+
+      script.addEventListener("load", () => {
+        script.dataset.loaded = "true";
+        resolve();
+      }, { once: true });
+
+      script.addEventListener("error", () => {
+        script.remove();
+        reject(new Error(`could not load proxy asset: ${src}`));
+      }, { once: true });
+
+      document.head.appendChild(script);
     });
+  }
+
+  async function getUVConfig() {
+    const engine = ENGINES.ultraviolet;
+
+    if (
+      window.__uv$config &&
+      typeof window.__uv$config.encodeUrl === "function" &&
+      typeof window.__uv$config.prefix === "string"
+    ) {
+      return window.__uv$config;
+    }
+
+    if (!uvConfigPromise) {
+      uvConfigPromise = (async () => {
+        await loadScript(
+          `${engine.origin}/uv/uv.bundle.js`,
+          "uv-bundle"
+        );
+
+        await loadScript(
+          `${engine.origin}/uv/uv.config.js`,
+          "uv-config"
+        );
+
+        const config = window.__uv$config;
+
+        if (
+          !config ||
+          typeof config.encodeUrl !== "function" ||
+          typeof config.prefix !== "string"
+        ) {
+          throw new Error(
+            "ultraviolet did not expose a valid configuration. " +
+            "check the deployed UV asset paths."
+          );
+        }
+
+        return config;
+      })().catch(error => {
+        uvConfigPromise = null;
+        throw error;
+      });
+    }
+
+    return uvConfigPromise;
+  }
+
+  function normalizePrefix(prefix) {
+    let result = String(prefix || "");
+
+    if (!result.startsWith("/")) {
+      result = `/${result}`;
+    }
+
+    if (!result.endsWith("/")) {
+      result += "/";
+    }
+
+    return result;
+  }
+
+  async function encode(value, requestedEngine = getEngine()) {
+    const engineId = normalizeEngine(requestedEngine);
+    const engine = ENGINES[engineId];
+    const target = resolveTarget(value);
+
+    let proxyUrl;
+
+    if (engineId === "ultraviolet") {
+      const config = await getUVConfig();
+      const encoded = config.encodeUrl(target);
+
+      if (typeof encoded !== "string" || !encoded) {
+        throw new Error("ultraviolet could not encode this address");
+      }
+
+      const prefix = normalizePrefix(config.prefix);
+
+      proxyUrl = new URL(
+        `${prefix}${encoded}`,
+        engine.origin
+      ).href;
+    } else {
+      /*
+       * Scramjet route:
+       * https://sjett.sp1.blitz.cloud/scramjet/https://example.com
+       *
+       * The destination is deliberately NOT base64 encoded here.
+       * This assumes the deployed Scramjet backend uses /scramjet/
+       * and accepts the destination as a direct route.
+       */
+      proxyUrl = new URL(
+        `${engine.prefix}${target}`,
+        engine.origin
+      ).href;
+    }
+
+    return Object.freeze({
+      engine: engineId,
+      target,
+      proxyUrl
+    });
+  }
+
+  window.RockzRequest = Object.freeze({
+    engines: ENGINES,
+    settingsKey: SETTINGS_KEY,
+    getEngine,
+    setEngine,
+    getEngineConfig,
+    normalizeEngine,
+    resolveTarget,
+    encode
+  });
 })();
