@@ -225,17 +225,12 @@
         `${prefix}${encoded}`,
         engine.origin
       ).href;
+      
     } else {
-      /*
-       * Scramjet route:
-       * https://sjett.sp1.blitz.cloud/scramjet/https://example.com
-       *
-       * The destination is deliberately NOT base64 encoded here.
-       * This assumes the deployed Scramjet backend uses /scramjet/
-       * and accepts the destination as a direct route.
-       */
+      const encoded = encodeURIComponent(target);
+
       proxyUrl = new URL(
-        `${engine.prefix}${target}`,
+        `${engine.prefix}${encoded}`,
         engine.origin
       ).href;
     }
