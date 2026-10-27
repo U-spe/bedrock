@@ -1,0 +1,31 @@
+:root { --rockz-topbar-height: 54px; }
+html, body.rockz-page { width:100%; height:100%; min-height:100%; margin:0; overflow:hidden; background:var(--br-bg,#090c10); color:var(--br-text,#edf3fa); font-family:"JetBrains Mono",monospace; }
+body.rockz-page { display:flex; flex-direction:column; }
+.rockz-page *, .rockz-page *::before, .rockz-page *::after { box-sizing:border-box; }
+.rockz-topbar { position:relative; z-index:20; flex:0 0 var(--rockz-topbar-height); display:flex; align-items:center; gap:16px; padding:0 16px; border-bottom:1px solid var(--br-border,#26302b); background:color-mix(in srgb,var(--br-surface,#11161d) 92%,transparent); backdrop-filter:blur(18px); }
+.rockz-brand { display:inline-flex; align-items:center; gap:9px; color:var(--br-text,#edf3fa); text-decoration:none; font:700 19px/1 "Space Grotesk",sans-serif; letter-spacing:-.055em; }
+.rockz-brand img { width:25px; height:25px; object-fit:contain; }
+.rockz-dot { color:var(--br-accent,#5fae87); }
+.rockz-engine { display:inline-flex; align-items:center; gap:8px; margin-left:10px; color:var(--br-muted,#91a0b2); font-size:9px; letter-spacing:.12em; }
+.rockz-live-dot { width:7px; height:7px; border-radius:50%; background:var(--br-accent,#5fae87); box-shadow:0 0 12px var(--br-glow,#5fae8755); }
+.rockz-actions { display:flex; align-items:center; gap:7px; margin-left:auto; }
+.rockz-icon-button { width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--br-border,#26302b); border-radius:9px; color:var(--br-muted,#91a0b2); background:var(--br-raised,#171f29); font-size:17px; text-decoration:none; cursor:pointer; transition:color 160ms ease,border-color 160ms ease,transform 160ms ease; }
+.rockz-icon-button:hover { color:var(--br-text,#edf3fa); border-color:var(--br-accent,#5fae87); transform:translateY(-1px); }
+.rockz-icon-button:focus-visible,.rockz-frame-error button:focus-visible,.rockz-frame-error a:focus-visible { outline:2px solid var(--br-accent,#5fae87); outline-offset:3px; }
+.rockz-main { position:relative; flex:1 1 auto; min-height:0; background:var(--br-bg,#090c10); }
+#rockz-uv { position:absolute; inset:0; display:block; width:100%; height:100%; border:0; background:#111; }
+.rockz-loading { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; padding:24px; text-align:center; color:var(--br-muted,#91a0b2); background:var(--br-bg,#090c10); transition:opacity 220ms ease,visibility 220ms ease; }
+.rockz-loading.is-hidden { opacity:0; visibility:hidden; pointer-events:none; }
+.rockz-loading p { margin:8px 0 0; color:var(--br-text,#edf3fa); font-size:12px; }
+.rockz-loading small { font-size:10px; }
+.rockz-loader { width:27px; height:27px; border-radius:50%; border:2px solid var(--br-border,#26302b); border-top-color:var(--br-accent,#5fae87); animation:rockz-spin 800ms linear infinite; }
+.rockz-frame-error { position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:13px; padding:24px; text-align:center; background:var(--br-bg,#090c10); }
+.rockz-frame-error[hidden] { display:none; }
+.rockz-frame-error>i { font-size:30px; color:var(--br-accent,#5fae87); }
+.rockz-frame-error strong { color:var(--br-text,#edf3fa); font:600 19px "Space Grotesk",sans-serif; }
+.rockz-frame-error span { max-width:420px; color:var(--br-muted,#91a0b2); font-size:11px; line-height:1.7; }
+.rockz-frame-error button,.rockz-frame-error a { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid var(--br-border,#26302b); border-radius:9px; color:var(--br-text,#edf3fa); background:var(--br-raised,#171f29); font:inherit; font-size:11px; text-decoration:none; cursor:pointer; }
+.rockz-frame-error button:hover,.rockz-frame-error a:hover { border-color:var(--br-accent,#5fae87); }
+@keyframes rockz-spin { to { transform:rotate(360deg); } }
+@media(max-width:540px) { .rockz-topbar { gap:9px; padding:0 10px; } .rockz-engine { margin-left:0; font-size:8px; letter-spacing:.06em; } .rockz-brand { font-size:17px; } .rockz-brand img { width:22px; height:22px; } .rockz-icon-button { width:31px; height:31px; } }
+@media(prefers-reduced-motion:reduce) { .rockz-loader { animation-duration:2s; } .rockz-icon-button { transition:none; } }
