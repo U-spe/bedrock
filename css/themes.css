@@ -150,3 +150,46 @@ kbd { display: inline-block; padding: 4px 7px; border: 1px solid var(--br-border
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+html:has(.br-settings-layout) {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body:has(.br-settings-layout) {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.br-page-content:has(.br-settings-layout) {
+  min-height: 100vh;
+}
+
+.br-settings-layout {
+  align-items: start;
+}
+
+.br-settings-sections {
+  min-width: 0;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 720px) {
+  html:has(.br-settings-layout) {
+    scroll-padding-top: 12px;
+  }
+
+  .br-settings-nav {
+    z-index: 5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.br-settings-layout) {
+    scroll-behavior: auto;
+  }
+}
