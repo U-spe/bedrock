@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>Proxy Offline | Bedrock</title>
+
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #090909;
+  --panel: #111111;
+  --border: #292929;
+  --text: #f5f5f5;
+  --muted: #888888;
+  --accent: #7c3aed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at center, #19131f 0%, transparent 60%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  padding: 44px 30px;
+  text-align: center;
+  background: linear-gradient(145deg, #151515, #0c0c0c);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 25px 80px #0008;
+  animation: appear .45s ease-out;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  margin-bottom: 25px;
+  border: 1px solid #482525;
+  border-radius: 100px;
+  background: #241313;
+  color: #ff8585;
+  font: 600 11px monospace;
+  letter-spacing: 2px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 12px #ef4444;
+  animation: pulse 1.5s infinite;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 7vw, 46px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+h1 span {
+  display: block;
+  color: #a78bfa;
+}
+
+.description {
+  max-width: 360px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.error-code {
+  margin-top: 22px;
+  color: #555;
+  font: 11px monospace;
+  letter-spacing: 1px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+button, a {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #191919;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.primary {
+  background: #5b21b6;
+  border-color: #6d28d9;
+}
+
+button:hover, a:hover {
+  border-color: #777;
+  transform: translateY(-2px);
+}
+
+.primary:hover {
+  background: #6d28d9;
+}
+
+.footer {
+  margin-top: 34px;
+  color: #484848;
+  font: 10px monospace;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  50% { opacity: .35; }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="container">
+
+  <div class="status">
+    <span class="status-dot"></span>
+    SYSTEM OFFLINE
+  </div>
+
+  <h1>
+    THE PROXY
+    <span>IS DOWN.</span>
+  </h1>
+
+  <p class="description">
+    The proxy service is currently unavailable.
+    This is a server-side issue, not a problem with your URL.
+    Please try again later.
+  </p>
+
+  <div class="error-code">
+    ERROR 503 · PROXY SERVICE UNAVAILABLE
+  </div>
+
+  <div class="actions">
+    <button class="primary" id="retry" type="button">
+      Try Again
+    </button>
+
+    <button id="back" type="button">
+      Go Back
+    </button>
+  </div>
+
+  <div class="footer">
+    BEDROCK // PROXY STATUS
+  </div>
+
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  document.getElementById("retry").addEventListener("click", () => {
+    window.location.reload();
+  });
+
+  document.getElementById("back").addEventListener("click", () => {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.assign("/");
+    }
+  });
+})();
+</script>
+</body>
+</html>
