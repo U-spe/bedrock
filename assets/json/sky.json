@@ -6,906 +6,906 @@
     "cover": "https://cdn-icons-png.flaticon.com/512/5968/5968528.png",
     "url": "/assets/forms/custom.html"
   }, 
-   {
-    "Name": "slope",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/slope.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/slope/index.html"
-  },
   {
-    "Name": "subway surfers",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/subwaysurfers.jpeg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/subwaysurfers/index.html"
+    "name": "slope",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/slope.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/slope/index.html"
   },
   {
-    "Name": "flappy bird",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/flappybird.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/flappy/index.html"
+    "name": "subway surfers",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/subwaysurfers.jpeg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/subwaysurfers/index.html"
   },
   {
-    "Name": "papa's pizzaria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papaspizzeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papaspizzaria/index.html"
+    "name": "flappy bird",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/flappybird.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/flappy/index.html"
   },
   {
-    "Name": "papa's burgeria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasburgeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasburgeria/index.html"
+    "name": "papa's pizzaria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papaspizzeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papaspizzaria/index.html"
   },
   {
-    "Name": "super mario 64",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64/index.html"
+    "name": "papa's burgeria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasburgeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasburgeria/index.html"
   },
   {
-    "Name": "run 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/run3/index.html"
+    "name": "super mario 64",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64/index.html"
   },
   {
-    "Name": "bitlife",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bitlife.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/bitlife/index.html"
+    "name": "run 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/run3/index.html"
   },
   {
-    "Name": "crossy road",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/crossyroad.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/crossy/index.html"
+    "name": "bitlife",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bitlife.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/bitlife/index.html"
   },
   {
-    "Name": "minecraft [v1.5.2]",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mc.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mc/index.html"
+    "name": "crossy road",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/crossyroad.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/crossy/index.html"
   },
   {
-    "Name": "cookie clicker",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/cookieclick.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/cookieclicker/index.html"
+    "name": "minecraft [v1.5.2]",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mc.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mc/index.html"
   },
   {
-    "Name": "temple run 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/templerun2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/templerun2/index.html"
+    "name": "cookie clicker",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/cookieclick.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/cookieclicker/index.html"
   },
   {
-    "Name": "duck life 4",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife4.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife4/index.html"
+    "name": "temple run 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/templerun2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/templerun2/index.html"
   },
   {
-    "Name": "chrome dino game",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/chromedino.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/dinogame/index.html"
+    "name": "duck life 4",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife4.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife4/index.html"
   },
   {
-    "Name": "jetpack joyride",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/jetpackjoyride.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/jetpackjoyride/index.html"
+    "name": "chrome dino game",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/chromedino.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/dinogame/index.html"
   },
   {
-    "Name": "retro bowl",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/retrobowl.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/retrobowl/index.html"
+    "name": "jetpack joyride",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/jetpackjoyride.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/jetpackjoyride/index.html"
   },
   {
-    "Name": "fruit ninja",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fruitninja.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fruitninja/index.html"
+    "name": "retro bowl",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/retrobowl.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/retrobowl/index.html"
   },
   {
-    "Name": "doodle jump",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/doodlejump.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/doodlejump/index.html"
+    "name": "fruit ninja",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fruitninja.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fruitninja/index.html"
   },
   {
-    "Name": "2048",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/2048.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/2048/index.html"
+    "name": "doodle jump",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/doodlejump.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/doodlejump/index.html"
   },
   {
-    "Name": "tetris",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tetris.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/tetris/index.html"
+    "name": "2048",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/2048.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/2048/index.html"
   },
   {
-    "Name": "fancy pants adventure",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fancypantsadventure.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fancypantsadventure/index.html"
+    "name": "tetris",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tetris.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/tetris/index.html"
   },
   {
-    "Name": "happy wheels",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/happywheels.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/happywheels/index.html"
+    "name": "fancy pants adventure",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fancypantsadventure.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fancypantsadventure/index.html"
   },
   {
-    "Name": "papa's hotdoggeria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papashotdoggeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papashotdoggeria/index.html"
+    "name": "happy wheels",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/happywheels.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/happywheels/index.html"
   },
   {
-    "Name": "paperio2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/paperio2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/paperio2/index.html"
+    "name": "papa's hotdoggeria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papashotdoggeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papashotdoggeria/index.html"
   },
   {
-    "Name": "super hot",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superhot.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/superhot/index.html"
+    "name": "paperio2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/paperio2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/paperio2/index.html"
   },
   {
-    "Name": "the binding of isaac",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thebindingofisaac.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thebindingofisaac/index.html"
+    "name": "super hot",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superhot.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/superhot/index.html"
   },
   {
-    "Name": "townscaper",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/townscaper.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/townscaper/index.html"
+    "name": "the binding of isaac",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thebindingofisaac.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thebindingofisaac/index.html"
   },
   {
-    "Name": "tunnel rush",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tunnelrush.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/tunnelrush/index.html"
+    "name": "townscaper",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/townscaper.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/townscaper/index.html"
   },
   {
-    "Name": "theme hotel",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/themehotel.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/themehotel/index.html"
+    "name": "tunnel rush",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tunnelrush.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/tunnelrush/index.html"
   },
   {
-    "Name": "escaping the prison",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/escapingtheprison.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/escapingtheprison/index.html"
+    "name": "theme hotel",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/themehotel.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/themehotel/index.html"
   },
   {
-    "Name": "stealing the diamond",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stealingthediamond.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/stealingthediamond/index.html"
+    "name": "escaping the prison",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/escapingtheprison.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/escapingtheprison/index.html"
   },
   {
-    "Name": "infiltrating the airship",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/infiltratingtheairship.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/infiltratingtheairship/index.html"
+    "name": "stealing the diamond",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stealingthediamond.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/stealingthediamond/index.html"
   },
   {
-    "Name": "fleeing the complex",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fleeingthecomplex.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fleeingthecomplex/index.html"
+    "name": "infiltrating the airship",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/infiltratingtheairship.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/infiltratingtheairship/index.html"
   },
   {
-    "Name": "the impossible quiz",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/theimpossiblequiz.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/theimpossiblequiz/index.html"
+    "name": "fleeing the complex",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fleeingthecomplex.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fleeingthecomplex/index.html"
   },
   {
-    "Name": "solitaire",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/solitaire.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/solitaire/index.html"
+    "name": "the impossible quiz",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/theimpossiblequiz.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/theimpossiblequiz/index.html"
   },
   {
-    "Name": "drift hunters",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drifthunters.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/drifthunters/index.html"
+    "name": "solitaire",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/solitaire.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/solitaire/index.html"
   },
   {
-    "Name": "vex 6",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/vex6.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/vex6/index.html"
+    "name": "drift hunters",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drifthunters.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/drifthunters/index.html"
   },
   {
-    "Name": "among us fangame",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/amongus.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/amongus/index.html"
+    "name": "vex 6",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/vex6.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/vex6/index.html"
   },
   {
-    "Name": "edge surf",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/surf.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/surf/index.html"
+    "name": "among us fangame",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/amongus.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/amongus/index.html"
   },
   {
-    "Name": "motox3m",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/motox3m.jpeg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/motox3m/index.html"
+    "name": "edge surf",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/surf.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/surf/index.html"
   },
   {
-    "Name": "fnaf 1",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf/index.html"
+    "name": "motox3m",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/motox3m.jpeg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/motox3m/index.html"
   },
   {
-    "Name": "fnaf 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-2/index.html"
+    "name": "fnaf 1",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf/index.html"
   },
   {
-    "Name": "fnaf 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-3/index.html"
+    "name": "fnaf 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-2/index.html"
   },
   {
-    "Name": "fnaf 4",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf4.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-4/index.html"
+    "name": "fnaf 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-3/index.html"
   },
   {
-    "Name": "riddle school",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool1/index.html"
+    "name": "fnaf 4",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnaf4.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnaf-4/index.html"
   },
   {
-    "Name": "riddle school 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool2/index.html"
+    "name": "riddle school",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool1/index.html"
   },
   {
-    "Name": "riddle school 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool3/index.html"
+    "name": "riddle school 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool2/index.html"
   },
   {
-    "Name": "riddle school 4",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool4.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool4/index.html"
+    "name": "riddle school 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool3/index.html"
   },
   {
-    "Name": "riddle school 5",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool5.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool5/index.html"
+    "name": "riddle school 4",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool4.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool4/index.html"
   },
   {
-    "Name": "riddle transfer",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddletransfer.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddletransfer/index.html"
+    "name": "riddle school 5",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddleschool5.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddleschool5/index.html"
   },
   {
-    "Name": "riddle transfer 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddletransfer2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddletransfer2/index.html"
+    "name": "riddle transfer",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddletransfer.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddletransfer/index.html"
   },
   {
-    "Name": "drift boss",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/driftboss.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/driftboss/index.html"
+    "name": "riddle transfer 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/riddletransfer2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/riddleschool/riddletransfer2/index.html"
   },
   {
-    "Name": "friday night funkin",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnf.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnf/index.html"
+    "name": "drift boss",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/driftboss.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/driftboss/index.html"
   },
   {
-    "Name": "pacman",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pacman.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pacman/index.html"
+    "name": "friday night funkin",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fnf.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fnf/index.html"
   },
   {
-    "Name": "papa's pancakeria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papaspancakeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papaspancakeria/index.html"
+    "name": "pacman",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pacman.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pacman/index.html"
   },
   {
-    "Name": "rooftop snipers",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop/index.html"
+    "name": "papa's pancakeria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papaspancakeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papaspancakeria/index.html"
   },
   {
-    "Name": "baldi's basics",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/baldisbasics.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/baldisbasics/index.html"
+    "name": "rooftop snipers",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop/index.html"
   },
   {
-    "Name": "bob the robber 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bobtherobber2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/bobtherobber2/index.html"
+    "name": "baldi's basics",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/baldisbasics.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/baldisbasics/index.html"
   },
   {
-    "Name": "minesweeper",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/minesweeper.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/minesweeper/index.html"
+    "name": "bob the robber 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bobtherobber2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/bobtherobber2/index.html"
   },
   {
-    "Name": "pokemon emerald",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonemerald.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonemerald/index.html"
+    "name": "minesweeper",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/minesweeper.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/minesweeper/index.html"
   },
   {
-    "Name": "pokemon fire red",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonfirered.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonfirered/index.html"
+    "name": "pokemon emerald",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonemerald.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonemerald/index.html"
   },
   {
-    "Name": "super mario bros",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros/index.html"
+    "name": "pokemon fire red",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonfirered.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonfirered/index.html"
   },
   {
-    "Name": "super mario kart",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariokart.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariokart/index.html"
+    "name": "super mario bros",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros/index.html"
   },
   {
-    "Name": "super mario world",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioworld.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioworld/index.html"
+    "name": "super mario kart",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariokart.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariokart/index.html"
   },
   {
-    "Name": "there is no game",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thereisnogame.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thereisnogame/index.html"
+    "name": "super mario world",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioworld.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioworld/index.html"
   },
   {
-    "Name": "world's hardest game",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/worldshardestgame.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/worldshardestgame/index.html"
+    "name": "there is no game",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thereisnogame.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thereisnogame/index.html"
   },
   {
-    "Name": "castlevania",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/castlevania.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/castlevania/index.html"
+    "name": "world's hardest game",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/worldshardestgame.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/worldshardestgame/index.html"
   },
   {
-    "Name": "donkey kong",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykong.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykong/index.html"
+    "name": "castlevania",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/castlevania.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/castlevania/index.html"
   },
   {
-    "Name": "dr mario",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drmario.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/drmario/index.html"
+    "name": "donkey kong",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykong.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykong/index.html"
   },
   {
-    "Name": "metroid",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/metroid.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/metroid/index.html"
+    "name": "dr mario",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drmario.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/drmario/index.html"
   },
   {
-    "Name": "super mario bros 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros2/index.html"
+    "name": "metroid",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/metroid.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/metroid/index.html"
   },
   {
-    "Name": "super mario bros 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros3/index.html"
+    "name": "super mario bros 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros2/index.html"
   },
   {
-    "Name": "the legend of zelda",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thelegendofzelda.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thelegendofzelda/index.html"
+    "name": "super mario bros 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros3/index.html"
   },
   {
-    "Name": "warioware",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/warioware.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/warioware/index.html"
+    "name": "the legend of zelda",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thelegendofzelda.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thelegendofzelda/index.html"
   },
   {
-    "Name": "yoshi's island",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/yoshisisland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/yoshisisland/index.html"
+    "name": "warioware",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/warioware.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/warioware/index.html"
   },
   {
-    "Name": "donkey kong land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykongland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykongland/index.html"
+    "name": "yoshi's island",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/yoshisisland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/yoshisisland/index.html"
   },
   {
-    "Name": "kirby's dream land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/kirbysdreamland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/kirbysdreamland/index.html"
+    "name": "donkey kong land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykongland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykongland/index.html"
   },
   {
-    "Name": "super mario land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioland/index.html"
+    "name": "kirby's dream land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/kirbysdreamland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/kirbysdreamland/index.html"
   },
   {
-    "Name": "doge miner",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/dogeminer.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/dogeminer/index.html"
+    "name": "super mario land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioland/index.html"
   },
   {
-    "Name": "tanuki sunset",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tanukisunset.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/tanukisunset/index.html"
+    "name": "doge miner",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/dogeminer.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/dogeminer/index.html"
   },
   {
-    "Name": "aquapark slides",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/aquaparkslides.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/aquaparkslides/index.html"
+    "name": "tanuki sunset",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tanukisunset.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/tanukisunset/index.html"
   },
   {
-    "Name": "color switch",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/colorswitch.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/colorswitch/index.html"
+    "name": "aquapark slides",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/aquaparkslides.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/aquaparkslides/index.html"
   },
   {
-    "Name": "papa's freezeria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasfreezeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasfreezeria/index.html"
+    "name": "color switch",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/colorswitch.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/colorswitch/index.html"
   },
   {
-    "Name": "btd",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd/index.html"
+    "name": "papa's freezeria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasfreezeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasfreezeria/index.html"
   },
   {
-    "Name": "btd 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd2/index.html"
+    "name": "btd",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd/index.html"
   },
   {
-    "Name": "btd 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd3/index.html"
+    "name": "btd 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd2/index.html"
   },
   {
-    "Name": "btd 4",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd4.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd4/index.html"
+    "name": "btd 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd3/index.html"
   },
   {
-    "Name": "bomberman",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bomberman.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/bomberman/index.html"
+    "name": "btd 4",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/btd4.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/btd/btd4/index.html"
   },
   {
-    "Name": "fire emblem",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fireemblem.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fireemblem/index.html"
+    "name": "bomberman",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bomberman.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/bomberman/index.html"
   },
   {
-    "Name": "ice climber",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/iceclimber.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/iceclimber/index.html"
+    "name": "fire emblem",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fireemblem.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fireemblem/index.html"
   },
   {
-    "Name": "mario kart super circuit",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartsupercircuit.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartsupercircuit/index.html"
+    "name": "ice climber",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/iceclimber.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/iceclimber/index.html"
   },
   {
-    "Name": "pokemon leaf green",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonleafgreen.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonleafgreen/index.html"
+    "name": "mario kart super circuit",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartsupercircuit.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartsupercircuit/index.html"
   },
   {
-    "Name": "pokemon ruby",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonruby.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonruby/index.html"
+    "name": "pokemon leaf green",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonleafgreen.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonleafgreen/index.html"
   },
   {
-    "Name": "pokemon sapphire",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonsapphire.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonsapphire/index.html"
+    "name": "pokemon ruby",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonruby.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonruby/index.html"
   },
   {
-    "Name": "superstar saga",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superstarsaga.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/superstarsaga/index.html"
+    "name": "pokemon sapphire",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonsapphire.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonsapphire/index.html"
   },
   {
-    "Name": "adofai",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/adofai.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/adofai/index.html"
+    "name": "superstar saga",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superstarsaga.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/superstarsaga/index.html"
   },
   {
-    "Name": "super smash flash",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supersmashflash.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supersmashflash/index.html"
+    "name": "adofai",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/adofai.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/adofai/index.html"
   },
   {
-    "Name": "super meat boy",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermeatboy.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermeatboy/index.html"
+    "name": "super smash flash",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supersmashflash.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supersmashflash/index.html"
   },
   {
-    "Name": "stickman hook",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stickmanhook.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/stickmanhook/index.html"
+    "name": "super meat boy",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermeatboy.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermeatboy/index.html"
   },
   {
-    "Name": "defend the tank",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/defendthetank.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/defendthetank/index.html"
+    "name": "stickman hook",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stickmanhook.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/stickmanhook/index.html"
   },
   {
-    "Name": "sort the court",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sortthecourt.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sortthecourt/index.html"
+    "name": "defend the tank",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/defendthetank.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/defendthetank/index.html"
   },
   {
-    "Name": "this is the only level",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thisistheonlylevel.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thisistheonlylevel/index.html"
+    "name": "sort the court",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sortthecourt.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sortthecourt/index.html"
   },
   {
-    "Name": "run",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/run/index.html"
+    "name": "this is the only level",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thisistheonlylevel.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thisistheonlylevel/index.html"
   },
   {
-    "Name": "run 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/run2/index.html"
+    "name": "run",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/run/index.html"
   },
   {
-    "Name": "battleships",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/battleships.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/battleships/index.html"
+    "name": "run 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/run2/index.html"
   },
   {
-    "Name": "breaking the bank",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/breakingthebank.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/breakingthebank/index.html"
+    "name": "battleships",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/battleships.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/battleships/index.html"
   },
   {
-    "Name": "duck life",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife/index.html"
+    "name": "breaking the bank",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/breakingthebank.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/breakingthebank/index.html"
   },
   {
-    "Name": "duck life 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife2/index.html"
+    "name": "duck life",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife/index.html"
   },
   {
-    "Name": "duck life 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife3/index.html"
+    "name": "duck life 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife2/index.html"
   },
   {
-    "Name": "line rider",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/linerider.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/linerider/index.html"
+    "name": "duck life 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife3/index.html"
   },
   {
-    "Name": "mario combat",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariocombat.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariocombat/index.html"
+    "name": "line rider",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/linerider.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/linerider/index.html"
   },
   {
-    "Name": "raft wars 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/raftwars2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/raftwars2/index.html"
+    "name": "mario combat",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariocombat.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariocombat/index.html"
   },
   {
-    "Name": "space invaders",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/spaceinvaders.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/spaceinvaders/index.html"
+    "name": "raft wars 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/raftwars2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/raftwars2/index.html"
   },
   {
-    "Name": "animal crossing",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/animalcrossingwildworld.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/animalcrossingwildworld/index.html"
+    "name": "space invaders",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/spaceinvaders.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/spaceinvaders/index.html"
   },
   {
-    "Name": "mario kart ds",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartds.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartds/index.html"
+    "name": "animal crossing",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/animalcrossingwildworld.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/animalcrossingwildworld/index.html"
   },
   {
-    "Name": "new super mario bros",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/newsupermariobros.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/newsupermariobros/index.html"
+    "name": "mario kart ds",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartds.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartds/index.html"
   },
   {
-    "Name": "nintendogs",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/nintendogs.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/nintendogs/index.html"
+    "name": "new super mario bros",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/newsupermariobros.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/newsupermariobros/index.html"
   },
   {
-    "Name": "super mario 64 ds",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64ds.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64ds/index.html"
+    "name": "nintendogs",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/nintendogs.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/nintendogs/index.html"
   },
   {
-    "Name": "gun mayhem",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/gunmayhem.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/gunmayhem/index.html"
+    "name": "super mario 64 ds",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64ds.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64ds/index.html"
   },
   {
-    "Name": "learn to fly",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/learntofly.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/learntofly/index.html"
+    "name": "gun mayhem",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/gunmayhem.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/gunmayhem/index.html"
   },
   {
-    "Name": "rooftop snipers 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop2/index.html"
+    "name": "learn to fly",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/learntofly.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/learntofly/index.html"
   },
   {
-    "Name": "super mario 64",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64/index.html"
+    "name": "rooftop snipers 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop2/index.html"
   },
   {
-    "Name": "super mario bros",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros/index.html"
+    "name": "super mario 64",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64/index.html"
   },
   {
-    "Name": "super mario world",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioworld.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioworld/index.html"
+    "name": "super mario bros",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermariobros.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermariobros/index.html"
   },
   {
-    "Name": "pokemon emerald",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonemerald.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonemerald/index.html"
+    "name": "super mario world",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioworld.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioworld/index.html"
   },
   {
-    "Name": "pokemon fire red",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonfirered.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonfirered/index.html"
+    "name": "pokemon emerald",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonemerald.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonemerald/index.html"
   },
   {
-    "Name": "pokemon leaf green",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonleafgreen.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonleafgreen/index.html"
+    "name": "pokemon fire red",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonfirered.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonfirered/index.html"
   },
   {
-    "Name": "pokemon ruby",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonruby.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonruby/index.html"
+    "name": "pokemon leaf green",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonleafgreen.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonleafgreen/index.html"
   },
   {
-    "Name": "pokemon sapphire",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonsapphire.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonsapphire/index.html"
+    "name": "pokemon ruby",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonruby.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonruby/index.html"
   },
   {
-    "Name": "castlevania",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/castlevania.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/castlevania/index.html"
+    "name": "pokemon sapphire",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/pokemonsapphire.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/pokemonsapphire/index.html"
   },
   {
-    "Name": "donkey kong",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykong.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykong/index.html"
+    "name": "castlevania",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/castlevania.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/castlevania/index.html"
   },
   {
-    "Name": "dr mario",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drmario.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/drmario/index.html"
+    "name": "donkey kong",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykong.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykong/index.html"
   },
   {
-    "Name": "metroid",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/metroid.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/metroid/index.html"
+    "name": "dr mario",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/drmario.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/drmario/index.html"
   },
   {
-    "Name": "the legend of zelda",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thelegendofzelda.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thelegendofzelda/index.html"
+    "name": "metroid",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/metroid.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/metroid/index.html"
   },
   {
-    "Name": "warioware",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/warioware.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/warioware/index.html"
+    "name": "the legend of zelda",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thelegendofzelda.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thelegendofzelda/index.html"
   },
   {
-    "Name": "yoshi's island",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/yoshisisland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/yoshisisland/index.html"
+    "name": "warioware",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/warioware.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/warioware/index.html"
   },
   {
-    "Name": "donkey kong land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykongland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykongland/index.html"
+    "name": "yoshi's island",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/yoshisisland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/yoshisisland/index.html"
   },
   {
-    "Name": "kirby's dream land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/kirbysdreamland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/kirbysdreamland/index.html"
+    "name": "donkey kong land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/donkeykongland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/donkeykongland/index.html"
   },
   {
-    "Name": "super mario land",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioland.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioland/index.html"
+    "name": "kirby's dream land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/kirbysdreamland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/kirbysdreamland/index.html"
   },
   {
-    "Name": "doge miner",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/dogeminer.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/dogeminer/index.html"
+    "name": "super mario land",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermarioland.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermarioland/index.html"
   },
   {
-    "Name": "tanuki sunset",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tanukisunset.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/tanukisunset/index.html"
+    "name": "doge miner",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/dogeminer.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/dogeminer/index.html"
   },
   {
-    "Name": "aquapark slides",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/aquaparkslides.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/aquaparkslides/index.html"
+    "name": "tanuki sunset",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/tanukisunset.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/tanukisunset/index.html"
   },
   {
-    "Name": "color switch",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/colorswitch.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/colorswitch/index.html"
+    "name": "aquapark slides",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/aquaparkslides.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/aquaparkslides/index.html"
   },
   {
-    "Name": "papa's freezeria",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasfreezeria.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasfreezeria/index.html"
+    "name": "color switch",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/colorswitch.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/colorswitch/index.html"
   },
   {
-    "Name": "bomberman",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bomberman.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/bomberman/index.html"
+    "name": "papa's freezeria",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papasfreezeria.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papasfreezeria/index.html"
   },
   {
-    "Name": "fire emblem",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fireemblem.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/fireemblem/index.html"
+    "name": "bomberman",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/bomberman.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/bomberman/index.html"
   },
   {
-    "Name": "ice climber",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/iceclimber.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/iceclimber/index.html"
+    "name": "fire emblem",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/fireemblem.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/fireemblem/index.html"
   },
   {
-    "Name": "mario kart super circuit",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartsupercircuit.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartsupercircuit/index.html"
+    "name": "ice climber",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/iceclimber.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/iceclimber/index.html"
   },
   {
-    "Name": "superstar saga",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superstarsaga.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/superstarsaga/index.html"
+    "name": "mario kart super circuit",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartsupercircuit.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartsupercircuit/index.html"
   },
   {
-    "Name": "adofai",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/adofai.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/adofai/index.html"
+    "name": "superstar saga",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/superstarsaga.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/superstarsaga/index.html"
   },
   {
-    "Name": "super smash flash",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supersmashflash.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supersmashflash/index.html"
+    "name": "adofai",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/adofai.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/adofai/index.html"
   },
   {
-    "Name": "super meat boy",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermeatboy.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermeatboy/index.html"
+    "name": "super smash flash",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supersmashflash.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supersmashflash/index.html"
   },
   {
-    "Name": "stickman hook",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stickmanhook.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/stickmanhook/index.html"
+    "name": "super meat boy",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/supermeatboy.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/supermeatboy/index.html"
   },
   {
-    "Name": "defend the tank",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/defendthetank.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/defendthetank/index.html"
+    "name": "stickman hook",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/stickmanhook.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/stickmanhook/index.html"
   },
   {
-    "Name": "sort the court",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sortthecourt.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sortthecourt/index.html"
+    "name": "defend the tank",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/defendthetank.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/defendthetank/index.html"
   },
   {
-    "Name": "this is the only level",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thisistheonlylevel.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/thisistheonlylevel/index.html"
+    "name": "sort the court",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sortthecourt.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sortthecourt/index.html"
   },
   {
-    "Name": "run",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/run/index.html"
+    "name": "this is the only level",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/thisistheonlylevel.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/thisistheonlylevel/index.html"
   },
   {
-    "Name": "run 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/run2/index.html"
+    "name": "run",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/run/index.html"
   },
   {
-    "Name": "battleships",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/battleships.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/battleships/index.html"
+    "name": "run 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/run2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/run2/index.html"
   },
   {
-    "Name": "breaking the bank",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/breakingthebank.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/breakingthebank/index.html"
+    "name": "battleships",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/battleships.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/battleships/index.html"
   },
   {
-    "Name": "duck life",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife/index.html"
+    "name": "breaking the bank",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/breakingthebank.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/breakingthebank/index.html"
   },
   {
-    "Name": "duck life 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife2/index.html"
+    "name": "duck life",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife/index.html"
   },
   {
-    "Name": "duck life 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife3/index.html"
+    "name": "duck life 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife2/index.html"
   },
   {
-    "Name": "line rider",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/linerider.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/linerider/index.html"
+    "name": "duck life 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/ducklife3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/ducklife3/index.html"
   },
   {
-    "Name": "mario combat",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariocombat.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariocombat/index.html"
+    "name": "line rider",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/linerider.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/linerider/index.html"
   },
   {
-    "Name": "raft wars 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/raftwars2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/raftwars2/index.html"
+    "name": "mario combat",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariocombat.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariocombat/index.html"
   },
   {
-    "Name": "space invaders",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/spaceinvaders.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/spaceinvaders/index.html"
+    "name": "raft wars 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/raftwars2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/raftwars2/index.html"
   },
   {
-    "Name": "animal crossing",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/animalcrossingwildworld.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/animalcrossingwildworld/index.html"
+    "name": "space invaders",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/spaceinvaders.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/spaceinvaders/index.html"
   },
   {
-    "Name": "mario kart ds",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartds.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartds/index.html"
+    "name": "animal crossing",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/animalcrossingwildworld.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/animalcrossingwildworld/index.html"
   },
   {
-    "Name": "new super mario bros",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/newsupermariobros.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/newsupermariobros/index.html"
+    "name": "mario kart ds",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/mariokartds.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/mariokartds/index.html"
   },
   {
-    "Name": "nintendogs",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/nintendogs.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/nintendogs/index.html"
+    "name": "new super mario bros",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/newsupermariobros.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/newsupermariobros/index.html"
   },
   {
-    "Name": "super mario 64 ds",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64ds.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64ds/index.html"
+    "name": "nintendogs",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/nintendogs.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/nintendogs/index.html"
   },
   {
-    "Name": "gun mayhem",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/gunmayhem.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/gunmayhem/index.html"
+    "name": "super mario 64 ds",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/sm64ds.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/sm64ds/index.html"
   },
   {
-    "Name": "learn to fly",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/learntofly.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/learntofly/index.html"
+    "name": "gun mayhem",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/gunmayhem.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/gunmayhem/index.html"
   },
   {
-    "Name": "rooftop snipers 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop2/index.html"
+    "name": "learn to fly",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/learntofly.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/learntofly/index.html"
   },
   {
-    "Name": "papa louie",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie/index.html"
+    "name": "rooftop snipers 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/rooftopsnipers2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/rooftop2/index.html"
   },
   {
-    "Name": "papa louie 2",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie2.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie2/index.html"
+    "name": "papa louie",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie/index.html"
   },
   {
-    "Name": "papa louie 3",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie3.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie3/index.html"
+    "name": "papa louie 2",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie2.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie2/index.html"
   },
   {
-    "Name": "steak and jake",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/steakandjake.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/steakandjake/index.html"
+    "name": "papa louie 3",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/papalouie3.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/papalouie3/index.html"
   },
   {
-    "Name": "steak and jake midnight",
-    "Image": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/steakandjakemidnightmarch.jpg",
-    "Game": "https://imissthatkinda.misery.webcreationstudios.org/games/steakandjakemidnightmarch/index.html"
+    "name": "steak and jake",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/steakandjake.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/steakandjake/index.html"
   },
+  {
+    "name": "steak and jake midnight",
+    "img": "https://imissthatkinda.misery.webcreationstudios.org/images/thumbnails/steakandjakemidnightmarch.jpg",
+    "game": "https://imissthatkinda.misery.webcreationstudios.org/games/steakandjakemidnightmarch/index.html"
+  }, 
   {
       "id": 2,
       "name": "1v1.LOL",
